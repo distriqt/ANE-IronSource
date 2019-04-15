@@ -98,7 +98,7 @@ package com.distriqt.test.ironsource
 			
 			_tests = new IronSourceTests( this );
 
-			
+			addAction( "Advertising Id", _tests.getAdvertisingId );
 			addAction( "Show :Rewarded Video", _tests.showRewardedVideo );
 			addAction( "Load :Interstitial", _tests.loadInterstitial );
 			addAction( "Show :Interstitial", _tests.showInterstitial );

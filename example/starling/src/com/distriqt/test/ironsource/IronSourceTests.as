@@ -57,9 +57,6 @@ package com.distriqt.test.ironsource
 				log( "IronSource Supported: " + IronSource.isSupported );
 				if (IronSource.isSupported)
 				{
-					log( "IronSource Version:   " + IronSource.instance.version );
-					log( "IronSource Native Version:   " + IronSource.instance.nativeVersion );
-					
 					
 					IronSource.instance.init( Config.IRONSRC_APP_KEY,
 											  [
@@ -89,6 +86,10 @@ package com.distriqt.test.ironsource
 					
 					IronSource.instance.validateIntegration();
 					
+					
+					log( "IronSource Version:        " + IronSource.instance.version );
+					log( "IronSource Native Version: " + IronSource.instance.nativeVersion );
+					
 				}
 				
 			}
@@ -97,6 +98,13 @@ package com.distriqt.test.ironsource
 				trace( e );
 			}
 		}
+		
+		
+		public function getAdvertisingId():void
+		{
+			log( "IronSource Advertising Id: " + IronSource.instance.getAdvertiserId() );
+		}
+		
 		
 		
 		////////////////////////////////////////////////////////
