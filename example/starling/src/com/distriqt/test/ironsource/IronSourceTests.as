@@ -16,6 +16,7 @@ package com.distriqt.test.ironsource
 {
 	import com.distriqt.extension.ironsource.IronSource;
 	import com.distriqt.extension.ironsource.IronSource;
+	import com.distriqt.extension.ironsource.events.RewardedVideoAdEvent;
 	
 	import flash.display.Bitmap;
 	import flash.events.DataEvent;
@@ -67,14 +68,23 @@ package com.distriqt.test.ironsource
 					
 					IronSource.instance.setDynamicUserId( "test_identifier_1" );
 					
-					IronSource.instance.addEventListener( "onRewardedVideoAdOpened", onRewardedVideoAdOpened );
-					IronSource.instance.addEventListener( "onRewardedVideoAdClosed", onRewardedVideoAdClosed );
-					IronSource.instance.addEventListener( "onRewardedVideoAvailabilityChanged", onRewardedVideoAvailabilityChanged );
-					IronSource.instance.addEventListener( "onRewardedVideoAdStarted", onRewardedVideoAdStarted );
-					IronSource.instance.addEventListener( "onRewardedVideoAdEnded", onRewardedVideoAdEnded );
-					IronSource.instance.addEventListener( "onRewardedVideoAdRewarded", onRewardedVideoAdRewarded );
-					IronSource.instance.addEventListener( "onRewardedVideoAdShowFailed", onRewardedVideoAdShowFailed );
-					IronSource.instance.addEventListener( "onRewardedVideoAdClicked", onRewardedVideoAdClicked );
+//					IronSource.instance.addEventListener( "onRewardedVideoAdOpened", onRewardedVideoAdOpened );
+//					IronSource.instance.addEventListener( "onRewardedVideoAdClosed", onRewardedVideoAdClosed );
+//					IronSource.instance.addEventListener( "onRewardedVideoAvailabilityChanged", onRewardedVideoAvailabilityChanged );
+//					IronSource.instance.addEventListener( "onRewardedVideoAdStarted", onRewardedVideoAdStarted );
+//					IronSource.instance.addEventListener( "onRewardedVideoAdEnded", onRewardedVideoAdEnded );
+//					IronSource.instance.addEventListener( "onRewardedVideoAdRewarded", onRewardedVideoAdRewarded );
+//					IronSource.instance.addEventListener( "onRewardedVideoAdShowFailed", onRewardedVideoAdShowFailed );
+//					IronSource.instance.addEventListener( "onRewardedVideoAdClicked", onRewardedVideoAdClicked );
+					
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.OPENED, onRewardedVideoAdOpened );
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.CLOSED, onRewardedVideoAdClosed );
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.AVAILABILITY_CHANGED, onRewardedVideoAvailabilityChanged );
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.STARTED, onRewardedVideoAdStarted );
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.ENDED, onRewardedVideoAdEnded );
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.REWARDED, onRewardedVideoAdRewarded );
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.SHOW_FAILED, onRewardedVideoAdShowFailed );
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.CLICKED, onRewardedVideoAdClicked );
 					
 					IronSource.instance.addEventListener( "onInterstitialAdReady", onInterstitialAdReady );
 					IronSource.instance.addEventListener( "onInterstitialAdLoadFailed", onInterstitialAdLoadFailed );
@@ -159,50 +169,50 @@ package com.distriqt.test.ironsource
 		//
 		//
 		
-		private function onRewardedVideoAdShowFailed( event:DataEvent ):void
+		private function onRewardedVideoAdShowFailed( event:RewardedVideoAdEvent ):void
 		{
 			log( "onRewardedVideoAdShowFailed" );
 		}
 		
 		
-		private function onRewardedVideoAdOpened( event:DataEvent ):void
+		private function onRewardedVideoAdOpened( event:RewardedVideoAdEvent ):void
 		{
 			log( "onRewardedVideoAdOpened" );
 		}
 		
 		
-		private function onRewardedVideoAdClosed( event:DataEvent ):void
+		private function onRewardedVideoAdClosed( event:RewardedVideoAdEvent ):void
 		{
 			log( "onRewardedVideoAdClosed" );
 		}
 		
 		
-		private function onRewardedVideoAvailabilityChanged( event:DataEvent ):void
+		private function onRewardedVideoAvailabilityChanged( event:RewardedVideoAdEvent ):void
 		{
-			log( "onRewardedVideoAvailabilityChanged" );
+			log( "onRewardedVideoAvailabilityChanged: " + event.availability );
 		}
 		
 		
-		private function onRewardedVideoAdStarted( event:DataEvent ):void
+		private function onRewardedVideoAdStarted( event:RewardedVideoAdEvent ):void
 		{
 			log( "onRewardedVideoAdStarted" );
 		}
 		
 		
-		private function onRewardedVideoAdEnded( event:DataEvent ):void
+		private function onRewardedVideoAdEnded( event:RewardedVideoAdEvent ):void
 		{
 			log( "onRewardedVideoAdEnded" );
 		}
 		
 		
-		private function onRewardedVideoAdRewarded( event:DataEvent ):void
+		private function onRewardedVideoAdRewarded( event:RewardedVideoAdEvent ):void
 		{
 			log( "onRewardedVideoAdRewarded" );
 			
 		}
 		
 		
-		private function onRewardedVideoAdClicked( event:DataEvent ):void
+		private function onRewardedVideoAdClicked( event:RewardedVideoAdEvent ):void
 		{
 			log( "onRewardedVideoAdClicked" );
 		}

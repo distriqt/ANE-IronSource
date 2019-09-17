@@ -1,5 +1,15 @@
 
 
+###### 2019.09.17 [v0.2.024]
+
+```
+Updated SDK:
+ - iOS v6.8.5
+ - Android v6.10.0
+Added availability to RewardedVideoAdEvent (resolves #3)
+```
+
+
 ###### 2019.08.16 [v0.1.018]
 
 ```
