@@ -51,7 +51,8 @@
     <android>
         <manifestAdditions><![CDATA[
 			<manifest android:installLocation="auto" >
-				<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="27" />
+				<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="28" />
+
 				<uses-permission android:name="android.permission.INTERNET"/>
 				<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -83,8 +84,10 @@
     </android>
 
     <extensions>
-        <extensionID>com.distriqt.Core</extensionID>
         <extensionID>com.distriqt.IronSource</extensionID>
+        <!--<extensionID>com.ironsource.adobeair</extensionID>-->
+
+        <extensionID>com.distriqt.Core</extensionID>
 
         <extensionID>com.distriqt.androidsupport.V4</extensionID>
         <extensionID>com.distriqt.playservices.Base</extensionID>

@@ -16,6 +16,7 @@
 package
 {
 	import com.distriqt.extension.ironsource.IronSource;
+	import com.distriqt.extension.ironsource.events.RewardedVideoAdEvent;
 	
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
@@ -40,7 +41,6 @@ package
 		public function TestIronSource()
 		{
 			super();
-			create();
 			init();
 		}
 		
@@ -57,22 +57,19 @@ package
 		//	INITIALISATION
 		//	
 		
-		private function create( ):void
+		private function init( ):void
 		{
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			
 			_text = new TextField();
+			_text.mouseEnabled = false;
 			_text.defaultTextFormat = new TextFormat( "_typewriter", 18 );
 			addChild( _text );
 
 			stage.addEventListener( Event.RESIZE, stage_resizeHandler, false, 0, true );
 			stage.addEventListener( MouseEvent.CLICK, mouseClickHandler, false, 0, true );
-		}
-		
-		
-		private function init( ):void
-		{
+			
 			try
 			{
 				message( "IronSource Supported:      " + IronSource.isSupported );
@@ -82,6 +79,17 @@ package
 					message( "IronSource Native Version: " + IronSource.instance.nativeVersion );
 					
 					IronSource.instance.init( IRONSRC_APP_KEY, [ IronSource.REWARDED_VIDEO ] );
+					
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.OPENED, onRewardedVideoAdOpened );
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.CLOSED, onRewardedVideoAdClosed );
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.AVAILABILITY_CHANGED, onRewardedVideoAvailabilityChanged );
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.STARTED, onRewardedVideoAdStarted );
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.ENDED, onRewardedVideoAdEnded );
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.REWARDED, onRewardedVideoAdRewarded );
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.SHOW_FAILED, onRewardedVideoAdShowFailed );
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.CLICKED, onRewardedVideoAdClicked );
+					
+					
 				}
 			}
 			catch (e:Error)
@@ -131,7 +139,56 @@ package
 		//	EXTENSION HANDLERS
 		//
 		
+		
+		
+		private function onRewardedVideoAdShowFailed( event:RewardedVideoAdEvent ):void
+		{
+			message( "onRewardedVideoAdShowFailed" );
+		}
 
+
+		private function onRewardedVideoAdOpened( event:RewardedVideoAdEvent ):void
+		{
+			message( "onRewardedVideoAdOpened" );
+		}
+
+
+		private function onRewardedVideoAdClosed( event:RewardedVideoAdEvent ):void
+		{
+			message( "onRewardedVideoAdClosed" );
+		}
+
+
+		private function onRewardedVideoAvailabilityChanged( event:RewardedVideoAdEvent ):void
+		{
+			message( "onRewardedVideoAvailabilityChanged: " + event.availability );
+		}
+
+
+		private function onRewardedVideoAdStarted( event:RewardedVideoAdEvent ):void
+		{
+			message( "onRewardedVideoAdStarted" );
+		}
+
+
+		private function onRewardedVideoAdEnded( event:RewardedVideoAdEvent ):void
+		{
+			message( "onRewardedVideoAdEnded" );
+		}
+
+
+		private function onRewardedVideoAdRewarded( event:RewardedVideoAdEvent ):void
+		{
+			message( "onRewardedVideoAdRewarded" );
+
+		}
+
+
+		private function onRewardedVideoAdClicked( event:RewardedVideoAdEvent ):void
+		{
+			message( "onRewardedVideoAdClicked" );
+		}
+		
 		
 	}
 }

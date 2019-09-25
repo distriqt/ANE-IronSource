@@ -1,5 +1,12 @@
 
 
+###### 2019.09.25 [v0.2.046]
+
+```
+Fixed iOS issue with resuming from IronSource rewarded video
+```
+
+
 ###### 2019.09.17 [v0.2.024]
 
 ```
