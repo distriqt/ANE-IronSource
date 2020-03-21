@@ -26,7 +26,8 @@ IronSource does provide an ANE independent of this ANE. We developed this ANE so
 
 ## Documentation
 
-Latest documentation can be found in the [wiki](https://github.com/distriqt/ANE-IronSource/wiki)
+The [wiki](https://github.com/distriqt/ANE-IronSource/wiki) forms the best source of detailed documentation for the extension along with 
+the [asdocs](https://distriqt.github.io/ANE-IronSource/asdocs). 
 
 Quick Example: 
 

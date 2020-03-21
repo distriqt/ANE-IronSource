@@ -1,5 +1,15 @@
 
 
+###### 2020.03.21 [v1.2.053]
+
+```
+Android X migration (resolves #12) 
+Updated SDK:
+ - iOS v6.15.0
+ - Android v6.15.0
+```
+
+
 ###### 2019.11.12 [v0.2.046]
 
 ```
