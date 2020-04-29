@@ -1,5 +1,17 @@
 
 
+###### 2020.04.29 [v1.3.000]
+
+```
+Updated SDK:
+ - iOS v6.16.0
+ - Android v6.16.0
+
+Added Facebook Audience mediation adapter to resolve issues with the version from IronSource
+
+```
+
+
 ###### 2020.03.21 [v1.2.053]
 
 ```
