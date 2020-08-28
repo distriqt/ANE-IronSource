@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<application xmlns="http://ns.adobe.com/air/application/32.0">
+<application xmlns="http://ns.adobe.com/air/application/33.1">
 	<id>com.distriqt.test</id>
 	<filename>TestIronSource</filename>
 	<name>TestIronSource</name>
@@ -33,6 +33,15 @@
 				<string>1</string>
 				<string>2</string>
 			</array>
+
+
+            <key>SKAdNetworkItems</key>
+            <array>
+               <dict>
+                   <key>SKAdNetworkIdentifier</key>
+                   <string>SU67R6K2V3.skadnetwork</string>
+               </dict>
+            </array>
 
 			<key>NSAppTransportSecurity</key>
 			<dict>
@@ -89,6 +98,7 @@
 
         <extensionID>com.distriqt.playservices.Base</extensionID>
         <extensionID>com.distriqt.playservices.Ads</extensionID>
+        <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
 
         <extensionID>androidx.core</extensionID>
 	</extensions>

@@ -100,6 +100,7 @@
 
         <extensionID>com.distriqt.playservices.Base</extensionID>
         <extensionID>com.distriqt.playservices.Ads</extensionID>
+        <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
 
         <extensionID>androidx.core</extensionID>
 	</extensions>

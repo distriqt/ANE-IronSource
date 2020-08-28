@@ -1,5 +1,5 @@
 
 | Extension | Version | Android Lib | iOS Lib |
 | --- | --- | --- | --- |
-| com.distriqt.ironsource.FacebookAudience | 1.0.074 | 5.8.0 | 5.8.0 |
-| com.distriqt.IronSource | 1.3.067 | 6.16.0 | 6.16.0 |
+| com.distriqt.ironsource.FacebookAudience | 1.1.004 | 5.11.0 | 5.10.1 |
+| com.distriqt.IronSource | 2.0.002 | 7.0.0 | 7.0.0 |

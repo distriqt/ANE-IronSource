@@ -1,5 +1,18 @@
 
 
+###### 2020.08.28 [v2.0.001]
+
+```
+Updated SDK:
+ - iOS v7.0.0
+ - Android v7.0.0
+
+Facebook Audience mediator updated:
+ - iOS v5.10.1
+ - Android v5.11.0
+```
+
+
 ###### 2020.04.29 [v1.3.000]
 
 ```
