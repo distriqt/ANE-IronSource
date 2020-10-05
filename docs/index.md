@@ -19,14 +19,21 @@ IronSource does provide an ANE independent of this ANE. We developed this ANE so
 - Monetization - One of the industry’s largest in-app ad networks leveraging all available ad units to drive revenue and user engagement.
 - Single API interface - your code works across supported platforms with no modifications
 - Sample project code and ASDocs reference
-
+- Mediation:
+  - AdColony
+  - AdMob
+  - Amazon
+  - AppLovin
+  - Chartboost
+  - Facebook Audience
+  - Tapjoy
+  - UnityAds
 
 
 
 ## Documentation
 
-The [wiki](https://github.com/distriqt/ANE-IronSource/wiki) forms the best source of detailed documentation for the extension along with 
-the [asdocs](https://distriqt.github.io/ANE-IronSource/asdocs). 
+The [wiki](https://github.com/distriqt/ANE-IronSource/wiki) forms the best source of detailed documentation for the extension along with the [asdocs](https://distriqt.github.io/ANE-IronSource/asdocs). 
 
 Quick Example: 
 

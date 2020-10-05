@@ -22,7 +22,7 @@ https://developers.ironsrc.com/ironsource-mobile/air/facebook-mediation-guide/#s
 
 ## Step 3: Import the Facebook Audience Network SDK and adapter ANE
 
-The `com.distriqt.admob.FacebookAudience` ANE includes the Facebook Audience SDK and the AdMob Facebook mediation adapter. This is everything you need to get Facebook mediation working in your application.
+The `com.distriqt.ironsource.FacebookAudience` ANE includes the Facebook Audience SDK and the IronSource Facebook mediation adapter. This is everything you need to get Facebook mediation working in your application.
 
 To add the ANE download it from the repository and add it to your application:
 

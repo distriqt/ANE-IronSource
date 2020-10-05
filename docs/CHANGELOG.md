@@ -1,5 +1,20 @@
 
 
+###### 2020.10.05 [v2.1.0]
+
+```
+Added Mediation Adapters:
+  - AdColony
+  - AdMob
+  - Amazon
+  - AppLovin
+  - Chartboost
+  - Facebook Audience
+  - Tapjoy
+  - UnityAds
+```
+
+
 ###### 2020.08.28 [v2.0.001]
 
 ```
