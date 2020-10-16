@@ -60,6 +60,17 @@
             <key>NSMotionUsageDescription </key>
             <string>Interactive ad controls</string>
 
+            <key>SKAdNetworkItems</key>
+            <array>
+                <dict>
+                   <key>SKAdNetworkIdentifier</key>
+                   <string>SU67R6K2V3.skadnetwork</string>
+                </dict>
+                <dict>
+                    <key>SKAdNetworkIdentifier</key>
+                    <string>4PFYVQ9L8R.skadnetwork</string>
+                </dict>
+            </array>
 
         ]]></InfoAdditions>
         <requestedDisplayResolution>high</requestedDisplayResolution>
@@ -72,7 +83,7 @@
     <android>
         <manifestAdditions><![CDATA[
             <manifest android:installLocation="auto" >
-                <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="28" />
+                <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="29" />
 
                 <uses-permission android:name="android.permission.INTERNET" />
                 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

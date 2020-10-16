@@ -1,5 +1,5 @@
 
-If you are reporting a bug please make sure you fill out the following information, otherwise delete this ironsource and ask your question.
+If you are reporting a bug please make sure you fill out the following information, otherwise delete this template and ask your question.
 
 
 ##### Expected behaviour

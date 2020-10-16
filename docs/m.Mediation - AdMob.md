@@ -1,6 +1,4 @@
 
-## AdMob Mediation
-
 This guide shows how to add mediation through AdMob to your IronSource integration.
 
 

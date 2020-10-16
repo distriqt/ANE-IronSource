@@ -1,6 +1,4 @@
 
-## AppLovin Mediation
-
 This guide shows how to add mediation through AppLovin to your IronSource integration.
 
 

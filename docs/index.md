@@ -10,7 +10,7 @@ IronSource is an AIR Native Extension to access the [IronSource](https://www.iro
 >
 
 
-IronSource does provide an ANE independent of this ANE. We developed this ANE so we can update the ANE to match the latest native versions without waiting for updates from IronSource directly, which seem to lag behind the native SDKs.
+IronSource does provide an offical ANE. We developed this extension so we can update it to match the latest native versions without waiting for updates from IronSource directly, which seem to lag behind the native SDKs.
 
 
 

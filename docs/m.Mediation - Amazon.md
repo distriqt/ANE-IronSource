@@ -1,7 +1,5 @@
 
-## AdMob Mediation
-
-This guide shows how to add mediation through AdMob to your IronSource integration.
+This guide shows how to add mediation through Amazon to your IronSource integration.
 
 
 ## Step 1: Create an Amazon Account 

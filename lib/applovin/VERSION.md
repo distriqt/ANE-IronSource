@@ -1,1 +1,1 @@
-| com.distriqt.ironsource.AppLovin | 1.0.066 | 4.3.16 | 4.3.18 |
+| com.distriqt.ironsource.AppLovin | 1.0.069 | 4.3.19 | 4.3.19 |

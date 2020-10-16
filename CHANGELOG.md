@@ -1,5 +1,12 @@
 
 
+###### 2020.10.16 [v2.2.0]
+
+```
+Updated SDK + mediator SDKs to latest builds
+```
+
+
 ###### 2020.10.05 [v2.1.0]
 
 ```

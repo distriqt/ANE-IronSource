@@ -1,6 +1,4 @@
 
-## UnityAds Mediation
-
 This guide shows how to add mediation through UnityAds to your IronSource integration.
 
 

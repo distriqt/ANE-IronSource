@@ -1,6 +1,4 @@
 
-## Tapjoy Mediation
-
 This guide shows how to add mediation through Tapjoy to your IronSource integration.
 
 

@@ -1,6 +1,4 @@
 
-## AdColony Mediation
-
 This guide shows how to add mediation through AdColony to your IronSource integration.
 
 
