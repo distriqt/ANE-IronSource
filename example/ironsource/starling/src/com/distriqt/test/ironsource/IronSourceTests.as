@@ -16,6 +16,9 @@ package com.distriqt.test.ironsource
 {
 	import com.distriqt.extension.ironsource.IronSource;
 	import com.distriqt.extension.ironsource.IronSource;
+	import com.distriqt.extension.ironsource.IronSourceBannerSize;
+	import com.distriqt.extension.ironsource.events.BannerAdEvent;
+	import com.distriqt.extension.ironsource.events.OfferwallEvent;
 	import com.distriqt.extension.ironsource.events.RewardedVideoAdEvent;
 	
 	import flash.display.Bitmap;
@@ -61,11 +64,13 @@ package com.distriqt.test.ironsource
 				log( "IronSource Supported: " + IronSource.isSupported );
 				if (IronSource.isSupported)
 				{
-					
+					IronSource.instance.setIronSourceClientSideCallbacks( true );
 					IronSource.instance.init( Config.IRONSRC_APP_KEY,
 											  [
+												  IronSource.BANNER,
 												  IronSource.REWARDED_VIDEO,
-												  IronSource.INTERSTITIAL
+												  IronSource.INTERSTITIAL,
+												  IronSource.OFFERWALL
 											  ]
 					);
 					
@@ -97,7 +102,22 @@ package com.distriqt.test.ironsource
 					IronSource.instance.addEventListener( "onInterstitialAdShowFailed", onInterstitialAdShowFailed );
 					IronSource.instance.addEventListener( "onInterstitialAdClicked", onInterstitialAdClicked );
 					
-
+					
+					IronSource.instance.addEventListener( BannerAdEvent.LOADED, bannerHandler );
+					IronSource.instance.addEventListener( BannerAdEvent.LOAD_FAILED, bannerLoadFailedHandler );
+					IronSource.instance.addEventListener( BannerAdEvent.CLICKED, bannerHandler );
+					IronSource.instance.addEventListener( BannerAdEvent.SCREEN_PRESENTED, bannerHandler );
+					IronSource.instance.addEventListener( BannerAdEvent.SCREEN_DISMISSED, bannerHandler );
+					IronSource.instance.addEventListener( BannerAdEvent.LEFT_APPLICATION, bannerHandler );
+					
+					IronSource.instance.addEventListener( OfferwallEvent.AVAILABLE, offerwallHandler );
+					IronSource.instance.addEventListener( OfferwallEvent.SHOW_FAILED, offerwallErrorHandler );
+					IronSource.instance.addEventListener( OfferwallEvent.OPENED, offerwallHandler );
+					IronSource.instance.addEventListener( OfferwallEvent.CLOSED, offerwallHandler );
+					IronSource.instance.addEventListener( OfferwallEvent.AD_CREDITED, adCreditedHandler );
+					IronSource.instance.addEventListener( OfferwallEvent.GETOFFERWALLCREDITS_FAILED, offerwallErrorHandler );
+					
+					
 					IronSource.instance.validateIntegration();
 					
 					
@@ -263,6 +283,101 @@ package com.distriqt.test.ironsource
 			log( "onInterstitialAdShowSucceeded" );
 		}
 		
+		
+		
+		
+		//
+		//	BANNERS
+		//
+		
+		public function loadBanner():void
+		{
+			log( "loadBanner()" );
+			IronSource.instance.loadBanner(
+					IronSourceBannerSize.LARGE,
+					IronSource.POSITION_BOTTOM
+			);
+		}
+		
+		public function displayBanner():void
+		{
+			log( "displayBanner()" );
+			IronSource.instance.displayBanner();
+		}
+		
+		public function hideBanner():void
+		{
+			log( "hideBanner()" );
+			IronSource.instance.hideBanner();
+		}
+		
+		public function destroyBanner():void
+		{
+			log( "destroyBanner()" );
+			IronSource.instance.destroyBanner();
+		}
+		
+		
+		
+		private function bannerHandler( event:BannerAdEvent ):void
+		{
+			log( "BANNER: " + event.type );
+		}
+		
+		private function bannerLoadFailedHandler( event:BannerAdEvent ):void
+		{
+			var errorCode:String;
+			var errorDescription:String;
+			if (event.data)
+			{
+				var error:Object = JSON.parse( event.data );
+				errorDescription = error.error_description;
+				errorCode = error.error_code;
+				log( "ERROR: [" + errorCode + "]: " + errorDescription )
+			}
+		}
+		
+		
+		
+		//
+		//	OFFERWALL
+		//
+
+		
+		public function showOfferwall():void
+		{
+			if (IronSource.instance.isOfferwallAvailable())
+			{
+				IronSource.instance.showOfferwall();
+			}
+		}
+		
+		
+		public function getOfferwallCredits():void
+		{
+			IronSource.instance.getOfferwallCredits();
+		}
+		
+		
+		
+		private function offerwallHandler( event:OfferwallEvent ):void
+		{
+			log( "OFFERWALL: " + event.type );
+		}
+		
+		private function adCreditedHandler( event:OfferwallEvent ):void
+		{
+			log( "OFFERWALL: " + event.type );
+			log( "  credits=" + event.credits );
+			log( "  totalCredits=" + event.totalCredits );
+			log( "  totalCreditsFlag=" + event.totalCreditsFlag );
+		}
+		
+		private function offerwallErrorHandler( event:OfferwallEvent ):void
+		{
+			var data:Object = JSON.parse(event.data);
+			log( "ERROR : [" + data.error_code + "] " + data.error_description );
+		}
 		
 	}
 	

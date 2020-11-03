@@ -1,5 +1,13 @@
 
 
+###### 2020.11.03 [v2.3.0]
+
+```
+Implemented Banner Ads (resolves #18)
+Implemented Offerwall (resolves #17)
+```
+
+
 ###### 2020.10.16 [v2.2.0]
 
 ```

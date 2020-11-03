@@ -105,7 +105,7 @@ package com.distriqt.test.applovin
 					log( "IronSource Version:        " + IronSource.instance.version );
 					log( "IronSource Native Version: " + IronSource.instance.nativeVersion );
 					
-					log( "AdColony Version: " + AppLovin.instance.nativeVersion );
+					log( "AppLovin Version: " + AppLovin.instance.nativeVersion );
 					
 				}
 				

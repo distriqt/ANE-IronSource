@@ -48,7 +48,11 @@
 				<key>NSAllowsArbitraryLoads</key>
 	  			<true/>
 			</dict>
-			
+
+
+            <key>UILaunchStoryboardName</key>
+            <string>LaunchScreen</string>
+
 		]]></InfoAdditions>
 		<requestedDisplayResolution>high</requestedDisplayResolution>
 		<Entitlements>
@@ -60,7 +64,7 @@
 	<android>
 		<manifestAdditions><![CDATA[
 			<manifest android:installLocation="auto" >
-				<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="28" />
+				<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="29" />
 
 				<uses-permission android:name="android.permission.INTERNET"/>
 				<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

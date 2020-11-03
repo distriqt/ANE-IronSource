@@ -1,5 +1,7 @@
 
+An interstitial ad is a full-screen static, video or interactive (playable) ad unit that offers users the option to exit and skip. They engage users with rich content at natural pauses in the app’s flow, ensuring minimum disruption to user experience while maximizing user engagement and revenue. 
 
+![](images/interstitial.png)
 
 ## Load Interstitial
 
@@ -105,3 +107,9 @@ function onInterstitialAdShowSucceeded( event:DataEvent ):void
     trace( "onInterstitialAdShowSucceeded" );
 }				
 ```
+
+
+## Errors
+
+See the complete description of the ironSource errors ![](here|u.Errors).
+

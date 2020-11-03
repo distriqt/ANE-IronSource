@@ -103,6 +103,13 @@ package com.distriqt.test.ironsource
 			addAction( "Load :Interstitial", _tests.loadInterstitial );
 			addAction( "Show :Interstitial", _tests.showInterstitial );
 			
+			addAction( "Load :Banner", _tests.loadBanner );
+			addAction( "Display :Banner", _tests.displayBanner );
+			addAction( "Hide :Banner", _tests.hideBanner );
+			addAction( "Destroy :Banner", _tests.destroyBanner );
+			
+			addAction( "Show :Offerwall", _tests.showOfferwall );
+			addAction( "Get Credits :Offerwall", _tests.getOfferwallCredits );
 			
 			addChild( _tests );
 			addChild( _text );
