@@ -1,5 +1,16 @@
 
 
+###### 2021.01.22 [v2.4.0]
+
+```
+Updated SDK:
+ - Android v7.1.0.1
+ - iOS v7.1.0
+Updated mediation adapters 
+Corrected iron source swc release (resolves #20)
+```
+
+
 ###### 2020.11.03 [v2.3.0]
 
 ```

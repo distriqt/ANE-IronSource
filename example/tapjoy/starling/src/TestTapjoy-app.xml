@@ -89,6 +89,9 @@
                         android:configChanges="orientation|screenSize"
                         android:hardwareAccelerated="true"
                         android:theme="@android:style/Theme.Translucent" />
+                    <provider
+                        android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
+                        android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider" />
 
                     <!-- TAPJOY -->
                     <activity

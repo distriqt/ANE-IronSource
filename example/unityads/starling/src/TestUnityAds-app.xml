@@ -66,13 +66,13 @@
 	<android>
 		<manifestAdditions><![CDATA[
 			<manifest android:installLocation="auto" >
-				<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="29" />
-				<uses-permission android:name="android.permission.INTERNET"/>
+				<uses-sdk android:minSdkVersion="19" android:targetSdkVersion="29" />
+				
+                <uses-permission android:name="android.permission.INTERNET"/>
 				<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
 
 				<application android:hardwareAccelerated="true">
-
 
                     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 
@@ -92,6 +92,9 @@
                         android:configChanges="orientation|screenSize"
                         android:hardwareAccelerated="true"
                         android:theme="@android:style/Theme.Translucent" />
+                    <provider
+                        android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
+                        android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider" />
 
 
                     <!-- UNITY ADS -->

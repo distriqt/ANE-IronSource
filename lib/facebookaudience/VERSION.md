@@ -1,1 +1,1 @@
-| com.distriqt.ironsource.FacebookAudience | 1.1.020 | 4.3.22 | 4.3.20 |
+| com.distriqt.ironsource.FacebookAudience | 1.1.025 | 4.3.23 | 4.3.22 |
