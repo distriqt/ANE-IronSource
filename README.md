@@ -1,6 +1,14 @@
 built by [distriqt //](https://airnativeextensions.com) 
 
+>
+> This extension is provided for **free**. If it helps you please consider sponsoring the developers to continue support and development of the extension by clicking "Sponsor" above.
+>
+> [:heart: Sponsor](https://github.com/sponsors/marchbold)
+>
+
+
 ![](images/hero.png)
+
 
 # IronSource
 
@@ -34,7 +42,7 @@ IronSource does provide an offical ANE. We developed this extension so we can up
 
 ## Documentation
 
-The [wiki](https://github.com/distriqt/ANE-IronSource/wiki) forms the best source of detailed documentation for the extension along with the [asdocs](https://distriqt.github.io/ANE-IronSource/asdocs). 
+The [documentation site](https://docs.airnativeextensions.com/docs/ironsource/) forms the best source of detailed documentation for the extension along with the [asdocs](https://docs.airnativeextensions.com/asdocs/ironsource/). 
 
 Quick Example: 
 
