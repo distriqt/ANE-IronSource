@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <application xmlns="http://ns.adobe.com/air/application/33.1">
-	<id>com.distriqt.test</id>
-	<filename>TestAppLovin</filename>
-	<name>TestAppLovin</name>
-	<versionNumber>0.0.1</versionNumber>
+    <id>com.distriqt.test</id>
+    <filename>TestAppLovin</filename>
+    <name>TestAppLovin</name>
+    <versionNumber>0.0.1</versionNumber>
 
     <initialWindow>
         <content>[This value will be overwritten by Flash Builder in the output app.xml]</content>
@@ -29,21 +29,21 @@
         <image512x512>icons/icon512x512.png</image512x512>
     </icon>
 
-	<iPhone>
-		<InfoAdditions><![CDATA[
-			<key>UIDeviceFamily</key>
-			<array>
-				<string>1</string>
-				<string>2</string>
-			</array>
+    <iPhone>
+        <InfoAdditions><![CDATA[
+            <key>UIDeviceFamily</key>
+            <array>
+                <string>1</string>
+                <string>2</string>
+            </array>
 
-			<key>NSAppTransportSecurity</key>
-			<dict>
-				<key>NSAllowsArbitraryLoads</key>
-	  			<true/>
-			</dict>
+            <key>NSAppTransportSecurity</key>
+            <dict>
+                <key>NSAllowsArbitraryLoads</key>
+                <true/>
+            </dict>
 
-			<key>SKAdNetworkItems</key>
+            <key>SKAdNetworkItems</key>
             <array>
                <dict>
                    <key>SKAdNetworkIdentifier</key>
@@ -54,30 +54,30 @@
                    <string>ludvb6z3bs.skadnetwork</string>
                </dict>
             </array>
-			
-		]]></InfoAdditions>
-		<requestedDisplayResolution>high</requestedDisplayResolution>
-		<Entitlements>
-			<![CDATA[
-			]]>
-		</Entitlements>
-	</iPhone>
-	
-	<android>
-		<manifestAdditions><![CDATA[
-			<manifest android:installLocation="auto" >
-				<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="28" />
 
-				<uses-permission android:name="android.permission.INTERNET"/>
+        ]]></InfoAdditions>
+        <requestedDisplayResolution>high</requestedDisplayResolution>
+        <Entitlements>
+            <![CDATA[
+            ]]>
+        </Entitlements>
+    </iPhone>
+
+    <android>
+        <manifestAdditions><![CDATA[
+            <manifest android:installLocation="auto" >
+                <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="28" />
+
+                <uses-permission android:name="android.permission.INTERNET"/>
                 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
                 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
                 <uses-permission android:name="android.permission.VIBRATE" />
 
-				<application android:hardwareAccelerated="true">
+                <application android:hardwareAccelerated="true">
 
-				    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+                    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 
-				    <activity
+                    <activity
                         android:name="com.ironsource.sdk.controller.ControllerActivity"
                         android:configChanges="orientation|screenSize"
                         android:hardwareAccelerated="true" />
@@ -96,61 +96,73 @@
                         android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider" />
 
 
-                    <!-- AppLovin -->
-					<activity
-						android:name="com.applovin.adview.AppLovinInterstitialActivity"
-						android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
-						android:hardwareAccelerated="true"
-						android:screenOrientation="behind" />
-					<activity
-						android:name="com.applovin.adview.AppLovinFullscreenActivity"
-						android:configChanges="keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-						android:exported="false"
-						android:hardwareAccelerated="true"
-						android:launchMode="singleTop"
-						android:screenOrientation="behind" />
-					<activity
-						android:name="com.applovin.sdk.AppLovinWebViewActivity"
-						android:configChanges="keyboardHidden|orientation|screenSize|uiMode" />
-					<activity
-						android:name="com.applovin.mediation.MaxDebuggerActivity"
-						android:configChanges="keyboardHidden|orientation|screenSize"
-						android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-					<activity
-						android:name="com.applovin.mediation.MaxDebuggerDetailActivity"
-						android:configChanges="keyboardHidden|orientation|screenSize"
-						android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
-					<activity
-						android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity"
-						android:configChanges="keyboardHidden|orientation|screenSize"
-						android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+                    <!-- APPLOVIN -->
+                    <activity
+                        android:name="com.applovin.adview.AppLovinInterstitialActivity"
+                        android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode"
+                        android:hardwareAccelerated="true"
+                        android:screenOrientation="behind" />
+                    <activity
+                        android:name="com.applovin.adview.AppLovinFullscreenActivity"
+                        android:configChanges="keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+                        android:exported="false"
+                        android:hardwareAccelerated="true"
+                        android:launchMode="singleTop"
+                        android:screenOrientation="behind" />
+                    <activity
+                        android:name="com.applovin.sdk.AppLovinWebViewActivity"
+                        android:configChanges="keyboardHidden|orientation|screenSize|uiMode" />
+                    <activity
+                        android:name="com.applovin.mediation.MaxDebuggerActivity"
+                        android:configChanges="keyboardHidden|orientation|screenSize"
+                        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+                    <activity
+                        android:name="com.applovin.mediation.MaxDebuggerDetailActivity"
+                        android:configChanges="keyboardHidden|orientation|screenSize"
+                        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+                    <activity
+                        android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity"
+                        android:configChanges="keyboardHidden|orientation|screenSize"
+                        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+                    <activity
+                        android:name="com.applovin.mediation.MaxDebuggerAdUnitsListActivity"
+                        android:configChanges="keyboardHidden|orientation|screenSize"
+                        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+                    <activity
+                        android:name="com.applovin.mediation.MaxDebuggerAdUnitDetailActivity"
+                        android:configChanges="keyboardHidden|orientation|screenSize"
+                        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
+                    <activity
+                        android:name="com.applovin.mediation.MaxDebuggerTestLiveNetworkActivity"
+                        android:configChanges="keyboardHidden|orientation|screenSize"
+                        android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme" />
 
-					<service
-						android:name="com.applovin.impl.sdk.utils.AppKilledService"
-						android:exported="false"
-						android:stopWithTask="false" />
-					<service
-						android:name="com.applovin.impl.adview.activity.FullscreenAdService"
-						android:exported="false"
-						android:stopWithTask="false" />
-						
-				</application>
+                    <service
+                        android:name="com.applovin.impl.sdk.utils.AppKilledService"
+                        android:exported="false"
+                        android:stopWithTask="false" />
+                    <service
+                        android:name="com.applovin.impl.adview.activity.FullscreenAdService"
+                        android:exported="false"
+                        android:stopWithTask="false" />
 
-			</manifest>
-		]]></manifestAdditions>
-	</android>
-	
-	<extensions>
-		<extensionID>com.distriqt.Core</extensionID>
+                </application>
 
-		<extensionID>com.distriqt.IronSource</extensionID>
-		<extensionID>com.distriqt.ironsource.AppLovin</extensionID>
+            </manifest>
+        ]]></manifestAdditions>
+    </android>
+
+    <extensions>
+        <extensionID>com.distriqt.Core</extensionID>
+
+        <extensionID>com.distriqt.IronSource</extensionID>
+        <extensionID>com.distriqt.ironsource.AppLovin</extensionID>
 
         <extensionID>com.distriqt.playservices.Base</extensionID>
         <extensionID>com.distriqt.playservices.Ads</extensionID>
         <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
 
         <extensionID>androidx.core</extensionID>
-	</extensions>
-	
+    </extensions>
+
 </application>

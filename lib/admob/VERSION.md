@@ -1,1 +1,1 @@
-| com.distriqt.ironsource.AdMob | 1.0.084 | 4.3.15 | 4.3.18 |
+| com.distriqt.ironsource.AdMob | 1.0.099 | 4.3.19 | 4.3.22 |

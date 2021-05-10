@@ -1,5 +1,18 @@
 
 
+###### 2021.05.10 [v2.5.0]
+
+```
+Added reward information to REWARD event (resolves #24)
+
+Updated SDK:
+ - Android v7.1.5.1
+ - iOS v7.1.5
+
+Updated mediation adapters
+```
+
+
 ###### 2021.02.26 [v2.4.1]
 
 ```

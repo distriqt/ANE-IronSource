@@ -1,1 +1,1 @@
-| com.distriqt.ironsource.AdColony | 1.0.094 | 4.3.4 | 4.3.5 |
+| com.distriqt.ironsource.AdColony | 1.0.110 | 4.3.8 | 4.3.9 |
