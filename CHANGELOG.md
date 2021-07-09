@@ -1,5 +1,18 @@
 
 
+###### 2021.07.09 [v2.6.0]
+
+```
+Updated SDK:
+- Android v7.1.7
+- iOS v7.1.7
+
+Facebook Audience: Added setAdvertiserTrackingEnabled and setDataProcessingOptions to set additional settings for Facebook (resolves #27)
+
+Updated mediation adapters to latest versions
+```
+
+
 ###### 2021.05.10 [v2.5.0]
 
 ```

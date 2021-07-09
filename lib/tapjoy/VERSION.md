@@ -1,1 +1,1 @@
-| com.distriqt.ironsource.Tapjoy | 1.0.110 | 4.1.16 | 4.1.16 |
+| com.distriqt.ironsource.Tapjoy | 1.0.113 | 4.1.17 | 4.1.17 |

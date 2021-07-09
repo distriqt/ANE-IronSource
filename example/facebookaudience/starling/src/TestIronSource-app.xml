@@ -47,6 +47,10 @@
                    <string>SU67R6K2V3.skadnetwork</string>
                </dict>
             </array>
+
+
+            <key>UILaunchStoryboardName</key>
+            <string>LaunchScreen</string>
 			
 		]]></InfoAdditions>
 		<requestedDisplayResolution>high</requestedDisplayResolution>

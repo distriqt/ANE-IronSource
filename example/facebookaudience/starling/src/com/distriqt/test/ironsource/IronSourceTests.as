@@ -57,6 +57,11 @@ package com.distriqt.test.ironsource
 			_l = logger;
 			try
 			{
+				FacebookAudience.instance.adSettings.setAdvertiserTrackingEnabled( true );
+				
+//				FacebookAudience.instance.adSettings.setDataProcessingOptions( ["LDU"], 1, 1000 ); // enable LDU for users and specify user geography
+//				FacebookAudience.instance.adSettings.setDataProcessingOptions( ["LDU"], 0, 0 ); // enable LDU for users with geolocation
+				FacebookAudience.instance.adSettings.setDataProcessingOptions( [] ); // explicitly not enable LDU mode
 				
 				
 				log( "IronSource Supported: " + IronSource.isSupported );

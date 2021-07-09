@@ -65,14 +65,12 @@ package com.distriqt.test.ironsource
 				if (IronSource.isSupported)
 				{
 					IronSource.instance.setIronSourceClientSideCallbacks( true );
-					IronSource.instance.init( Config.IRONSRC_APP_KEY,
-											  [
-												  IronSource.BANNER,
-												  IronSource.REWARDED_VIDEO,
-												  IronSource.INTERSTITIAL,
-												  IronSource.OFFERWALL
-											  ]
-					);
+					IronSource.instance.init( Config.IRONSRC_APP_KEY, [
+							IronSource.BANNER,
+							IronSource.REWARDED_VIDEO,
+							IronSource.INTERSTITIAL,
+							IronSource.OFFERWALL
+					]);
 					
 					IronSource.instance.setDynamicUserId( "test_identifier_1" );
 					
