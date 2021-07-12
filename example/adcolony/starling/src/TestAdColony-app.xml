@@ -94,7 +94,7 @@
 
                     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 
-				    <activity
+                    <activity
                         android:name="com.ironsource.sdk.controller.ControllerActivity"
                         android:configChanges="orientation|screenSize"
                         android:hardwareAccelerated="true" />
@@ -140,6 +140,7 @@
         <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
 
         <extensionID>androidx.core</extensionID>
+        <extensionID>com.jetbrains.kotlin</extensionID>
     </extensions>
 
 </application>

@@ -163,6 +163,7 @@
         <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
 
         <extensionID>androidx.core</extensionID>
+        <extensionID>com.jetbrains.kotlin</extensionID>
     </extensions>
 
 </application>

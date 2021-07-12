@@ -1,5 +1,12 @@
 
 
+###### 2021.07.12 [v2.6.1]
+
+```
+Corrected docs on new dependencies, fixed issue with rewarded placement info not available
+```
+
+
 ###### 2021.07.09 [v2.6.0]
 
 ```

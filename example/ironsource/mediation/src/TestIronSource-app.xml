@@ -374,6 +374,7 @@
         <extensionID>androidx.core</extensionID>
         <extensionID>androidx.appcompat</extensionID>
         <extensionID>androidx.constraintlayout</extensionID>
+        <extensionID>com.jetbrains.kotlin</extensionID>
     </extensions>
 
 </application>

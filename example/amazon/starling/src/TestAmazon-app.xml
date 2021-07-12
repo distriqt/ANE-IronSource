@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <application xmlns="http://ns.adobe.com/air/application/33.1">
-	<id>com.distriqt.test</id>
-	<filename>TestAmazon</filename>
-	<name>TestAmazon</name>
-	<versionNumber>0.0.1</versionNumber>
+    <id>com.distriqt.test</id>
+    <filename>TestAmazon</filename>
+    <name>TestAmazon</name>
+    <versionNumber>0.0.1</versionNumber>
 
     <initialWindow>
         <content>[This value will be overwritten by Flash Builder in the output app.xml]</content>
@@ -29,50 +29,50 @@
         <image512x512>icons/icon512x512.png</image512x512>
     </icon>
 
-	<iPhone>
-		<InfoAdditions><![CDATA[
-			<key>UIDeviceFamily</key>
-			<array>
-				<string>1</string>
-				<string>2</string>
-			</array>
+    <iPhone>
+        <InfoAdditions><![CDATA[
+            <key>UIDeviceFamily</key>
+            <array>
+                <string>1</string>
+                <string>2</string>
+            </array>
 
-			<key>NSAppTransportSecurity</key>
-			<dict>
-				<key>NSAllowsArbitraryLoads</key>
-	  			<true/>
-			</dict>
+            <key>NSAppTransportSecurity</key>
+            <dict>
+                <key>NSAllowsArbitraryLoads</key>
+                <true/>
+            </dict>
 
-			<key>SKAdNetworkItems</key>
+            <key>SKAdNetworkItems</key>
             <array>
                <dict>
                    <key>SKAdNetworkIdentifier</key>
                    <string>SU67R6K2V3.skadnetwork</string>
                </dict>
             </array>
-			
-		]]></InfoAdditions>
-		<requestedDisplayResolution>high</requestedDisplayResolution>
-		<Entitlements>
-			<![CDATA[
-			]]>
-		</Entitlements>
-	</iPhone>
-	
-	<android>
-		<manifestAdditions><![CDATA[
-			<manifest android:installLocation="auto" >
-				<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="29" />
 
-				<uses-permission android:name="android.permission.INTERNET"/>
-				<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+        ]]></InfoAdditions>
+        <requestedDisplayResolution>high</requestedDisplayResolution>
+        <Entitlements>
+            <![CDATA[
+            ]]>
+        </Entitlements>
+    </iPhone>
 
-				<application android:hardwareAccelerated="true">
+    <android>
+        <manifestAdditions><![CDATA[
+            <manifest android:installLocation="auto" >
+                <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="29" />
 
-				    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+                <uses-permission android:name="android.permission.INTERNET"/>
+                <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+                <application android:hardwareAccelerated="true">
+
+                    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 
                     <!-- IRONSOURCE -->
-				    <activity
+                    <activity
                         android:name="com.ironsource.sdk.controller.ControllerActivity"
                         android:configChanges="orientation|screenSize"
                         android:hardwareAccelerated="true" />
@@ -92,17 +92,17 @@
 
 
                     <!-- AMAZON -->
-				    <activity
+                    <activity
                         android:name="com.amazon.device.ads.AdActivity"
                         android:configChanges="keyboardHidden|orientation|screenSize" />
 
-				</application>
+                </application>
 
-			</manifest>
-		]]></manifestAdditions>
-	</android>
-	
-	<extensions>
+            </manifest>
+        ]]></manifestAdditions>
+    </android>
+
+    <extensions>
         <extensionID>com.distriqt.Core</extensionID>
 
         <extensionID>com.distriqt.IronSource</extensionID>
@@ -111,6 +111,7 @@
         <extensionID>com.distriqt.playservices.Base</extensionID>
 
         <extensionID>androidx.core</extensionID>
-	</extensions>
-	
+        <extensionID>com.jetbrains.kotlin</extensionID>
+    </extensions>
+
 </application>
