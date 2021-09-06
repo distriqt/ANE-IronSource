@@ -1,3 +1,22 @@
+###### 2021.09.06 [v2.7.0]
+
+```
+Added AIR packages 
+
+Updated ironSource SDK:
+- Android v7.1.10
+- iOS v7.1.10
+
+Updated UnityAds: Android v4.3.14 iOS v4.3.13
+Updated Tapjoy: Android v4.1.18 iOS v4.1.18
+Updated Facebook: Android v4.3.30 iOS v4.3.29
+Updated Chartboost: Android v4.3.7 iOS v4.3.8
+Updated AppLovin: Android v4.3.28 iOS v4.3.28
+Updated Amazon: Android v4.3.4 iOS v4.3.6
+Updated AdMob: Android v4.3.22 iOS v4.3.27
+Updated AdColony: Android v4.3.9 iOS v4.3.10
+```
+
 
 
 ###### 2021.07.12 [v2.6.1]
