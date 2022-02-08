@@ -1,3 +1,10 @@
+###### 2022.02.08 [v2.7.0]
+
+```
+Update docs to use apm
+Minor fixes for manifests in air packages
+```
+
 ###### 2021.09.06 [v2.7.0]
 
 ```
