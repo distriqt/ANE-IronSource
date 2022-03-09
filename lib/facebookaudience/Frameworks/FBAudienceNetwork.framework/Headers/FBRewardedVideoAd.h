@@ -1,20 +1,4 @@
-// Copyright 2004-present Facebook. All Rights Reserved.
-//
-// You are hereby granted a non-exclusive, worldwide, royalty-free license to use,
-// copy, modify, and distribute this software in source code or binary form for use
-// in connection with the web services and APIs provided by Facebook.
-//
-// As with any software that integrates with the Facebook platform, your use of
-// this software is subject to the Facebook Developer Principles and Policies
-// [http://developers.facebook.com/policy/]. This copyright notice shall be
-// included in all copies or substantial portions of the software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-// FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-// COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-// IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-// CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+// (c) Facebook, Inc. and its affiliates. Confidential and proprietary.
 
 #import <CoreMedia/CoreMedia.h>
 #import <Foundation/Foundation.h>
@@ -45,7 +29,7 @@ FB_CLASS_EXPORT FB_SUBCLASSING_RESTRICTED @interface FBRewardedVideoAd : NSObjec
 @property (nonatomic, assign, readonly) CMTime duration;
 
 /**
-  the delegate
+  The delegate.
  */
 @property (nonatomic, weak, nullable) id<FBRewardedVideoAdDelegate> delegate;
 
@@ -78,8 +62,8 @@ FB_CLASS_EXPORT FB_SUBCLASSING_RESTRICTED @interface FBRewardedVideoAd : NSObjec
 - (instancetype)initWithPlacementID:(NSString *)placementID;
 
 /**
-  This is a method to initialize an FBRewardedVideoAd matching the given placement id and allows the publisher to set
- the reward to give to a user.
+ This is a method to initialize an FBRewardedVideoAd matching the given placement id and allows the publisher to set the
+ reward to give to a user.
 
  - Parameter placementID The id of the ad placement. You can create your placement id from Facebook developers page.
  - Parameter userID the id of the user
@@ -94,7 +78,7 @@ FB_CLASS_EXPORT FB_SUBCLASSING_RESTRICTED @interface FBRewardedVideoAd : NSObjec
 
 
  You can implement `rewardedVideoAdDidLoad:` and `rewardedVideoAd:didFailWithError:` methods
- of `FBRewardedVideoAdDelegate` if you would like to be notified as loading succeeds or fails.
+ of `FBRewardedVideoAdDelegate` if you would like to be notified when loading succeeds or fails.
  */
 - (void)loadAd;
 
@@ -161,7 +145,7 @@ FB_CLASS_EXPORT FB_SUBCLASSING_RESTRICTED @interface FBRewardedVideoAd : NSObjec
 /**
   Sent when an ad has been successfully loaded.
 
- @param rewardedVideoAd An FBRewardedVideoAd object sending the message.
+ @param rewardedVideoAd A FBRewardedVideoAd object sending the message.
  */
 - (void)rewardedVideoAdDidLoad:(FBRewardedVideoAd *)rewardedVideoAd;
 

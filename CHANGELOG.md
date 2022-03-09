@@ -1,3 +1,19 @@
+###### 2022.03.09 [v2.8.0]
+
+```
+Update IronSource SDK
+  - Android v7.2.0
+  - iOS v7.2.0
+
+Updated AdColony: Android v4.3.10, iOS v4.3.12
+Updated AdMob: Android v4.3.26, iOS v4.3.30
+Updated AppLovin: Android v4.3.30, iOS v4.3.29
+Updated Chartboost: Android v4.3.8, iOS v4.3.10
+Updated Facebook Audience: Android v4.3.34, iOS v4.3.33
+Updated Tapjoy: Android v4.1.19, iOS v4.1.18
+Updated UnityAds: Android v4.3.20, iOS v4.3.19
+```
+
 ###### 2022.02.08 [v2.7.0]
 
 ```
