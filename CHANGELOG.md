@@ -1,3 +1,18 @@
+###### 2022.06.28 [v2.9.0]
+
+```
+Update IronSource SDK
+
+- Android v7.2.2
+- iOS v7.2.2.1
+
+feat(unity): update unity sdk: android v4.3.21 (v4.1.0) ios v4.3.22 (v4.2.1)
+feat(tapyjoy): update tapjoy sdk: android v4.1.20 (v12.9.1) ios v4.1.19 (v12.9.1)
+feat(facebook): update facebook audience sdk: android v4.3.36 (v6.11.0) ios v4.3.36 (v6.11.1)
+feat(applovin): update applovin sdk: android v4.3.32 (v11.4.3) ios v4.3.32 (v11.4.1)
+feat(adcolony): update adcolony sdk: android v4.3.12 (v4.7.1) ios v4.3.14 (v4.8.0)
+```
+
 ###### 2022.03.09 [v2.8.0]
 
 ```
