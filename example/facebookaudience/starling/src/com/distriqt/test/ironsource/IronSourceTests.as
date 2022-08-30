@@ -1,11 +1,11 @@
 /**
- *        __       __               __ 
+ *        __       __               __
  *   ____/ /_ ____/ /______ _ ___  / /_
  *  / __  / / ___/ __/ ___/ / __ `/ __/
- * / /_/ / (__  ) / / /  / / /_/ / / 
- * \__,_/_/____/_/ /_/  /_/\__, /_/ 
- *                           / / 
- *                           \/ 
+ * / /_/ / (__  ) / / /  / / /_/ / /
+ * \__,_/_/____/_/ /_/  /_/\__, /_/
+ *                           / /
+ *                           \/
  * http://distriqt.com
  *
  * @author 		"Michael Archbold (ma&#64;distriqt.com)"
@@ -15,68 +15,58 @@
 package com.distriqt.test.ironsource
 {
 	import com.distriqt.extension.ironsource.IronSource;
-	import com.distriqt.extension.ironsource.IronSource;
 	import com.distriqt.extension.ironsource.events.RewardedVideoAdEvent;
 	import com.distriqt.extension.ironsource.facebookaudience.FacebookAudience;
-	
-	import flash.display.Bitmap;
+
 	import flash.events.DataEvent;
-	import flash.filesystem.File;
-	import flash.geom.Rectangle;
-	import flash.net.URLRequest;
-	import flash.net.navigateToURL;
-	import flash.utils.setTimeout;
-	
-	import starling.core.Starling;
-	
-	import starling.display.Image;
+
 	import starling.display.Sprite;
-	
+
 	/**
 	 *
 	 */
 	public class IronSourceTests extends Sprite
 	{
 		public static const TAG:String = "";
-		
+
 		private var _l:ILogger;
-		
-		
+
+
 		private function log( log:String ):void
 		{
 			_l.log( TAG, log );
 		}
-		
-		
+
+
 		////////////////////////////////////////////////////////
 		//	FUNCTIONALITY
 		//
-		
+
 		public function IronSourceTests( logger:ILogger )
 		{
 			_l = logger;
 			try
 			{
 				FacebookAudience.instance.adSettings.setAdvertiserTrackingEnabled( true );
-				
+
 //				FacebookAudience.instance.adSettings.setDataProcessingOptions( ["LDU"], 1, 1000 ); // enable LDU for users and specify user geography
 //				FacebookAudience.instance.adSettings.setDataProcessingOptions( ["LDU"], 0, 0 ); // enable LDU for users with geolocation
 				FacebookAudience.instance.adSettings.setDataProcessingOptions( [] ); // explicitly not enable LDU mode
-				
-				
+
+
 				log( "IronSource Supported: " + IronSource.isSupported );
 				if (IronSource.isSupported)
 				{
-					
+					IronSource.instance.setAdaptersDebug( true );
 					IronSource.instance.init( Config.IRONSRC_APP_KEY,
 											  [
 												  IronSource.REWARDED_VIDEO,
 												  IronSource.INTERSTITIAL
 											  ]
 					);
-					
+
 					IronSource.instance.setDynamicUserId( "test_identifier_1" );
-					
+
 //					IronSource.instance.addEventListener( "onRewardedVideoAdOpened", onRewardedVideoAdOpened );
 //					IronSource.instance.addEventListener( "onRewardedVideoAdClosed", onRewardedVideoAdClosed );
 //					IronSource.instance.addEventListener( "onRewardedVideoAvailabilityChanged", onRewardedVideoAvailabilityChanged );
@@ -85,54 +75,56 @@ package com.distriqt.test.ironsource
 //					IronSource.instance.addEventListener( "onRewardedVideoAdRewarded", onRewardedVideoAdRewarded );
 //					IronSource.instance.addEventListener( "onRewardedVideoAdShowFailed", onRewardedVideoAdShowFailed );
 //					IronSource.instance.addEventListener( "onRewardedVideoAdClicked", onRewardedVideoAdClicked );
-					
+
 					IronSource.instance.addEventListener( RewardedVideoAdEvent.OPENED, onRewardedVideoAdOpened );
 					IronSource.instance.addEventListener( RewardedVideoAdEvent.CLOSED, onRewardedVideoAdClosed );
-					IronSource.instance.addEventListener( RewardedVideoAdEvent.AVAILABILITY_CHANGED, onRewardedVideoAvailabilityChanged );
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.AVAILABILITY_CHANGED,
+														  onRewardedVideoAvailabilityChanged );
 					IronSource.instance.addEventListener( RewardedVideoAdEvent.STARTED, onRewardedVideoAdStarted );
 					IronSource.instance.addEventListener( RewardedVideoAdEvent.ENDED, onRewardedVideoAdEnded );
 					IronSource.instance.addEventListener( RewardedVideoAdEvent.REWARDED, onRewardedVideoAdRewarded );
-					IronSource.instance.addEventListener( RewardedVideoAdEvent.SHOW_FAILED, onRewardedVideoAdShowFailed );
+					IronSource.instance.addEventListener( RewardedVideoAdEvent.SHOW_FAILED,
+														  onRewardedVideoAdShowFailed );
 					IronSource.instance.addEventListener( RewardedVideoAdEvent.CLICKED, onRewardedVideoAdClicked );
-					
+
 					IronSource.instance.addEventListener( "onInterstitialAdReady", onInterstitialAdReady );
 					IronSource.instance.addEventListener( "onInterstitialAdLoadFailed", onInterstitialAdLoadFailed );
 					IronSource.instance.addEventListener( "onInterstitialAdOpened", onInterstitialAdOpened );
 					IronSource.instance.addEventListener( "onInterstitialAdClosed", onInterstitialAdClosed );
-					IronSource.instance.addEventListener( "onInterstitialAdShowSucceeded", onInterstitialAdShowSucceeded );
+					IronSource.instance.addEventListener( "onInterstitialAdShowSucceeded",
+														  onInterstitialAdShowSucceeded );
 					IronSource.instance.addEventListener( "onInterstitialAdShowFailed", onInterstitialAdShowFailed );
 					IronSource.instance.addEventListener( "onInterstitialAdClicked", onInterstitialAdClicked );
-					
+
 
 					IronSource.instance.validateIntegration();
-					
-					
+
+
 					log( "IronSource Version:        " + IronSource.instance.version );
 					log( "IronSource Native Version: " + IronSource.instance.nativeVersion );
-					
+
 					log( "FacebookAudience Version: " + FacebookAudience.instance.nativeVersion );
-					
+
 				}
-				
+
 			}
 			catch (e:Error)
 			{
 				trace( e );
 			}
 		}
-		
-		
+
+
 		public function getAdvertisingId():void
 		{
 			log( "IronSource Advertising Id: " + IronSource.instance.getAdvertiserId() );
 		}
-		
-		
-		
+
+
 		////////////////////////////////////////////////////////
 		//  
 		//
-		
+
 		public function showRewardedVideo():void
 		{
 			log( "showRewardedVideo" );
@@ -145,10 +137,8 @@ package com.distriqt.test.ironsource
 				log( "Rewarded Video not available" );
 			}
 		}
-		
-		
-		
-		
+
+
 		public function loadInterstitial():void
 		{
 			log( "loadInterstitial" );
@@ -157,8 +147,8 @@ package com.distriqt.test.ironsource
 				IronSource.instance.loadInterstitial();
 			}
 		}
-		
-		
+
+
 		public function showInterstitial():void
 		{
 			log( "showInterstitial" );
@@ -167,117 +157,110 @@ package com.distriqt.test.ironsource
 				IronSource.instance.showInterstitial();
 			}
 		}
-		
-		
-		
-		
+
+
 		public function validateIntegration():void
 		{
 			log( "validateIntegration" );
 			IronSource.instance.validateIntegration();
 		}
-		
-		
-		
-		
-		
-		
-		
+
+
 		////////////////////////////////////////////////////////
 		//
 		//
-		
+
 		private function onRewardedVideoAdShowFailed( event:RewardedVideoAdEvent ):void
 		{
 			log( "onRewardedVideoAdShowFailed" );
 		}
-		
-		
+
+
 		private function onRewardedVideoAdOpened( event:RewardedVideoAdEvent ):void
 		{
 			log( "onRewardedVideoAdOpened" );
 		}
-		
-		
+
+
 		private function onRewardedVideoAdClosed( event:RewardedVideoAdEvent ):void
 		{
 			log( "onRewardedVideoAdClosed" );
 		}
-		
-		
+
+
 		private function onRewardedVideoAvailabilityChanged( event:RewardedVideoAdEvent ):void
 		{
 			log( "onRewardedVideoAvailabilityChanged: " + event.availability );
 		}
-		
-		
+
+
 		private function onRewardedVideoAdStarted( event:RewardedVideoAdEvent ):void
 		{
 			log( "onRewardedVideoAdStarted" );
 		}
-		
-		
+
+
 		private function onRewardedVideoAdEnded( event:RewardedVideoAdEvent ):void
 		{
 			log( "onRewardedVideoAdEnded" );
 		}
-		
-		
+
+
 		private function onRewardedVideoAdRewarded( event:RewardedVideoAdEvent ):void
 		{
 			log( "onRewardedVideoAdRewarded" );
-			
+
 		}
-		
-		
+
+
 		private function onRewardedVideoAdClicked( event:RewardedVideoAdEvent ):void
 		{
 			log( "onRewardedVideoAdClicked" );
 		}
-		
-		
+
+
 		private function onInterstitialAdReady( event:DataEvent ):void
 		{
 			log( "onInterstitialAdReady" );
 		}
-		
-		
+
+
 		private function onInterstitialAdLoadFailed( event:DataEvent ):void
 		{
 			log( "onInterstitialAdLoadFailed" );
 		}
-		
-		
+
+
 		private function onInterstitialAdOpened( event:DataEvent ):void
 		{
 			log( "onInterstitialAdOpened" );
 		}
-		
-		
+
+
 		private function onInterstitialAdClosed( event:DataEvent ):void
 		{
 			log( "onInterstitialAdClosed" );
 		}
-		
-		
+
+
 		private function onInterstitialAdShowFailed( event:DataEvent ):void
 		{
 			log( "onInterstitialAdShowFailed" );
 		}
-		
-		
+
+
 		private function onInterstitialAdClicked( event:DataEvent ):void
 		{
 			log( "onInterstitialAdClicked" );
 		}
-		
-		
+
+
 		private function onInterstitialAdShowSucceeded( event:DataEvent ):void
 		{
 			log( "onInterstitialAdShowSucceeded" );
 		}
-		
-		
+
+
 	}
-	
+
 }

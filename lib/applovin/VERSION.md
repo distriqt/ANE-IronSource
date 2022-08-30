@@ -2,4 +2,4 @@
 
 | Extension | Version | Android Lib | iOS Lib |
 | --- | --- | --- | --- |
-| com.distriqt.ironsource.AppLovin | 11.4.3 | 4.3.32 | 4.3.32 |
+| com.distriqt.ironsource.AppLovin | 11.4.4 | 4.3.33 | 4.3.34 |

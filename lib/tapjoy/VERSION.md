@@ -2,4 +2,4 @@
 
 | Extension | Version | Android Lib | iOS Lib |
 | --- | --- | --- | --- |
-| com.distriqt.ironsource.Tapjoy | 12.9.1 | 4.1.20 | 4.1.19 |
+| com.distriqt.ironsource.Tapjoy | 12.10.0 | 4.1.21 | 4.1.21 |

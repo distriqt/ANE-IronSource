@@ -1,3 +1,20 @@
+###### 2022.08.30 [v2.10.0]
+
+```
+feat(ironsource): update sdk
+- Android v7.2.4
+- iOS v7.2.4
+
+feat(ironsource): add setAdaptersDebug function to enable debug logs for mediation adapters
+
+feat(admob): update admob sdk: android v4.3.29 (support for v21 of Google AbMob) (resolves #32)
+feat(applovin): update applovin sdk: android v4.3.33 (v11.4.4) ios v4.3.34 (v11.4.3)
+feat(facebookaudience): update facebook audience sdk: android v4.3.37 (v6.11.0) ios v4.3.37 (v6.11.2)
+feat(tapjoy): update tapjoy sdk: android v4.1.21 (v12.10.0) ios v4.1.21 (v12.10.0)
+feat(unityads): update unity sdk: android v4.3.22 (v4.3.0) ios v4.3.23 (v4.3.0)
+feat(chartboost): update chartboost sdk: android v4.3.9 (v9.0.0) 
+```
+
 ###### 2022.06.28 [v2.9.0]
 
 ```
