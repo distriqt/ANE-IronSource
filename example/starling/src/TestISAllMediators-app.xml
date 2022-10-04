@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<application xmlns="http://ns.adobe.com/air/application/33.1" >
+  <id>com.distriqt.test</id>
+  <filename>TestISAllMediators</filename>
+  <name>TestISAllMediators</name>
+  <versionNumber>0.0.1</versionNumber>
+  <initialWindow>
+    <content>[This value will be overwritten by Flash Builder in the output app.xml]</content>
+    <autoOrients>true</autoOrients>
+    <fullScreen>false</fullScreen>
+    <visible>true</visible>
+    <renderMode>direct</renderMode>
+  </initialWindow>
+  <icon>
+    <image16x16>icons/icon16x16.png</image16x16>
+    <image29x29>icons/icon29x29.png</image29x29>
+    <image32x32>icons/icon32x32.png</image32x32>
+    <image36x36>icons/icon36x36.png</image36x36>
+    <image48x48>icons/icon48x48.png</image48x48>
+    <image57x57>icons/icon57x57.png</image57x57>
+    <image72x72>icons/icon72x72.png</image72x72>
+    <image76x76>icons/icon76x76.png</image76x76>
+    <image114x114>icons/icon114x114.png</image114x114>
+    <image120x120>icons/icon120x120.png</image120x120>
+    <image128x128>icons/icon128x128.png</image128x128>
+    <image152x152>icons/icon152x152.png</image152x152>
+    <image512x512>icons/icon512x512.png</image512x512>
+  </icon>
+  <iPhone>
+    <InfoAdditions><![CDATA[
+<key>UIDeviceFamily</key>
+<array>
+  <string>1</string>
+  <string>2</string>
+</array>
+<key>MinimumOSVersion</key>
+<string>10.0</string>
+<key>UILaunchStoryboardName</key>
+<string>LaunchScreen</string>
+<key>NSAppTransportSecurity</key>
+<dict>
+  <key>NSExceptionDomains</key>
+  <dict>
+    <key>localhost</key>
+    <dict>
+      <key>NSExceptionAllowsInsecureHTTPLoads</key>
+      <true/>
+    </dict>
+  </dict>
+  <key>NSAllowsArbitraryLoads</key>
+  <true/>
+</dict>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>fb</string>
+  <string>instagram</string>
+  <string>tumblr</string>
+  <string>twitter</string>
+</array>
+<key>GADApplicationIdentifier</key>
+<string>ca-app-pub-5929774472898937~8512598200</string>
+<key>NSCalendarsUsageDescription</key>
+<string>Adding events</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Taking selfies</string>
+<key>NSCameraUsageDescription</key>
+<string>Taking selfies</string>
+<key>NSMotionUsageDescription</key>
+<string>Interactive ad controls</string>
+<key>SKAdNetworkItems</key>
+<array>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>cstr6suwn9.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>4pfyvq9l8r.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>yclnxrl5pm.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>v72qych5uu.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>tl55sbb4fm.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>t38b2kh725.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>prcb7njmu6.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>ppxm28t8ap.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>mlmmfzh3r3.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>klf5c3l5u5.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>hs6bdukanm.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>c6k4g5qg8m.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>9t245vhmpl.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>9rd848q2bz.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>8s468mfl3y.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>7ug5zh24hu.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>4fzdc2evr5.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>4468km3ulz.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>3rd42ekr43.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>2u9pt9hc89.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>m8dbw4sv7c.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>7rz58n8ntl.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>ejvt5qm6ak.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>5lm9lj6jb7.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>44jx6755aq.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>mtkv5xtk9e.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>6g9af3uyq4.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>275upjj5gd.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>9nlqeag3gk.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>cg4yq2srnc.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>g28c52eehv.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>rx5hdcabgc.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>u679fj5vs4.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>uw77j35x4d.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>ludvb6z3bs.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>f38h382jlk.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>v9wttpbfk9.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>n38lu8286q.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>ECPZ2SRF59.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>4DZT52R2T5.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>su67r6k2v3.skadnetwork</string>
+  </dict>
+</array>
+<key>NSAdvertisingAttributionReportEndpoint</key>
+<string>https://postbacks-is.com</string>]]></InfoAdditions>
+    <requestedDisplayResolution>high</requestedDisplayResolution>
+    <Entitlements><![CDATA[
+			]]></Entitlements>
+  </iPhone>
+  <android>
+    <manifestAdditions><![CDATA[<manifest android:installLocation="auto" >
+  <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="30"/>
+  <!-- Include required permissions for Google Mobile Ads to run -->
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+  <!-- Android package visibility setting -->
+  <queries>
+    <!-- For browser content -->
+    <intent>
+      <action android:name="android.intent.action.VIEW"/>
+      <category android:name="android.intent.category.BROWSABLE"/>
+      <data android:scheme="https"/>
+    </intent>
+    <!-- End of browser content -->
+    <!-- For CustomTabsService -->
+    <intent>
+      <action android:name="android.support.customtabs.action.CustomTabsService"/>
+    </intent>
+    <!-- End of CustomTabsService -->
+    <package android:name="com.android.vending"/>
+    <package android:name="com.amazon.venezia"/>
+    <package android:name="com.sec.android.app.samsungapps"/>
+    <package android:name="com.huawei.appmarket"/>
+    <package android:name="com.facebook.katana"/>
+  </queries>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+  <!-- Required by older versions of Google Play services to create IID tokens -->
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+  <!-- Permissions required by Open Measurement SDK -->
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+  <application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+    <meta-data android:name="android.max_aspect" android:value="2.5"/>
+    <meta-data android:name="android.notch_support" android:value="true"/>
+    <service android:name="androidx.room.MultiInstanceInvalidationService" android:directBootAware="true" android:exported="false"/>
+    <provider android:name="androidx.startup.InitializationProvider" android:authorities="air.com.distriqt.test.androidx-startup" android:exported="false">
+      <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+      <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
+    </provider>
+    <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+    <activity android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:exported="false" android:theme="@android:style/Theme.Translucent"/>
+    <provider android:name="com.google.android.gms.ads.MobileAdsInitProvider" android:authorities="air.com.distriqt.test.mobileadsinitprovider" android:exported="false" android:initOrder="100"/>
+    <service android:name="com.google.android.gms.ads.AdService" android:enabled="true" android:exported="false"/>
+    <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+    <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+    <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:enabled="true" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+    </service>
+    <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false"/>
+    <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <service android:name="androidx.work.impl.foreground.SystemForegroundService" android:directBootAware="false" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false"/>
+    <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:directBootAware="false" android:enabled="true" android:exported="false"/>
+    <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:directBootAware="false" android:enabled="false" android:exported="false">
+      <intent-filter>
+        <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+        <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:directBootAware="false" android:enabled="false" android:exported="false">
+      <intent-filter>
+        <action android:name="android.intent.action.BATTERY_OKAY"/>
+        <action android:name="android.intent.action.BATTERY_LOW"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:directBootAware="false" android:enabled="false" android:exported="false">
+      <intent-filter>
+        <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+        <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:directBootAware="false" android:enabled="false" android:exported="false">
+      <intent-filter>
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:directBootAware="false" android:enabled="false" android:exported="false">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.TIME_SET"/>
+        <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false">
+      <intent-filter>
+        <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+      </intent-filter>
+    </receiver>
+    <receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:directBootAware="false" android:enabled="true" android:exported="true" android:permission="android.permission.DUMP">
+      <intent-filter>
+        <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+      </intent-filter>
+    </receiver>
+    <!-- ADMOB -->
+    <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-5929774472898937~8512598200"/>
+    <activity android:name="com.adcolony.sdk.AdColonyInterstitialActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="true"/>
+    <activity android:name="com.adcolony.sdk.AdColonyAdViewActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="true"/>
+    <activity android:name="com.chartboost.sdk.legacy.CBImpressionActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+    <activity android:name="com.chartboost.sdk.CBImpressionActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+    <activity android:name="com.amazon.device.ads.AdActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+    <provider android:name="com.applovin.sdk.AppLovinInitProvider" android:authorities="air.com.distriqt.test.applovincontentprovider" android:exported="false" android:grantUriPermissions="true" android:initOrder="101"/>
+    <!-- Init order is 101 so we're before Firebase/Google which uses 100 -->
+    <activity android:name="com.applovin.adview.AppLovinFullscreenActivity" android:configChanges="keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:hardwareAccelerated="true" android:launchMode="singleTop" android:screenOrientation="behind"/>
+    <activity android:name="com.applovin.sdk.AppLovinWebViewActivity" android:configChanges="keyboardHidden|orientation|screenSize|uiMode"/>
+    <activity android:name="com.applovin.mediation.MaxDebuggerActivity" android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+    <activity android:name="com.applovin.mediation.MaxDebuggerDetailActivity" android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+    <activity android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity" android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+    <activity android:name="com.applovin.mediation.MaxDebuggerAdUnitsListActivity" android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+    <activity android:name="com.applovin.mediation.MaxDebuggerAdUnitDetailActivity" android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+    <activity android:name="com.applovin.mediation.MaxDebuggerTestLiveNetworkActivity" android:configChanges="keyboardHidden|orientation|screenSize|uiMode" android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"/>
+    <service android:name="com.applovin.impl.sdk.utils.AppKilledService" android:exported="false" android:stopWithTask="false"/>
+    <service android:name="com.applovin.impl.adview.activity.FullscreenAdService" android:exported="false" android:stopWithTask="false"/>
+    <activity android:name="com.unity3d.services.ads.adunit.AdUnitActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+    <activity android:name="com.unity3d.services.ads.adunit.AdUnitTransparentActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+    <activity android:name="com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:hardwareAccelerated="false" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+    <activity android:name="com.unity3d.services.ads.adunit.AdUnitSoftwareActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:hardwareAccelerated="false" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+    <!--
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        -->
+    <activity android:name="com.tapjoy.TJAdUnitActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+    <activity android:name="com.tapjoy.TJContentActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <activity android:name="com.facebook.ads.AudienceNetworkActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <provider android:name="com.facebook.ads.AudienceNetworkContentProvider" android:authorities="air.com.distriqt.test.AudienceNetworkContentProvider" android:exported="false"/>
+    <activity android:name="com.ironsource.sdk.controller.ControllerActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true"/>
+    <activity android:name="com.ironsource.sdk.controller.InterstitialActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent"/>
+    <activity android:name="com.ironsource.sdk.controller.OpenUrlActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent"/>
+    <provider android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider" android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider"/>
+  </application>
+</manifest>
+]]></manifestAdditions>
+  </android>
+  <extensions>
+    <extensionID>com.distriqt.Core</extensionID>
+    <extensionID>com.distriqt.IronSource</extensionID>
+    <extensionID>androidx.core</extensionID>
+    <extensionID>com.distriqt.playservices.Ads</extensionID>
+    <extensionID>com.distriqt.playservices.Base</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
+    <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+    <extensionID>com.distriqt.ironsource.ISAllMediators</extensionID>
+    <extensionID>androidx.room</extensionID>
+    <extensionID>androidx.vectordrawable</extensionID>
+    <extensionID>com.google.code.gson</extensionID>
+    <extensionID>androidx.browser</extensionID>
+    <extensionID>androidx.appcompat</extensionID>
+    <extensionID>androidx.work</extensionID>
+    <extensionID>androidx.constraintlayout</extensionID>
+    <extensionID>com.google.guava</extensionID>
+  </extensions>
+</application>

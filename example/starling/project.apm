@@ -1,0 +1,64 @@
+{
+    "identifier": "com.distriqt.test",
+    "name": "TestISAllMediators",
+    "filename": "TestISAllMediators",
+    "version": "0.0.1",
+    "versionLabel": "",
+    "dependencies": [
+        {
+            "version": "3.4.1",
+            "id": "com.distriqt.IronSource"
+        },
+        {
+            "version": "1.0.10",
+            "id": "com.distriqt.ironsource.ISAllMediators",
+            "source": "file"
+        },
+        {
+            "version": "4.1.1",
+            "id": "feathersui"
+        },
+        {
+            "version": "4.1.1",
+            "id": "feathersui_MetalWorksMobileTheme"
+        },
+        {
+            "version": "2.7.0",
+            "id": "starling"
+        }
+    ],
+    "configuration": {
+        "adMobAndroidApplicationId": {
+            "name": "adMobAndroidApplicationId",
+            "required": "true",
+            "value": "ca-app-pub-5929774472898937~8512598200"
+        },
+        "adMobIOSApplicationId": {
+            "name": "adMobIOSApplicationId",
+            "required": "true",
+            "value": "ca-app-pub-5929774472898937~8512598200"
+        },
+        "calendarsUsageDescription": {
+            "name": "calendarsUsageDescription",
+            "required": "true",
+            "value": "Adding events"
+        },
+        "cameraUsageDescription": {
+            "name": "cameraUsageDescription",
+            "required": "true",
+            "value": "Taking selfies"
+        },
+        "motionUsageDescription": {
+            "name": "motionUsageDescription",
+            "required": "true",
+            "value": "Interactive ad controls"
+        },
+        "photoLibraryUsageDescription": {
+            "name": "photoLibraryUsageDescription",
+            "required": "true",
+            "value": "Taking selfies"
+        }
+    },
+    "repositories": [],
+    "deployOptions": {}
+}
