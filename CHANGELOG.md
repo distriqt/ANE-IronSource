@@ -1,3 +1,13 @@
+###### 2022.10.05 [v2.11.0]
+
+```
+feat(ironsource): add setmetadata function (resolves #34)
+
+feat(adcolony): update adcolony sdk: android v4.3.13 (v4.8.0) ios v4.3.15 (v4.9.0)
+feat(applovin): update applovin sdk: android v4.3.34 (v11.5.0) ios v4.3.35 (v11.5.0)
+fix(admob): correct dependencies to include AppSet library (resolves #38)
+```
+
 ###### 2022.08.30 [v2.10.0]
 
 ```

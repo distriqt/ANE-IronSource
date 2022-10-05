@@ -1,9 +1,9 @@
 built by [distriqt //](https://airnativeextensions.com) 
 
 >
-> This extension is provided for **free**. If it helps you please consider sponsoring the developers to continue support and development of the extension by clicking "Sponsor" above.
->
 > [:heart: Sponsor](https://github.com/sponsors/marchbold)
+>
+> This extension is provided for **free**. If it helps you please consider sponsoring the developers to continue support and development of the extension by supporting the developers listed under "Sponsor this project". 
 >
 
 
@@ -72,5 +72,6 @@ Our mobile solutions allow developers to fast-forward development and focus on b
 
 
 ![](images/promo.png)
+
 
 
