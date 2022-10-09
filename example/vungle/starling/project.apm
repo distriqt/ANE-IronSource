@@ -1,0 +1,29 @@
+{
+    "identifier": "com.distriqt.test",
+    "name": "TestVungle",
+    "filename": "TestVungle",
+    "version": "0.0.1",
+    "versionLabel": "",
+    "dependencies": [
+        {
+            "version": "3.5.0",
+            "id": "com.distriqt.IronSource",
+            "source": "file"
+        },
+        {
+            "version": "4.1.1",
+            "id": "feathersui"
+        },
+        {
+            "version": "4.1.1",
+            "id": "feathersui_MetalWorksMobileTheme"
+        },
+        {
+            "version": "2.7.0",
+            "id": "starling"
+        }
+    ],
+    "configuration": {},
+    "repositories": [],
+    "deployOptions": {}
+}

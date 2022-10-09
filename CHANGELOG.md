@@ -1,3 +1,10 @@
+###### 2022.10.09 [v2.12.0]
+
+```
+fix(ironsource): correct airpackage dependencies 
+feat(vungle): add vungle mediator: android v4.3.18 (v6.12.0) ios v4.3.22 (v6.12.0)
+```
+
 ###### 2022.10.05 [v2.11.0]
 
 ```

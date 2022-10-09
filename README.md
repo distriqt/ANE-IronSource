@@ -37,7 +37,7 @@ IronSource does provide an offical ANE. We developed this extension so we can up
   - Facebook Audience
   - Tapjoy
   - UnityAds
-
+  - Vungle
 
 
 ## Documentation
