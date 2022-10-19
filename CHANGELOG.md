@@ -1,3 +1,17 @@
+###### 2022.10.19 [v2.13.0]
+
+```
+feat(unityads): update unity ads sdk: android v4.3.23 (v4.4.1) ios v4.3.23 (v4.3.0)
+feat(digitalturbine): add mediation adapter for digital turbine (fyber) android v4.3.22 (v8.2.0) ios v4.3.25 (v8.1.5) 
+```
+
+###### 2022.10.19 [v2.12.0]
+
+```
+feat(unityads): update unity ads sdk: android v4.3.23 (v4.4.1) ios v4.3.23 (v4.3.0)
+feat(digitalturbine): add mediation adapter for digital turbine (fyber) android v4.3.22 (v8.2.0) ios v4.3.25 (v8.1.5) 
+```
+
 ###### 2022.10.09 [v2.12.0]
 
 ```

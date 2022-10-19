@@ -43,6 +43,11 @@
                 <true/>
             </dict>
 
+
+            <key>MinimumOSVersion</key>
+            <string>14.0</string>
+
+
             <key>SKAdNetworkItems</key>
             <array>
                <dict>
@@ -66,10 +71,13 @@
     <android>
         <manifestAdditions><![CDATA[
             <manifest android:installLocation="auto" >
-                <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="29" />
+                <uses-sdk
+                    android:minSdkVersion="19"
+                    android:targetSdkVersion="30" />
 
-                <uses-permission android:name="android.permission.INTERNET"/>
-                <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+                <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+                <uses-permission android:name="android.permission.INTERNET" />
+                <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
 
 
                 <application android:hardwareAccelerated="true">

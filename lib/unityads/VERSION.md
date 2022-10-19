@@ -2,4 +2,4 @@
 
 | Extension | Version | Android Lib | iOS Lib |
 | --- | --- | --- | --- |
-| com.distriqt.ironsource.UnityAds | 4.3.0 | 4.3.22 | 4.3.23 |
+| com.distriqt.ironsource.UnityAds | 4.4.1 | 4.3.23 | 4.3.23 |

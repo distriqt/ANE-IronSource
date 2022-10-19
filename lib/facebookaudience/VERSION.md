@@ -2,4 +2,4 @@
 
 | Extension | Version | Android Lib | iOS Lib |
 | --- | --- | --- | --- |
-| com.distriqt.ironsource.FacebookAudience | 6.11.1 | 4.3.37 | 4.3.37 |
+| com.distriqt.ironsource.FacebookAudience | 6.11.2 | 4.3.37 | 4.3.37 |
