@@ -1,3 +1,9 @@
+###### 2023.01.27 [v2.14.1]
+
+```
+fix(mediators): update mediator airpackages dependency on ironsource (resolves #43)
+```
+
 ###### 2023.01.20 [v2.14.0]
 
 ```
