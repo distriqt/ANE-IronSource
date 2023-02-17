@@ -2,14 +2,14 @@
 
 | Extension | Version | Android Lib | iOS Lib |
 | --- | --- | --- | --- |
-| com.distriqt.ironsource.AdColony | 4.10.1 | 4.3.13 | 4.3.15 |
-| com.distriqt.ironsource.AdMob | 1.2.1 | 4.3.29 | 4.3.34 |
-| com.distriqt.ironsource.Amazon | 1.1.1 | 4.3.4 | 4.3.6 |
-| com.distriqt.ironsource.AppLovin | 11.6.1 | 4.3.34 | 4.3.35 |
-| com.distriqt.ironsource.Chartboost | 2.0.1 | 4.3.9 | 4.3.10 |
-| com.distriqt.ironsource.DigitalTurbine | 8.3.1 | 4.3.22 | 4.3.25 |
-| com.distriqt.ironsource.FacebookAudience | 6.12.1 | 4.3.37 | 4.3.37 |
-| com.distriqt.IronSource | 3.6.1 | 7.2.4 | 7.2.4 |
-| com.distriqt.ironsource.Tapjoy | 12.11.1 | 4.1.21 | 4.1.21 |
-| com.distriqt.ironsource.UnityAds | 4.5.1 | 4.3.23 | 4.3.23 |
-| com.distriqt.ironsource.Vungle | 6.13.1 | 4.3.18 | 4.3.22  |
+| com.distriqt.ironsource.AdColony | 4.10.2 | 4.3.13 | 4.3.15 |
+| com.distriqt.ironsource.AdMob | 1.2.2 | 4.3.29 | 4.3.34 |
+| com.distriqt.ironsource.Amazon | 1.1.2 | 4.3.4 | 4.3.6 |
+| com.distriqt.ironsource.AppLovin | 11.6.2 | 4.3.34 | 4.3.35 |
+| com.distriqt.ironsource.Chartboost | 2.0.2 | 4.3.9 | 4.3.10 |
+| com.distriqt.ironsource.DigitalTurbine | 8.3.2 | 4.3.22 | 4.3.25 |
+| com.distriqt.ironsource.FacebookAudience | 6.12.2 | 4.3.37 | 4.3.37 |
+| com.distriqt.IronSource | 3.6.2 | 7.2.4 | 7.2.4 |
+| com.distriqt.ironsource.Tapjoy | 12.11.2 | 4.1.21 | 4.1.21 |
+| com.distriqt.ironsource.UnityAds | 4.5.2 | 4.3.23 | 4.3.23 |
+| com.distriqt.ironsource.Vungle | 6.13.2 | 4.3.18 | 4.3.22  |

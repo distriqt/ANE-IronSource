@@ -2,4 +2,4 @@
 
 | Extension | Version | Android Lib | iOS Lib |
 | --- | --- | --- | --- |
-| com.distriqt.ironsource.Chartboost | 2.0.1 | 4.3.9 | 4.3.10 |
+| com.distriqt.ironsource.Chartboost | 2.0.2 | 4.3.9 | 4.3.10 |

@@ -1,3 +1,9 @@
+###### 2023.02.17 [v2.14.2]
+
+```
+feat(ios): strip bitcode from dynamic frameworks that haven't been updated yet
+```
+
 ###### 2023.01.27 [v2.14.1]
 
 ```
