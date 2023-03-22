@@ -52,9 +52,11 @@
             <key>GADApplicationIdentifier</key>
             <string>ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY</string>
 
+            <key>MinimumOSVersion</key>
+            <string>11.0</string>
             <key>UILaunchStoryboardName</key>
             <string>LaunchScreen</string>
-
+            
         ]]></InfoAdditions>
         <requestedDisplayResolution>high</requestedDisplayResolution>
         <Entitlements>
@@ -219,12 +221,6 @@
                     <service
                         android:name="androidx.room.MultiInstanceInvalidationService"
                         android:exported="false" />
-
-
-                    <!-- AMAZON -->
-                    <activity
-                        android:name="com.amazon.device.ads.AdActivity"
-                        android:configChanges="keyboardHidden|orientation|screenSize" />
 
 
                     <!-- APPLOVIN -->

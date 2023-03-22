@@ -31,7 +31,6 @@ IronSource does provide an offical ANE. We developed this extension so we can up
 - Mediation:
   - AdColony
   - AdMob
-  - Amazon
   - AppLovin
   - Chartboost
   - Facebook Audience

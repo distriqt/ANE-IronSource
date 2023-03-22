@@ -48,7 +48,9 @@
             </dict>
 
             <key>MinimumOSVersion</key>
-            <string>9.0</string>
+            <string>11.0</string>
+            <key>UILaunchStoryboardName</key>
+            <string>LaunchScreen</string>
 
             <key>GADApplicationIdentifier</key>
             <string>ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY</string>

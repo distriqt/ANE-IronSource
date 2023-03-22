@@ -2,4 +2,4 @@
 
 | Extension | Version | Android Lib | iOS Lib |
 | --- | --- | --- | --- |
-| com.distriqt.ironsource.AdColony | 4.10.2 | 4.3.13 | 4.3.15 |
+| com.distriqt.ironsource.AdColony | 4.11.0 | 4.3.14 | 4.3.16 |

@@ -1,3 +1,25 @@
+###### 2023.03.22 [v2.15.0]
+
+```
+Update IronSource SDK
+
+- Android v7.3.0
+- iOS v7.3.0
+
+feat(ironsource): update sdk android v7.3.0, ios v7.3.0
+feat(adcolony): update sdk: android v4.3.14 (v4.8.0) ios v4.3.16 (v4.9.0)
+feat(admob): update sdk: android v4.3.35 (v21.5.0) ios v4.3.41 (v10.1.0)
+feat(applovin): update sdk: android v4.3.37 (v11.7.1) ios v4.3.38 (v11.7.1)
+feat(chartboost): update sdk: android v4.3.11 (v9.2.0) ios v4.3.13 (v9.2.0)
+feat(digitalturbine): update sdk: android v4.3.24 (v8.2.2) ios v4.3.28 (v8.1.9)
+feat(facebookaudience): update sdk: android v4.3.39 (v6.12.0) ios v4.3.39 (v6.12.0)
+feat(tapjoy): update sdk: android v4.1.24 (v12.11.1) ios v4.1.24 (v12.11.1)
+feat(unityads): update sdk: android v4.3.26 (v4.6.0) ios v4.3.27 (v4.6.0)
+feat(vungle): update sdk: android v4.3.20 (v6.12.1) ios v4.3.25 (v6.12.3)
+
+removed deprecated amazon mediator (as of September 30, 2021 Amazon deprecated Amazon Mobile Ads Network)
+```
+
 ###### 2023.02.17 [v2.14.2]
 
 ```
