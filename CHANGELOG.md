@@ -1,3 +1,9 @@
+###### 2023.03.22 [v2.15.1]
+
+```
+fix(unityads): add missing android dependency
+```
+
 ###### 2023.03.22 [v2.15.0]
 
 ```

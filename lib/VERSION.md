@@ -10,5 +10,5 @@
 | com.distriqt.ironsource.FacebookAudience | 6.12.3 | 4.3.39 | 4.3.39 |
 | com.distriqt.IronSource | 3.7.0 | 7.3.0 | 7.3.0 |
 | com.distriqt.ironsource.Tapjoy | 12.11.102 | 4.1.24 | 4.1.24 |
-| com.distriqt.ironsource.UnityAds | 4.6.0 | 4.3.26 | 4.3.27 |
+| com.distriqt.ironsource.UnityAds | 4.6.1 | 4.3.26 | 4.3.27 |
 | com.distriqt.ironsource.Vungle | 6.13.3 | 4.3.20 | 4.3.25 |
