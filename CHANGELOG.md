@@ -1,3 +1,9 @@
+###### 2023.03.27 [v2.15.2]
+
+```
+feat(chartboost,unityads): fix missing swift compat references
+```
+
 ###### 2023.03.22 [v2.15.1]
 
 ```

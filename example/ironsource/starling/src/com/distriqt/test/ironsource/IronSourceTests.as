@@ -31,19 +31,6 @@ package com.distriqt.test.ironsource
 	{
 		public static const TAG:String = "";
 
-		private var _l:ILogger;
-
-
-		private function log( log:String ):void
-		{
-			_l.log( TAG, log );
-		}
-
-
-		////////////////////////////////////////////////////////
-		//	FUNCTIONALITY
-		//
-
 		public function IronSourceTests( logger:ILogger )
 		{
 			_l = logger;
@@ -62,7 +49,7 @@ package com.distriqt.test.ironsource
 						IronSource.OFFERWALL
 					] );
 
-					IronSource.instance.setDynamicUserId( "test_identifier_1" );
+					IronSource.instance.setDynamicUserId( "test_dynamic_identifier_1" );
 
 //					IronSource.instance.addEventListener( "onRewardedVideoAdOpened", onRewardedVideoAdOpened );
 //					IronSource.instance.addEventListener( "onRewardedVideoAdClosed", onRewardedVideoAdClosed );
@@ -124,17 +111,17 @@ package com.distriqt.test.ironsource
 				trace( e );
 			}
 		}
+		private var _l:ILogger;
 
+
+		////////////////////////////////////////////////////////
+		//	FUNCTIONALITY
+		//
 
 		public function getAdvertisingId():void
 		{
 			log( "IronSource Advertising Id: " + IronSource.instance.getAdvertiserId() );
 		}
-
-
-		////////////////////////////////////////////////////////
-		//  
-		//
 
 		public function showRewardedVideo():void
 		{
@@ -150,6 +137,10 @@ package com.distriqt.test.ironsource
 		}
 
 
+		////////////////////////////////////////////////////////
+		//  
+		//
+
 		public function loadInterstitial():void
 		{
 			log( "loadInterstitial" );
@@ -158,7 +149,6 @@ package com.distriqt.test.ironsource
 				IronSource.instance.loadInterstitial();
 			}
 		}
-
 
 		public function showInterstitial():void
 		{
@@ -169,108 +159,6 @@ package com.distriqt.test.ironsource
 			}
 		}
 
-
-		////////////////////////////////////////////////////////
-		//
-		//
-
-		private function onRewardedVideoAdShowFailed( event:RewardedVideoAdEvent ):void
-		{
-			log( "onRewardedVideoAdShowFailed" );
-		}
-
-
-		private function onRewardedVideoAdOpened( event:RewardedVideoAdEvent ):void
-		{
-			log( "onRewardedVideoAdOpened" );
-		}
-
-
-		private function onRewardedVideoAdClosed( event:RewardedVideoAdEvent ):void
-		{
-			log( "onRewardedVideoAdClosed" );
-		}
-
-
-		private function onRewardedVideoAvailabilityChanged( event:RewardedVideoAdEvent ):void
-		{
-			log( "onRewardedVideoAvailabilityChanged: " + event.availability );
-		}
-
-
-		private function onRewardedVideoAdStarted( event:RewardedVideoAdEvent ):void
-		{
-			log( "onRewardedVideoAdStarted" );
-		}
-
-
-		private function onRewardedVideoAdEnded( event:RewardedVideoAdEvent ):void
-		{
-			log( "onRewardedVideoAdEnded" );
-		}
-
-
-		private function onRewardedVideoAdRewarded( event:RewardedVideoAdEvent ):void
-		{
-			log( "onRewardedVideoAdRewarded" );
-			log( "placementName: " + event.placementInfo.placementName );
-			log( "rewardName:    " + event.placementInfo.rewardName );
-			log( "rewardAmount:  " + event.placementInfo.rewardAmount );
-		}
-
-
-		private function onRewardedVideoAdClicked( event:RewardedVideoAdEvent ):void
-		{
-			log( "onRewardedVideoAdClicked" );
-		}
-
-
-		private function onInterstitialAdReady( event:DataEvent ):void
-		{
-			log( "onInterstitialAdReady" );
-		}
-
-
-		private function onInterstitialAdLoadFailed( event:DataEvent ):void
-		{
-			log( "onInterstitialAdLoadFailed" );
-		}
-
-
-		private function onInterstitialAdOpened( event:DataEvent ):void
-		{
-			log( "onInterstitialAdOpened" );
-		}
-
-
-		private function onInterstitialAdClosed( event:DataEvent ):void
-		{
-			log( "onInterstitialAdClosed" );
-		}
-
-
-		private function onInterstitialAdShowFailed( event:DataEvent ):void
-		{
-			log( "onInterstitialAdShowFailed" );
-		}
-
-
-		private function onInterstitialAdClicked( event:DataEvent ):void
-		{
-			log( "onInterstitialAdClicked" );
-		}
-
-
-		private function onInterstitialAdShowSucceeded( event:DataEvent ):void
-		{
-			log( "onInterstitialAdShowSucceeded" );
-		}
-
-
-		//
-		//	BANNERS
-		//
-
 		public function loadBanner():void
 		{
 			log( "loadBanner()" );
@@ -279,6 +167,11 @@ package com.distriqt.test.ironsource
 					IronSource.POSITION_BOTTOM
 			);
 		}
+
+
+		////////////////////////////////////////////////////////
+		//
+		//
 
 		public function displayBanner():void
 		{
@@ -298,6 +191,111 @@ package com.distriqt.test.ironsource
 			IronSource.instance.destroyBanner();
 		}
 
+		public function showOfferwall():void
+		{
+			if (IronSource.instance.isOfferwallAvailable())
+			{
+				IronSource.instance.showOfferwall();
+			}
+		}
+
+		public function getOfferwallCredits():void
+		{
+			IronSource.instance.getOfferwallCredits();
+		}
+
+		private function log( log:String ):void
+		{
+			_l.log( TAG, log );
+		}
+
+		private function onRewardedVideoAdShowFailed( event:RewardedVideoAdEvent ):void
+		{
+			log( "onRewardedVideoAdShowFailed" );
+		}
+
+		private function onRewardedVideoAdOpened( event:RewardedVideoAdEvent ):void
+		{
+			log( "onRewardedVideoAdOpened" );
+		}
+
+		private function onRewardedVideoAdClosed( event:RewardedVideoAdEvent ):void
+		{
+			log( "onRewardedVideoAdClosed" );
+		}
+
+		private function onRewardedVideoAvailabilityChanged( event:RewardedVideoAdEvent ):void
+		{
+			log( "onRewardedVideoAvailabilityChanged: " + event.availability );
+		}
+
+		private function onRewardedVideoAdStarted( event:RewardedVideoAdEvent ):void
+		{
+			log( "onRewardedVideoAdStarted" );
+		}
+
+		private function onRewardedVideoAdEnded( event:RewardedVideoAdEvent ):void
+		{
+			log( "onRewardedVideoAdEnded" );
+		}
+
+		private function onRewardedVideoAdRewarded( event:RewardedVideoAdEvent ):void
+		{
+			log( "onRewardedVideoAdRewarded" );
+			log( "placementName: " + event.placementInfo.placementName );
+			log( "rewardName:    " + event.placementInfo.rewardName );
+			log( "rewardAmount:  " + event.placementInfo.rewardAmount );
+		}
+
+		private function onRewardedVideoAdClicked( event:RewardedVideoAdEvent ):void
+		{
+			log( "onRewardedVideoAdClicked" );
+		}
+
+		private function onInterstitialAdReady( event:DataEvent ):void
+		{
+			log( "onInterstitialAdReady" );
+		}
+
+
+		//
+		//	BANNERS
+		//
+
+		private function onInterstitialAdLoadFailed( event:DataEvent ):void
+		{
+			log( "onInterstitialAdLoadFailed" );
+		}
+
+		private function onInterstitialAdOpened( event:DataEvent ):void
+		{
+			log( "onInterstitialAdOpened" );
+		}
+
+		private function onInterstitialAdClosed( event:DataEvent ):void
+		{
+			log( "onInterstitialAdClosed" );
+		}
+
+		private function onInterstitialAdShowFailed( event:DataEvent ):void
+		{
+			log( "onInterstitialAdShowFailed" );
+		}
+
+		private function onInterstitialAdClicked( event:DataEvent ):void
+		{
+			log( "onInterstitialAdClicked" );
+		}
+
+		private function onInterstitialAdShowSucceeded( event:DataEvent ):void
+		{
+			log( "onInterstitialAdShowSucceeded" );
+		}
+
+
+		//
+		//	OFFERWALL
+		//
 
 		private function bannerHandler( event:BannerAdEvent ):void
 		{
@@ -312,31 +310,10 @@ package com.distriqt.test.ironsource
 			{
 				var error:Object = JSON.parse( event.data );
 				errorDescription = error.error_description;
-				errorCode        = error.error_code;
+				errorCode = error.error_code;
 				log( "ERROR: [" + errorCode + "]: " + errorDescription )
 			}
 		}
-
-
-		//
-		//	OFFERWALL
-		//
-
-
-		public function showOfferwall():void
-		{
-			if (IronSource.instance.isOfferwallAvailable())
-			{
-				IronSource.instance.showOfferwall();
-			}
-		}
-
-
-		public function getOfferwallCredits():void
-		{
-			IronSource.instance.getOfferwallCredits();
-		}
-
 
 		private function offerwallHandler( event:OfferwallEvent ):void
 		{
