@@ -1,3 +1,9 @@
+###### 2023.03.30 [v2.15.3]
+
+```
+fix(chartboost): correct required dependencies and update docs
+```
+
 ###### 2023.03.27 [v2.15.2]
 
 ```
