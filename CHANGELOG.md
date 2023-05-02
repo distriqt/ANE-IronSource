@@ -1,3 +1,9 @@
+###### 2023.05.02 [v2.16.0]
+
+```
+feat(ironsource): add setUserId functionality (resolves #46)
+```
+
 ###### 2023.03.30 [v2.15.3]
 
 ```
