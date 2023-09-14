@@ -1,3 +1,19 @@
+###### 2023.09.14 [v2.18.0]
+
+```
+feat(ironsource): add impression data events and details for mediation network impression data (resolves #52)
+feat(ironsource): move to latest event callback system, add AdInfo information to rewarded video and interstitial events
+feat(ironsource): update android sdk v7.5.1, update ios sdk v7.5.0
+
+feat(adcolony): update sdk: android v4.3.15 (v4.8.0) ios v4.3.17 (v4.9.0)
+feat(applovin): update sdk: android v4.3.39 (v11.10.1) ios v4.3.40 (v11.10.1)
+feat(chartboost): update sdk: android v4.3.12 (v9.3.1) ios v4.3.15 (v9.2.0)
+feat(digitalturbine): update sdk: android v4.3.26 (v8.2.3) ios v4.3.31 (v8.2.4)
+feat(facebookaudience): update sdk: android v4.3.45 (v6.16.0) ios v4.3.42 (v6.14.0)
+feat(unityads): update sdk: android v4.3.31 (v4.8.0) ios v4.3.31 (v4.8.0)
+feat(vungle): update sdk: android v4.3.21 (v6.12.1) ios v4.3.28 (v7.0.1)
+```
+
 ###### 2023.05.02 [v2.16.0]
 
 ```
@@ -160,7 +176,7 @@ Updated ironSource SDK:
 Updated UnityAds: Android v4.3.14 iOS v4.3.13
 Updated Tapjoy: Android v4.1.18 iOS v4.1.18
 Updated Facebook: Android v4.3.30 iOS v4.3.29
-Updated Chartboost: Android v4.3.7 iOS v4.3.8
+Updated Chartboost: Android v4.3.9 iOS v4.3.8
 Updated AppLovin: Android v4.3.28 iOS v4.3.28
 Updated Amazon: Android v4.3.4 iOS v4.3.6
 Updated AdMob: Android v4.3.22 iOS v4.3.27

@@ -4,9 +4,15 @@
     "filename": "TestDigitalTurbine",
     "version": "0.0.1",
     "versionLabel": "",
+    "platforms": [],
     "dependencies": [
         {
-            "version": "0.0.057",
+            "version": "3.9.0",
+            "id": "com.distriqt.IronSource",
+            "source": "file"
+        },
+        {
+            "version": "8.3.7",
             "id": "com.distriqt.ironsource.DigitalTurbine",
             "source": "file"
         },

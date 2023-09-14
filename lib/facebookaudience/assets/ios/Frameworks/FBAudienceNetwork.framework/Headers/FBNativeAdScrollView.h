@@ -1,4 +1,10 @@
-// (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
+/*
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ * All rights reserved.
+ *
+ * This source code is licensed under the license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 
 #import <UIKit/UIKit.h>
 
@@ -14,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Contains multiple ads in a scroll view.
 
- When adding this view to a XIB or Storyboard, you may recieve the error "Unknown class FBNativeAdScrollView in
+ When adding this view to a XIB or Storyboard, you may receive the error "Unknown class FBNativeAdScrollView in
  Interface Builder file" in some cases. This error is caused by the linker failing to include FBNativeAdScrollView in
  your build. To resolve this, call [FBNativeAdScrollView class] in your project, or add "-all_load -ObjC" to "Other
  Linker Flags" in your project settings.

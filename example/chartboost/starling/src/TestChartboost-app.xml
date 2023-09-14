@@ -1,140 +1,128 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<application xmlns="http://ns.adobe.com/air/application/50.2">
-    <id>com.distriqt.test</id>
-    <filename>TestChartboost</filename>
-    <name>TestChartboost</name>
-    <versionNumber>0.0.1</versionNumber>
-
-    <initialWindow>
-        <content>[This value will be overwritten by Flash Builder in the output app.xml]</content>
-        <autoOrients>true</autoOrients>
-        <fullScreen>false</fullScreen>
-        <visible>true</visible>
-        <renderMode>direct</renderMode>
-    </initialWindow>
-
-    <icon>
-        <image16x16>icons/icon16x16.png</image16x16>
-        <image29x29>icons/icon29x29.png</image29x29>
-        <image32x32>icons/icon32x32.png</image32x32>
-        <image36x36>icons/icon36x36.png</image36x36>
-        <image48x48>icons/icon48x48.png</image48x48>
-        <image57x57>icons/icon57x57.png</image57x57>
-        <image72x72>icons/icon72x72.png</image72x72>
-        <image76x76>icons/icon76x76.png</image76x76>
-        <image114x114>icons/icon114x114.png</image114x114>
-        <image120x120>icons/icon120x120.png</image120x120>
-        <image128x128>icons/icon128x128.png</image128x128>
-        <image152x152>icons/icon152x152.png</image152x152>
-        <image512x512>icons/icon512x512.png</image512x512>
-    </icon>
-
-    <iPhone>
-        <InfoAdditions><![CDATA[
-            <key>UIDeviceFamily</key>
-            <array>
-                <string>1</string>
-                <string>2</string>
-            </array>
-
-            <key>NSAppTransportSecurity</key>
-            <dict>
-                <key>NSAllowsArbitraryLoads</key>
-                <true/>
-            </dict>
-
-            <key>SKAdNetworkItems</key>
-            <array>
-               <dict>
-                   <key>SKAdNetworkIdentifier</key>
-                   <string>SU67R6K2V3.skadnetwork</string>
-               </dict>
-               <dict>
-                   <key>SKAdNetworkIdentifier</key>
-                   <string>F38H382JLK.skadnetwork</string>
-               </dict>
-            </array>
-
-            <key>MinimumOSVersion</key>
-            <string>12.4</string>
-            <key>UILaunchStoryboardName</key>
-            <string>LaunchScreen</string>
-
-        ]]></InfoAdditions>
-        <requestedDisplayResolution>high</requestedDisplayResolution>
-        <Entitlements>
-            <![CDATA[
-            ]]>
-        </Entitlements>
-    </iPhone>
-
-    <android>
-        <manifestAdditions><![CDATA[
-            <manifest android:installLocation="auto" >
-                <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="29" />
-
-                <uses-permission android:name="android.permission.INTERNET"/>
-                <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-
-                <application android:hardwareAccelerated="true">
-
-                    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-
-
-                    <!-- IRONSOURCE -->
-                    <activity
-                        android:name="com.ironsource.sdk.controller.ControllerActivity"
-                        android:configChanges="orientation|screenSize"
-                        android:hardwareAccelerated="true" />
-                    <activity
-                        android:name="com.ironsource.sdk.controller.InterstitialActivity"
-                        android:configChanges="orientation|screenSize"
-                        android:hardwareAccelerated="true"
-                        android:theme="@android:style/Theme.Translucent" />
-                    <activity
-                        android:name="com.ironsource.sdk.controller.OpenUrlActivity"
-                        android:configChanges="orientation|screenSize"
-                        android:hardwareAccelerated="true"
-                        android:theme="@android:style/Theme.Translucent" />
-                    <provider
-                        android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
-                        android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider" />
-
-
-
-                    <!-- CHARTBOOST -->
-                    <activity
-                        android:name="com.chartboost.sdk.CBImpressionActivity"
-                        android:configChanges="keyboardHidden|orientation|screenSize"
-                        android:excludeFromRecents="true"
-                        android:hardwareAccelerated="true"
-                        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
-
-                    <activity
-                        android:name="com.google.android.gms.common.api.GoogleApiActivity"
-                        android:exported="false"
-                        android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-
-
-                </application>
-
-            </manifest>
-        ]]></manifestAdditions>
-    </android>
-
-    <extensions>
-        <extensionID>com.distriqt.Core</extensionID>
-
-        <extensionID>com.distriqt.IronSource</extensionID>
-        <extensionID>com.distriqt.ironsource.Chartboost</extensionID>
-
-        <extensionID>com.distriqt.playservices.Base</extensionID>
-        <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
-
-        <extensionID>androidx.core</extensionID>
-        <extensionID>com.jetbrains.kotlin</extensionID>
-    </extensions>
-
+<?xml version="1.0" encoding="utf-8" ?>
+<application xmlns="http://ns.adobe.com/air/application/50.2" >
+  <id>com.distriqt.test</id>
+  <filename>TestChartboost</filename>
+  <name>TestChartboost</name>
+  <versionNumber>0.0.1</versionNumber>
+  <initialWindow>
+    <content>[This value will be overwritten by Flash Builder in the output app.xml]</content>
+    <autoOrients>true</autoOrients>
+    <fullScreen>false</fullScreen>
+    <visible>true</visible>
+    <renderMode>direct</renderMode>
+  </initialWindow>
+  <icon>
+    <image16x16>icons/icon16x16.png</image16x16>
+    <image29x29>icons/icon29x29.png</image29x29>
+    <image32x32>icons/icon32x32.png</image32x32>
+    <image36x36>icons/icon36x36.png</image36x36>
+    <image48x48>icons/icon48x48.png</image48x48>
+    <image57x57>icons/icon57x57.png</image57x57>
+    <image72x72>icons/icon72x72.png</image72x72>
+    <image76x76>icons/icon76x76.png</image76x76>
+    <image114x114>icons/icon114x114.png</image114x114>
+    <image120x120>icons/icon120x120.png</image120x120>
+    <image128x128>icons/icon128x128.png</image128x128>
+    <image152x152>icons/icon152x152.png</image152x152>
+    <image512x512>icons/icon512x512.png</image512x512>
+  </icon>
+  <iPhone>
+    <InfoAdditions><![CDATA[
+<key>UIDeviceFamily</key>
+<array>
+  <string>1</string>
+  <string>2</string>
+</array>
+<key>MinimumOSVersion</key>
+<string>11.0</string>
+<key>UILaunchStoryboardName</key>
+<string>LaunchScreen</string>
+<!-- iOS 14 AdNetwork -->
+<key>SKAdNetworkItems</key>
+<array>
+  <dict>
+    <!-- Chartboost -->
+    <key>SKAdNetworkIdentifier</key>
+    <string>f38h382jlk.skadnetwork</string>
+  </dict>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>su67r6k2v3.skadnetwork</string>
+  </dict>
+</array>
+<!-- iOS 14 AdNetwork -->
+<key>NSAdvertisingAttributionReportEndpoint</key>
+<string>https://postbacks-is.com</string>
+<key>NSAppTransportSecurity</key>
+<dict>
+  <key>NSAllowsArbitraryLoads</key>
+  <true/>
+</dict>]]></InfoAdditions>
+    <requestedDisplayResolution>high</requestedDisplayResolution>
+    <Entitlements><![CDATA[
+            ]]></Entitlements>
+  </iPhone>
+  <android>
+    <manifestAdditions><![CDATA[<manifest android:installLocation="auto" >
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>
+  <permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+  <uses-permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+  <!--
+        https://support.google.com/googleplay/android-developer/answer/6048248?hl=en#zippy=%2Ctargeting-devices-without-an-advertising-id%2Cadvertising-id-violations%2Chow-to-opt-out-of-personalized-ads%2Cpersistent-identifiers-including-android-id
+        For publishers: Some Google Play policies, such as the Families Policy, require that apps not
+        use the Ad ID. If your app uses SDKs, like the Google Mobile Ads SDK, that declares the AD_ID
+        permission in their library manifests, you must prevent the permission from getting merged into
+        your app by including the following element in your manifest.
+        <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
+    -->
+  <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+  <!-- Required permission for App measurement to run. -->
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+  <!-- Required by older versions of Google Play services to create IID tokens -->
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+  <application android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+    <meta-data android:name="android.max_aspect" android:value="2.5"/>
+    <meta-data android:name="android.notch_support" android:value="true"/>
+    <provider android:name="androidx.startup.InitializationProvider" android:authorities="air.com.distriqt.test.androidx-startup" android:exported="false">
+      <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+    </provider>
+    <activity android:name="com.chartboost.sdk.view.CBImpressionActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
+    <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+    <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+    <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:enabled="true" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
+      <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+    </service>
+    <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <activity android:name="com.ironsource.sdk.controller.ControllerActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true"/>
+    <activity android:name="com.ironsource.sdk.controller.InterstitialActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent"/>
+    <activity android:name="com.ironsource.sdk.controller.OpenUrlActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent"/>
+    <activity android:name="com.ironsource.mediationsdk.testSuite.TestSuiteActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar"/>
+    <provider android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider" android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider"/>
+    <activity android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:excludeFromRecents="true" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <!--
+            Service handling Google Sign-In user revocation. For apps that do not integrate with
+            Google Sign-In, this service will never be started.
+        -->
+    <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:exported="true" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
+  </application>
+</manifest>
+]]></manifestAdditions>
+  </android>
+  <extensions>
+    <extensionID>androidx.core</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+    <extensionID>com.distriqt.IronSource</extensionID>
+    <extensionID>com.distriqt.ironsource.Chartboost</extensionID>
+    <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+    <extensionID>com.distriqt.playservices.AppSet</extensionID>
+    <extensionID>com.distriqt.playservices.Auth</extensionID>
+    <extensionID>com.distriqt.playservices.Base</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
+  </extensions>
 </application>

@@ -1,0 +1,23 @@
+{
+    "identifier": "com.distriqt.test",
+    "name": "TestAppLovin",
+    "filename": "TestAppLovin",
+    "version": "0.0.1",
+    "versionLabel": "",
+    "platforms": [],
+    "dependencies": [
+        {
+            "version": "3.9.0",
+            "id": "com.distriqt.IronSource",
+            "source": "file"
+        },
+        {
+            "version": "11.10.1",
+            "id": "com.distriqt.ironsource.AppLovin",
+            "source": "file"
+        }
+    ],
+    "configuration": {},
+    "repositories": [],
+    "deployOptions": {}
+}

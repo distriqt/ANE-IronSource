@@ -37,308 +37,385 @@
 <string>11.0</string>
 <key>UILaunchStoryboardName</key>
 <string>LaunchScreen</string>
+<!-- iOS 14 AdNetwork -->
 <key>SKAdNetworkItems</key>
 <array>
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>su67r6k2v3.skadnetwork</string>
   </dict>
+  <!--  Vungle  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>gta9lk7p23.skadnetwork</string>
   </dict>
+  <!--  Adelphic, LLC  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>c3frkrj4fj.skadnetwork</string>
   </dict>
+  <!--  A9 Inc  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>p78axxw29g.skadnetwork</string>
   </dict>
+  <!--  Aarki  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>4fzdc2evr5.skadnetwork</string>
   </dict>
+  <!--  AdColony  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>4pfyvq9l8r.skadnetwork</string>
   </dict>
+  <!--  AdForm  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>2fnua5tdw4.skadnetwork</string>
   </dict>
+  <!--  Adikteev  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>ydx93a7ass.skadnetwork</string>
   </dict>
+  <!--  AdMob  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>cstr6suwn9.skadnetwork</string>
   </dict>
+  <!--  AdTheorent  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>cg4yq2srnc.skadnetwork</string>
   </dict>
+  <!--  Appier  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>v72qych5uu.skadnetwork</string>
   </dict>
+  <!--  AppLift  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>6xzpu9s2p8.skadnetwork</string>
   </dict>
+  <!--  Appreciate  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>mlmmfzh3r3.skadnetwork</string>
   </dict>
+  <!--  Beeswax  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>c6k4g5qg8m.skadnetwork</string>
   </dict>
+  <!--  Bidmachine -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>wg4vff78zm.skadnetwork</string>
   </dict>
+  <!--  BidSlash -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>g28c52eehv.skadnetwork</string>
   </dict>
+  <!--  Bidsopt -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>523jb4fst2.skadnetwork</string>
   </dict>
+  <!--  Bidswitch -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>294l99pt4k.skadnetwork</string>
   </dict>
+  <!--  Blis Media -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>ggvn48r87g.skadnetwork</string>
   </dict>
+  <!--  Bucksense Inc  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>mls7yz5dvl.skadnetwork</string>
   </dict>
+  <!--  Bulbit Inc (AdWays)  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>578prtvx9j.skadnetwork</string>
   </dict>
+  <!--  Bytedance  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>22mmun2rn5.skadnetwork</string>
   </dict>
+  <!--  Centro Inc.  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>3sh42y64q3.skadnetwork</string>
   </dict>
+  <!--  Chartboost Inc.  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>f38h382jlk.skadnetwork</string>
   </dict>
+  <!--  Cheetah Medialink HK Limited  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>24t9a8vw3c.skadnetwork</string>
   </dict>
+  <!--  Clearpier Inc.  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>x44k69ngh6.skadnetwork</string>
   </dict>
+  <!--  Clearpier Performance Inc.  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>mp6xlyr22a.skadnetwork</string>
   </dict>
+  <!--  Criteo SA  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>hs6bdukanm.skadnetwork</string>
   </dict>
+  <!--  Criteo SA  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>9rd848q2bz.skadnetwork</string>
   </dict>
+  <!--  CrossInstall Inc.  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>prcb7njmu6.skadnetwork</string>
   </dict>
+  <!--  Dataset  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>m8dbw4sv7c.skadnetwork</string>
   </dict>
+  <!--  Edge 226  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>9nlqeag3gk.skadnetwork</string>
   </dict>
+  <!--  EngageBDR  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>cj5566h2ga.skadnetwork</string>
   </dict>
+  <!--  FrontPorch  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>9b89h5y424.skadnetwork</string>
   </dict>
+  <!--  Geofy  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>ejvt5qm6ak.skadnetwork</string>
   </dict>
+  <!--  Hybrid Adtech, Inc.  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>w9q455wk68.skadnetwork</string>
   </dict>
+  <!--  InMobi Pte. Ltd  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>wzmmz9fp6w.skadnetwork</string>
   </dict>
+  <!--  IQzone -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>7fmhfwg9en.skadnetwork</string>
   </dict>
+  <!--  Jampp  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>yclnxrl5pm.skadnetwork</string>
   </dict>
+  <!-- Lifestreet -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>t38b2kh725.skadnetwork</string>
   </dict>
+  <!-- Liftoff -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>7ug5zh24hu.skadnetwork</string>
   </dict>
+  <!--  LoopMe  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>5lm9lj6jb7.skadnetwork</string>
   </dict>
+  <!-- Maiden Marketing Pvt Ltd. -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>zmvfpc5aq8.skadnetwork</string>
   </dict>
+  <!-- Maxpoint Interactive Inc -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>mtkv5xtk9e.skadnetwork</string>
   </dict>
+  <!-- Mediamath -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>n6fk4nfna4.skadnetwork</string>
   </dict>
+  <!-- Mediasmart -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>7rz58n8ntl.skadnetwork</string>
   </dict>
+  <!-- Mezzomedia -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>feyaarzu9v.skadnetwork</string>
   </dict>
+  <!-- Moloco -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>9t245vhmpl.skadnetwork</string>
   </dict>
+  <!--  Mopub  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>7953jerfzd.skadnetwork</string>
   </dict>
+  <!--  MyTarget  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>n9x2a789qt.skadnetwork</string>
   </dict>
+  <!--  Personaly  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>44jx6755aq.skadnetwork</string>
   </dict>
+  <!--  Pubmatic  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>k674qkevps.skadnetwork</string>
   </dict>
+  <!--  Realtime Technologies GmbH  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>4468km3ulz.skadnetwork</string>
   </dict>
+  <!--  Remerge  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>2u9pt9hc89.skadnetwork</string>
   </dict>
+  <!--  RevX  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>5a6flpkh64.skadnetwork</string>
   </dict>
+  <!--  RhythmOne  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>pwa73g5rt2.skadnetwork</string>
   </dict>
+  <!--  RTB House  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>8s468mfl3y.skadnetwork</string>
   </dict>
+  <!--  Sabio  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>glqzh8vgby.skadnetwork</string>
   </dict>
+  <!--  Sift Media  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>klf5c3l5u5.skadnetwork</string>
   </dict>
+  <!--  Smadex S.L.  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>ppxm28t8ap.skadnetwork</string>
   </dict>
+  <!--  SMN Corporation  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>xy9t38ct57.skadnetwork</string>
   </dict>
+  <!--  Snap Inc.  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>424m5254lk.skadnetwork</string>
   </dict>
+  <!--  Sportradar AG  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>qu637u8glc.skadnetwork</string>
   </dict>
+  <!--  StackAdapt  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>kbmxgpxpgc.skadnetwork</string>
   </dict>
+  <!--  StartApp Inc.  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>5l3tpt7t6e.skadnetwork</string>
   </dict>
+  <!-- Tencent -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>f7s53z58qe.skadnetwork</string>
   </dict>
+  <!-- Trade Desk Inc. -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>uw77j35x4d.skadnetwork</string>
   </dict>
+  <!-- Tradingworks -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>54nzkqm89y.skadnetwork</string>
   </dict>
+  <!-- Twitter -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>9yg77x724h.skadnetwork</string>
   </dict>
+  <!-- Twitter -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>n66cz3y3bx.skadnetwork</string>
   </dict>
+  <!-- Twitter -->
+  <!-- Verizon -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>e5fvkxwrpn.skadnetwork</string>
   </dict>
+  <!--  Verve Group Europe GMBH (Previously PubNative)  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>tl55sbb4fm.skadnetwork</string>
   </dict>
+  <!--  Webeye -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>5tjdwbrq8w.skadnetwork</string>
   </dict>
+  <!--  WidenAd -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>r45fhb6rf7.skadnetwork</string>
   </dict>
+  <!--  Yeahmobi -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>32z4fx6l9h.skadnetwork</string>
   </dict>
+  <!--  YouAppi  -->
   <dict>
     <key>SKAdNetworkIdentifier</key>
     <string>3rd42ekr43.skadnetwork</string>
@@ -358,6 +435,8 @@
   <android>
     <manifestAdditions><![CDATA[<manifest android:installLocation="auto" >
   <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="31"/>
+  <permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+  <uses-permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
   <!-- Required permission for App measurement to run. -->
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -381,9 +460,11 @@
     <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
       <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
     </service>
+    <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
     <activity android:name="com.ironsource.sdk.controller.ControllerActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true"/>
     <activity android:name="com.ironsource.sdk.controller.InterstitialActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent"/>
     <activity android:name="com.ironsource.sdk.controller.OpenUrlActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent"/>
+    <activity android:name="com.ironsource.mediationsdk.testSuite.TestSuiteActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar"/>
     <provider android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider" android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider"/>
     <activity android:name="com.vungle.warren.ui.VungleActivity" android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode" android:launchMode="singleTop" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
     <activity android:name="com.vungle.warren.ui.VungleFlexViewActivity" android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode" android:hardwareAccelerated="true" android:launchMode="singleTop" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
@@ -394,12 +475,12 @@
   </android>
   <extensions>
     <extensionID>androidx.core</extensionID>
-    <extensionID>com.distriqt.playservices.Base</extensionID>
-    <extensionID>com.jetbrains.kotlin</extensionID>
-    <extensionID>com.google.code.gson</extensionID>
     <extensionID>com.distriqt.Core</extensionID>
     <extensionID>com.distriqt.IronSource</extensionID>
-    <extensionID>com.distriqt.square.okhttp3</extensionID>
     <extensionID>com.distriqt.ironsource.Vungle</extensionID>
+    <extensionID>com.distriqt.playservices.Base</extensionID>
+    <extensionID>com.distriqt.square.okhttp3</extensionID>
+    <extensionID>com.google.code.gson</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
   </extensions>
 </application>

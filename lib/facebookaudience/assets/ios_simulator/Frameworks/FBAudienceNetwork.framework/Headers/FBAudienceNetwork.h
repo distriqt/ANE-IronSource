@@ -1,4 +1,10 @@
-// (c) Meta Platforms, Inc. and affiliates. Confidential and proprietary.
+/*
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ * All rights reserved.
+ *
+ * This source code is licensed under the license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
 
 #import <UIKit/UIKit.h>
 
@@ -42,4 +48,4 @@
 // NOTE: Any changes should also be made to the module.modulemap
 // to ensure comptability with Swift apps using Cocoapods
 
-#define FB_AD_SDK_VERSION @"6.12.0"
+#define FB_AD_SDK_VERSION @"6.14.0"

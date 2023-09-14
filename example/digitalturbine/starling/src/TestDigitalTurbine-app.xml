@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<application xmlns="http://ns.adobe.com/air/application/50.1" >
+<application xmlns="http://ns.adobe.com/air/application/50.2" >
   <id>com.distriqt.test</id>
   <filename>TestDigitalTurbine</filename>
   <name>TestDigitalTurbine</name>
@@ -308,6 +308,7 @@
     <string>su67r6k2v3.skadnetwork</string>
   </dict>
 </array>
+<!-- iOS 14 AdNetwork -->
 <key>NSAdvertisingAttributionReportEndpoint</key>
 <string>https://postbacks-is.com</string>
 <key>NSAppTransportSecurity</key>
@@ -321,7 +322,9 @@
   </iPhone>
   <android>
     <manifestAdditions><![CDATA[<manifest android:installLocation="auto" >
-  <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="31"/>
+  <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="33"/>
+  <permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+  <uses-permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
   <!-- Required permission for App measurement to run. -->
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -353,20 +356,23 @@
     <activity android:name="com.fyber.inneractive.sdk.activities.InneractiveFullscreenAdActivity" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
     <activity android:name="com.fyber.inneractive.sdk.activities.InneractiveRichMediaVideoPlayerActivityCore" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
     <activity android:name="com.fyber.inneractive.sdk.activities.InternalStoreWebpageActivity" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout" android:excludeFromRecents="true" android:screenOrientation="sensor" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <activity android:name="com.fyber.inneractive.sdk.activities.FyberReportAdActivity" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout" android:hardwareAccelerated="true" android:screenOrientation="fullUser"/>
+    <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
     <activity android:name="com.ironsource.sdk.controller.ControllerActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true"/>
     <activity android:name="com.ironsource.sdk.controller.InterstitialActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent"/>
     <activity android:name="com.ironsource.sdk.controller.OpenUrlActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent"/>
+    <activity android:name="com.ironsource.mediationsdk.testSuite.TestSuiteActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar"/>
     <provider android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider" android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider"/>
   </application>
 </manifest>
 ]]></manifestAdditions>
   </android>
   <extensions>
-    <extensionID>com.distriqt.Core</extensionID>
     <extensionID>androidx.core</extensionID>
-    <extensionID>com.distriqt.playservices.Base</extensionID>
-    <extensionID>com.jetbrains.kotlin</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
     <extensionID>com.distriqt.IronSource</extensionID>
     <extensionID>com.distriqt.ironsource.DigitalTurbine</extensionID>
+    <extensionID>com.distriqt.playservices.Base</extensionID>
+    <extensionID>com.jetbrains.kotlin</extensionID>
   </extensions>
 </application>
