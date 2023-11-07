@@ -1,3 +1,15 @@
+###### 2023.11.07 [v2.18.1]
+
+```
+fix(ironsource): correct parameter names used for banner size objects (resolves #55)
+```
+
+###### 2023.11.07 [v2.18.1]
+
+```
+fix(ironsource): correct parameter names used for banner size objects (resolves #55)
+```
+
 ###### 2023.09.14 [v2.18.0]
 
 ```
