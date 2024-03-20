@@ -1,3 +1,9 @@
+###### 2024.03.20 [v2.18.2]
+
+```
+fix(docs): update to documentation to remove certain imagery and references
+```
+
 ###### 2023.11.07 [v2.18.1]
 
 ```
