@@ -7,14 +7,40 @@
     "platforms": [],
     "dependencies": [
         {
-            "version": "3.9.0",
-            "id": "com.distriqt.IronSource",
-            "source": "file"
+            "version": "1.10.101",
+            "id": "androidx.core"
         },
         {
-            "version": "4.8.0",
-            "id": "com.distriqt.ironsource.UnityAds",
-            "source": "file"
+            "version": "2.5.104",
+            "id": "androidx.room"
+        },
+        {
+            "version": "1.7.1",
+            "id": "androidx.webkit"
+        },
+        {
+            "version": "2.9.1",
+            "id": "androidx.work"
+        },
+        {
+            "version": "7.5.1",
+            "id": "com.distriqt.Core"
+        },
+        {
+            "version": "18.2.3",
+            "id": "com.distriqt.playservices.Base"
+        },
+        {
+            "version": "3.14.900",
+            "id": "com.distriqt.square.okhttp3"
+        },
+        {
+            "version": "31.1.106",
+            "id": "com.google.guava"
+        },
+        {
+            "version": "3.21.114",
+            "id": "com.google.protobuflite"
         }
     ],
     "configuration": {},

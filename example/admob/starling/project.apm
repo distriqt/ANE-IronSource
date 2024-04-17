@@ -1,0 +1,48 @@
+{
+    "identifier": "com.distriqt.test",
+    "name": "TestAdMob",
+    "filename": "TestAdMob",
+    "version": "0.0.1",
+    "versionLabel": "",
+    "platforms": [],
+    "dependencies": [
+        {
+            "version": "15.0.0",
+            "id": "com.distriqt.Adverts"
+        },
+        {
+            "version": "3.9.2",
+            "id": "com.distriqt.IronSource"
+        },
+        {
+            "version": "23.0.0",
+            "id": "com.distriqt.playservices.Ads"
+        },
+        {
+            "version": "4.1.1",
+            "id": "feathersui"
+        },
+        {
+            "version": "4.1.1",
+            "id": "feathersui_MetalWorksMobileTheme"
+        },
+        {
+            "version": "2.7.0",
+            "id": "starling"
+        }
+    ],
+    "configuration": {
+        "adMobAndroidApplicationId": {
+            "name": "adMobAndroidApplicationId",
+            "required": "true",
+            "value": "ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY"
+        },
+        "adMobIOSApplicationId": {
+            "name": "adMobIOSApplicationId",
+            "required": "true",
+            "value": "ca-app-pub-XXXXXXXXXXXXXXXX~YYYYYYYYYY"
+        }
+    },
+    "repositories": [],
+    "deployOptions": {}
+}

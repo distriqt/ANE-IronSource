@@ -466,9 +466,18 @@
     <activity android:name="com.ironsource.sdk.controller.OpenUrlActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent"/>
     <activity android:name="com.ironsource.mediationsdk.testSuite.TestSuiteActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar"/>
     <provider android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider" android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider"/>
-    <activity android:name="com.vungle.warren.ui.VungleActivity" android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode" android:launchMode="singleTop" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
-    <activity android:name="com.vungle.warren.ui.VungleFlexViewActivity" android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode" android:hardwareAccelerated="true" android:launchMode="singleTop" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-    <provider android:name="com.vungle.warren.utility.VungleProvider" android:authorities="air.com.distriqt.test.vungle-provider" android:exported="false"/>
+
+    <activity
+      android:name="com.vungle.ads.internal.ui.VungleActivity"
+      android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+      android:hardwareAccelerated="true"
+      android:launchMode="singleTop" />
+
+    <provider
+      android:name="com.vungle.ads.internal.util.VungleProvider"
+      android:authorities="air.com.distriqt.test.vungle-provider"
+      android:exported="false" />
+
   </application>
 </manifest>
 ]]></manifestAdditions>
@@ -481,6 +490,8 @@
     <extensionID>com.distriqt.playservices.Base</extensionID>
     <extensionID>com.distriqt.square.okhttp3</extensionID>
     <extensionID>com.google.code.gson</extensionID>
+    <extensionID>com.google.protobuflite</extensionID>
     <extensionID>com.jetbrains.kotlin</extensionID>
+    <extensionID>com.jetbrains.kotlinx</extensionID>
   </extensions>
 </application>

@@ -352,17 +352,40 @@
     <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
       <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
     </service>
-    <activity android:name="com.fyber.inneractive.sdk.activities.InneractiveInternalBrowserActivity" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout" android:hardwareAccelerated="true" android:screenOrientation="fullUser"/>
-    <activity android:name="com.fyber.inneractive.sdk.activities.InneractiveFullscreenAdActivity" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
-    <activity android:name="com.fyber.inneractive.sdk.activities.InneractiveRichMediaVideoPlayerActivityCore" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
-    <activity android:name="com.fyber.inneractive.sdk.activities.InternalStoreWebpageActivity" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout" android:excludeFromRecents="true" android:screenOrientation="sensor" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-    <activity android:name="com.fyber.inneractive.sdk.activities.FyberReportAdActivity" android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout" android:hardwareAccelerated="true" android:screenOrientation="fullUser"/>
     <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
     <activity android:name="com.ironsource.sdk.controller.ControllerActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true"/>
     <activity android:name="com.ironsource.sdk.controller.InterstitialActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent"/>
     <activity android:name="com.ironsource.sdk.controller.OpenUrlActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent"/>
     <activity android:name="com.ironsource.mediationsdk.testSuite.TestSuiteActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar"/>
     <provider android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider" android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider"/>
+
+    <activity
+        android:name="com.fyber.inneractive.sdk.activities.InneractiveInternalBrowserActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+        android:hardwareAccelerated="true"
+        android:screenOrientation="fullUser" />
+    <activity
+        android:name="com.fyber.inneractive.sdk.activities.InneractiveFullscreenAdActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+        android:hardwareAccelerated="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+    <activity
+        android:name="com.fyber.inneractive.sdk.activities.InneractiveRichMediaVideoPlayerActivityCore"
+        android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+        android:hardwareAccelerated="true"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+    <activity
+        android:name="com.fyber.inneractive.sdk.activities.InternalStoreWebpageActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+        android:excludeFromRecents="true"
+        android:screenOrientation="sensor"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <activity
+        android:name="com.fyber.inneractive.sdk.activities.FyberReportAdActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize|smallestScreenSize|screenLayout"
+        android:hardwareAccelerated="true"
+        android:screenOrientation="fullUser" />
+
   </application>
 </manifest>
 ]]></manifestAdditions>

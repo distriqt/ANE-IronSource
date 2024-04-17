@@ -89,7 +89,6 @@
     <provider android:name="androidx.startup.InitializationProvider" android:authorities="air.com.distriqt.test.androidx-startup" android:exported="false">
       <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
     </provider>
-    <activity android:name="com.chartboost.sdk.view.CBImpressionActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"/>
     <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
     <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
     <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:enabled="true" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
@@ -110,7 +109,33 @@
             Google Sign-In, this service will never be started.
         -->
     <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:exported="true" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
+    <activity
+          android:name="com.chartboost.sdk.view.CBImpressionActivity"
+          android:configChanges="keyboardHidden|orientation|screenSize"
+          android:excludeFromRecents="true"
+          android:hardwareAccelerated="true"
+          android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+    <activity
+        android:name="com.chartboost.sdk.internal.clickthrough.EmbeddedBrowserActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:excludeFromRecents="true"
+        android:hardwareAccelerated="true"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+    <!-- ExoPlayer DownloadService -->
+    <service
+        android:name="com.chartboost.sdk.internal.video.repository.exoplayer.VideoRepositoryDownloadService"
+        android:exported="false" >
+
+        <!-- This is needed for Scheduler -->
+        <intent-filter>
+            <action android:name="com.google.android.exoplayer.downloadService.action.RESTART" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </service>
   </application>
+
 </manifest>
 ]]></manifestAdditions>
   </android>

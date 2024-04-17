@@ -1,3 +1,18 @@
+###### 2024.04.17 [v3.0.0]
+
+```
+feat(ios,android): update ironsource sdk v8.0.0 (remove offerwall, add ad quality sdk)
+
+feat(adcolony): remove deprecated adcolony mediation (acquired by fyber)
+feat(tapjoy): remove deprecated tapjoy mediation (acquired by ironsource/unity)
+feat(admob): update admob sdk: android v4.3.43 (v23.0.0) ios v4.3.53 (v11.2.0)
+feat(applovin): update sdk: android v4.3.42 (v12.3.1) ios v4.3.43 (v12.3.1)
+feat(chartboost): update sdk: android v4.3.15 (v9.6.1) ios v4.3.17 (v9.6.0)
+feat(facebookaudience): update sdk: android v4.3.45 (v6.16.0) ios v4.3.44 (v6.15.0)
+feat(unityads): update sdk: android v4.3.37 (v4.10.0) ios v4.3.37 (v4.10.0)
+feat(vungle): update sdk: android v4.3.23 (v7.1.0) ios v4.3.33 (v7.3.0)
+```
+
 ###### 2024.03.20 [v2.18.2]
 
 ```
