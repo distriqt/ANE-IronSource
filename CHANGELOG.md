@@ -1,3 +1,9 @@
+###### 2024.04.23 [v3.0.1]
+
+```
+fix(ironsource): remove incorrectly packaged static library preventing submissions (resolves #65)
+```
+
 ###### 2024.04.17 [v3.0.0]
 
 ```
