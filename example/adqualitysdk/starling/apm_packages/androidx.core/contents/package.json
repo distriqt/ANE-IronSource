@@ -1,0 +1,22 @@
+{
+  "id": "androidx.core",
+  "name": "AndroidX Core",
+  "url": "https://github.com/distriqt/ANE-AndroidSupport",
+  "docUrl": "https://github.com/distriqt/ANE-AndroidSupport/wiki",
+  "description": "Android dependency library",
+  "type": "ane",
+  "version": "1.10.101",
+  "sourceUrl": "https://github.com/distriqt/ANE-AndroidSupport/releases/download/v2.8.4/androidx.core_1.10.101.airpackage",
+  "publishedAt": "2024-04-22T15:21:47.000Z",
+  "dependencies": ["com.jetbrains.kotlin:1.8.x"],
+  "parameters": [],
+  "tags": [],
+  "license": {
+    "type": "airnativeextensions - public",
+    "url": "https://airnativeextensions.com/license",
+    "public": true
+  },
+  "status": "release",
+  "purchaseUrl": "",
+  "platforms": ["android"]
+}

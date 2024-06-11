@@ -1,0 +1,29 @@
+{
+    "identifier": "com.distriqt.test",
+    "name": "TestAdQuality",
+    "filename": "TestAdQuality",
+    "version": "0.0.1",
+    "versionLabel": "",
+    "platforms": [],
+    "dependencies": [
+        {
+            "version": "4.0.1",
+            "id": "com.distriqt.IronSource"
+        },
+        {
+            "version": "4.1.1",
+            "id": "feathersui"
+        },
+        {
+            "version": "4.1.1",
+            "id": "feathersui_MetalWorksMobileTheme"
+        },
+        {
+            "version": "2.7.0",
+            "id": "starling"
+        }
+    ],
+    "configuration": {},
+    "repositories": [],
+    "deployOptions": {}
+}

@@ -1,0 +1,543 @@
+{
+    "dependencies": [
+        {
+            "packageVersion": {
+                "checksum": "817056d71514b71e2e63c609b3b5b226a63529debc00ce7ad76d49f46baa12ce",
+                "dependencies": [
+                    {
+                        "id": "com.jetbrains.kotlin",
+                        "version": "1.8.x"
+                    }
+                ],
+                "package": {
+                    "description": "Android dependency library",
+                    "docUrl": "https://github.com/distriqt/ANE-AndroidSupport/wiki",
+                    "identifier": "androidx.core",
+                    "license": {
+                        "public": true,
+                        "type": "airnativeextensions - public",
+                        "url": "https://airnativeextensions.com/license"
+                    },
+                    "name": "AndroidX Core",
+                    "publishedAt": "2021-08-20T02:40:36.644Z",
+                    "purchaseUrl": "",
+                    "type": "ane",
+                    "url": "https://github.com/distriqt/ANE-AndroidSupport"
+                },
+                "parameters": [],
+                "platforms": [
+                    {
+                        "name": "android"
+                    }
+                ],
+                "publishedAt": "2024-04-22T15:21:47.000Z",
+                "sourceUrl": "https://github.com/distriqt/ANE-AndroidSupport/releases/download/v2.8.4/androidx.core_1.10.101.airpackage",
+                "status": "release",
+                "version": "1.10.101"
+            },
+            "request": {
+                "packageIdentifier": "androidx.core",
+                "requiringPackage": {
+                    "checksum": "3b147b9ead32898ac1117eee762745d8580ff1a2883283104cce330019dd2d4d",
+                    "dependencies": [
+                        {
+                            "id": "com.distriqt.Core",
+                            "version": "7.x.x"
+                        },
+                        {
+                            "id": "com.jetbrains.kotlin",
+                            "version": "1.8.x"
+                        },
+                        {
+                            "id": "com.distriqt.playservices.Base",
+                            "version": "18.2.x"
+                        },
+                        {
+                            "id": "androidx.core",
+                            "version": "1.10.x"
+                        }
+                    ],
+                    "package": {
+                        "description": "Monetise your application through advertising with ironSource",
+                        "docUrl": "https://docs.airnativeextensions.com/docs/ironsource",
+                        "identifier": "com.distriqt.IronSource",
+                        "license": {
+                            "public": true,
+                            "type": "airnativeextensions - public",
+                            "url": "https://airnativeextensions.com/license"
+                        },
+                        "name": "IronSource",
+                        "publishedAt": "2021-09-06T02:20:27.163Z",
+                        "purchaseUrl": "https://github.com/sponsors/marchbold",
+                        "tags": [
+                            "ios",
+                            "android",
+                            "adverts",
+                            "ads",
+                            "monetisation",
+                            "mediation"
+                        ],
+                        "type": "ane",
+                        "url": "https://airnativeextensions.com/extension/com.distriqt.IronSource"
+                    },
+                    "parameters": [],
+                    "platforms": [],
+                    "publishedAt": "2024-04-23T12:00:11.000Z",
+                    "sourceUrl": "https://github.com/distriqt/ANE-IronSource/releases/download/v3.0.1/com.distriqt.IronSource_4.0.1.airpackage",
+                    "status": "release",
+                    "version": "4.0.1"
+                },
+                "source": null,
+                "version": "1.10.x"
+            }
+        },
+        {
+            "packageVersion": {
+                "checksum": "61010b0931c751563cdd3ef9c5685ca507a399e1259b4ffd5c62a5a80d8ee6b7",
+                "dependencies": [],
+                "package": {
+                    "description": "Extension providing a centralised library for native extension common utilities and a notification / delegation system",
+                    "docUrl": "https://github.com/distriqt/ANE-Core/wiki",
+                    "identifier": "com.distriqt.Core",
+                    "license": {
+                        "public": true,
+                        "type": "none",
+                        "url": ""
+                    },
+                    "name": "Core Native Extension",
+                    "publishedAt": "2021-06-18T04:09:04.984Z",
+                    "purchaseUrl": "",
+                    "tags": [
+                        "ios",
+                        "android",
+                        "core",
+                        "common"
+                    ],
+                    "type": "ane",
+                    "url": "https://github.com/distriqt/ANE-Core"
+                },
+                "parameters": [],
+                "platforms": [],
+                "publishedAt": "2023-09-22T13:43:35.000Z",
+                "sourceUrl": "https://github.com/distriqt/ANE-Core/releases/download/v7.5.1/com.distriqt.Core_7.5.1.airpackage",
+                "status": "release",
+                "version": "7.5.1"
+            },
+            "request": {
+                "packageIdentifier": "com.distriqt.Core",
+                "requiringPackage": {
+                    "checksum": "3b147b9ead32898ac1117eee762745d8580ff1a2883283104cce330019dd2d4d",
+                    "dependencies": [
+                        {
+                            "id": "com.distriqt.Core",
+                            "version": "7.x.x"
+                        },
+                        {
+                            "id": "com.jetbrains.kotlin",
+                            "version": "1.8.x"
+                        },
+                        {
+                            "id": "com.distriqt.playservices.Base",
+                            "version": "18.2.x"
+                        },
+                        {
+                            "id": "androidx.core",
+                            "version": "1.10.x"
+                        }
+                    ],
+                    "package": {
+                        "description": "Monetise your application through advertising with ironSource",
+                        "docUrl": "https://docs.airnativeextensions.com/docs/ironsource",
+                        "identifier": "com.distriqt.IronSource",
+                        "license": {
+                            "public": true,
+                            "type": "airnativeextensions - public",
+                            "url": "https://airnativeextensions.com/license"
+                        },
+                        "name": "IronSource",
+                        "publishedAt": "2021-09-06T02:20:27.163Z",
+                        "purchaseUrl": "https://github.com/sponsors/marchbold",
+                        "tags": [
+                            "ios",
+                            "android",
+                            "adverts",
+                            "ads",
+                            "monetisation",
+                            "mediation"
+                        ],
+                        "type": "ane",
+                        "url": "https://airnativeextensions.com/extension/com.distriqt.IronSource"
+                    },
+                    "parameters": [],
+                    "platforms": [],
+                    "publishedAt": "2024-04-23T12:00:11.000Z",
+                    "sourceUrl": "https://github.com/distriqt/ANE-IronSource/releases/download/v3.0.1/com.distriqt.IronSource_4.0.1.airpackage",
+                    "status": "release",
+                    "version": "4.0.1"
+                },
+                "source": null,
+                "version": "7.x.x"
+            }
+        },
+        {
+            "packageVersion": {
+                "checksum": "3b147b9ead32898ac1117eee762745d8580ff1a2883283104cce330019dd2d4d",
+                "dependencies": [
+                    {
+                        "id": "com.distriqt.Core",
+                        "version": "7.x.x"
+                    },
+                    {
+                        "id": "com.jetbrains.kotlin",
+                        "version": "1.8.x"
+                    },
+                    {
+                        "id": "com.distriqt.playservices.Base",
+                        "version": "18.2.x"
+                    },
+                    {
+                        "id": "androidx.core",
+                        "version": "1.10.x"
+                    }
+                ],
+                "package": {
+                    "description": "Monetise your application through advertising with ironSource",
+                    "docUrl": "https://docs.airnativeextensions.com/docs/ironsource",
+                    "identifier": "com.distriqt.IronSource",
+                    "license": {
+                        "public": true,
+                        "type": "airnativeextensions - public",
+                        "url": "https://airnativeextensions.com/license"
+                    },
+                    "name": "IronSource",
+                    "publishedAt": "2021-09-06T02:20:27.163Z",
+                    "purchaseUrl": "https://github.com/sponsors/marchbold",
+                    "tags": [
+                        "ios",
+                        "android",
+                        "adverts",
+                        "ads",
+                        "monetisation",
+                        "mediation"
+                    ],
+                    "type": "ane",
+                    "url": "https://airnativeextensions.com/extension/com.distriqt.IronSource"
+                },
+                "parameters": [],
+                "platforms": [],
+                "publishedAt": "2024-04-23T12:00:11.000Z",
+                "sourceUrl": "https://github.com/distriqt/ANE-IronSource/releases/download/v3.0.1/com.distriqt.IronSource_4.0.1.airpackage",
+                "status": "release",
+                "version": "4.0.1"
+            },
+            "request": {
+                "packageIdentifier": "com.distriqt.Ironsource",
+                "source": null,
+                "version": "4.0.1"
+            }
+        },
+        {
+            "packageVersion": {
+                "checksum": "c40e817457d5760ff814ce71fc9dadd2d34021443422586da60489a3201534db",
+                "dependencies": [],
+                "package": {
+                    "description": "Google Play Services Base dependencies",
+                    "docUrl": "https://github.com/distriqt/ANE-GooglePlayServices/wiki",
+                    "identifier": "com.distriqt.playservices.Base",
+                    "license": {
+                        "public": true,
+                        "type": "airnativeextensions - public",
+                        "url": "https://airnativeextensions.com/license"
+                    },
+                    "name": "Google Play Services Base  ",
+                    "publishedAt": "2021-08-20T03:45:04.555Z",
+                    "purchaseUrl": "",
+                    "type": "ane",
+                    "url": "https://github.com/distriqt/ANE-GooglePlayServices"
+                },
+                "parameters": [],
+                "platforms": [
+                    {
+                        "name": "android"
+                    }
+                ],
+                "publishedAt": "2024-04-17T12:16:37.000Z",
+                "sourceUrl": "https://github.com/distriqt/ANE-GooglePlayServices/releases/download/v28.3.2/com.distriqt.playservices.Base_18.2.4.airpackage",
+                "status": "release",
+                "version": "18.2.4"
+            },
+            "request": {
+                "packageIdentifier": "com.distriqt.playservices.Base",
+                "requiringPackage": {
+                    "checksum": "3b147b9ead32898ac1117eee762745d8580ff1a2883283104cce330019dd2d4d",
+                    "dependencies": [
+                        {
+                            "id": "com.distriqt.Core",
+                            "version": "7.x.x"
+                        },
+                        {
+                            "id": "com.jetbrains.kotlin",
+                            "version": "1.8.x"
+                        },
+                        {
+                            "id": "com.distriqt.playservices.Base",
+                            "version": "18.2.x"
+                        },
+                        {
+                            "id": "androidx.core",
+                            "version": "1.10.x"
+                        }
+                    ],
+                    "package": {
+                        "description": "Monetise your application through advertising with ironSource",
+                        "docUrl": "https://docs.airnativeextensions.com/docs/ironsource",
+                        "identifier": "com.distriqt.IronSource",
+                        "license": {
+                            "public": true,
+                            "type": "airnativeextensions - public",
+                            "url": "https://airnativeextensions.com/license"
+                        },
+                        "name": "IronSource",
+                        "publishedAt": "2021-09-06T02:20:27.163Z",
+                        "purchaseUrl": "https://github.com/sponsors/marchbold",
+                        "tags": [
+                            "ios",
+                            "android",
+                            "adverts",
+                            "ads",
+                            "monetisation",
+                            "mediation"
+                        ],
+                        "type": "ane",
+                        "url": "https://airnativeextensions.com/extension/com.distriqt.IronSource"
+                    },
+                    "parameters": [],
+                    "platforms": [],
+                    "publishedAt": "2024-04-23T12:00:11.000Z",
+                    "sourceUrl": "https://github.com/distriqt/ANE-IronSource/releases/download/v3.0.1/com.distriqt.IronSource_4.0.1.airpackage",
+                    "status": "release",
+                    "version": "4.0.1"
+                },
+                "source": null,
+                "version": "18.2.x"
+            }
+        },
+        {
+            "packageVersion": {
+                "checksum": "4722380e502551071d3775cfd8b26bc3b4fd331886e92bb85a8cde8eecaa41dc",
+                "dependencies": [],
+                "package": {
+                    "description": "Android dependency library",
+                    "docUrl": "https://github.com/distriqt/ANE-AndroidSupport/wiki",
+                    "identifier": "com.jetbrains.kotlin",
+                    "license": {
+                        "public": true,
+                        "type": "airnativeextensions - public",
+                        "url": "https://airnativeextensions.com/license"
+                    },
+                    "name": "JetBrains Kotlin",
+                    "publishedAt": "2021-08-20T02:39:34.868Z",
+                    "purchaseUrl": "",
+                    "type": "ane",
+                    "url": "https://github.com/distriqt/ANE-AndroidSupport"
+                },
+                "parameters": [],
+                "platforms": [
+                    {
+                        "name": "android"
+                    }
+                ],
+                "publishedAt": "2024-06-05T17:46:34.000Z",
+                "sourceUrl": "https://github.com/distriqt/ANE-AndroidSupport/releases/download/v2.9.1/com.jetbrains.kotlin_1.8.220.airpackage",
+                "status": "release",
+                "version": "1.8.220"
+            },
+            "request": {
+                "packageIdentifier": "com.jetbrains.kotlin",
+                "requiringPackage": {
+                    "checksum": "3b147b9ead32898ac1117eee762745d8580ff1a2883283104cce330019dd2d4d",
+                    "dependencies": [
+                        {
+                            "id": "com.distriqt.Core",
+                            "version": "7.x.x"
+                        },
+                        {
+                            "id": "com.jetbrains.kotlin",
+                            "version": "1.8.x"
+                        },
+                        {
+                            "id": "com.distriqt.playservices.Base",
+                            "version": "18.2.x"
+                        },
+                        {
+                            "id": "androidx.core",
+                            "version": "1.10.x"
+                        }
+                    ],
+                    "package": {
+                        "description": "Monetise your application through advertising with ironSource",
+                        "docUrl": "https://docs.airnativeextensions.com/docs/ironsource",
+                        "identifier": "com.distriqt.IronSource",
+                        "license": {
+                            "public": true,
+                            "type": "airnativeextensions - public",
+                            "url": "https://airnativeextensions.com/license"
+                        },
+                        "name": "IronSource",
+                        "publishedAt": "2021-09-06T02:20:27.163Z",
+                        "purchaseUrl": "https://github.com/sponsors/marchbold",
+                        "tags": [
+                            "ios",
+                            "android",
+                            "adverts",
+                            "ads",
+                            "monetisation",
+                            "mediation"
+                        ],
+                        "type": "ane",
+                        "url": "https://airnativeextensions.com/extension/com.distriqt.IronSource"
+                    },
+                    "parameters": [],
+                    "platforms": [],
+                    "publishedAt": "2024-04-23T12:00:11.000Z",
+                    "sourceUrl": "https://github.com/distriqt/ANE-IronSource/releases/download/v3.0.1/com.distriqt.IronSource_4.0.1.airpackage",
+                    "status": "release",
+                    "version": "4.0.1"
+                },
+                "source": null,
+                "version": "1.8.x"
+            }
+        },
+        {
+            "packageVersion": {
+                "checksum": "f83c6bc73d1e43f2ed4a37b8654b33b27d13f6093e1022efb244eef3b49cd68d",
+                "dependencies": [
+                    {
+                        "id": "starling",
+                        "version": "2.x.x"
+                    }
+                ],
+                "package": {
+                    "description": "Cross-platform user interface components for creative frontend projects built with Starling",
+                    "docUrl": "https://feathersui/api-reference/",
+                    "identifier": "feathersui",
+                    "license": {
+                        "public": true,
+                        "type": "Simplified BSD",
+                        "url": "https://github.com/feathersui/feathersui-starling/blob/v4.1.1/LICENSE.md"
+                    },
+                    "name": "feathersui",
+                    "publishedAt": "2021-11-19T19:14:20.988Z",
+                    "purchaseUrl": "",
+                    "tags": [
+                        "components",
+                        "gui",
+                        "starling",
+                        "ui",
+                        "widgets"
+                    ],
+                    "type": "swc",
+                    "url": "https://feathersui.com/as3-starling/"
+                },
+                "parameters": [],
+                "platforms": [],
+                "publishedAt": "2021-11-19T00:00:00.000Z",
+                "sourceUrl": "https://github.com/feathersui/feathersui-starling/releases/download/v4.1.1/feathersui_4.1.1.airpackage",
+                "status": "release",
+                "version": "4.1.1"
+            },
+            "request": {
+                "packageIdentifier": "feathersui",
+                "source": null,
+                "version": "4.1.1"
+            }
+        },
+        {
+            "packageVersion": {
+                "checksum": "3b2e521831514bbc599a39ecd4e157352f6388fd75e8b74d13506e5e7da63a31",
+                "dependencies": [
+                    {
+                        "id": "starling",
+                        "version": "2.x.x"
+                    },
+                    {
+                        "id": "feathersui",
+                        "version": "4.1.x"
+                    }
+                ],
+                "package": {
+                    "description": "Metal Works mobile theme for Feathers UI (Starling version)",
+                    "docUrl": "https://feathersui/api-reference/",
+                    "identifier": "feathersui_MetalWorksMobileTheme",
+                    "license": {
+                        "public": true,
+                        "type": "Simplified BSD",
+                        "url": "https://github.com/feathersui/feathersui-starling/blob/v4.1.1/LICENSE.md"
+                    },
+                    "name": "Feathers UI Metal Works Mobile Theme",
+                    "publishedAt": "2021-11-19T19:15:52.059Z",
+                    "purchaseUrl": "",
+                    "tags": [
+                        "starling",
+                        "theme",
+                        "feathers"
+                    ],
+                    "type": "swc",
+                    "url": "https://feathersui.com/as3-starling/"
+                },
+                "parameters": [],
+                "platforms": [],
+                "publishedAt": "2021-11-19T00:00:00.000Z",
+                "sourceUrl": "https://github.com/feathersui/feathersui-starling/releases/download/v4.1.1/feathersui_MetalWorksMobileTheme_4.1.1.airpackage",
+                "status": "release",
+                "version": "4.1.1"
+            },
+            "request": {
+                "packageIdentifier": "feathersui_MetalWorksMobileTheme",
+                "source": null,
+                "version": "4.1.1"
+            }
+        },
+        {
+            "packageVersion": {
+                "checksum": "17543a806e8dd4074dd2726b17d09b3282870ad38b962b4d6ae8ea7483418d0d",
+                "dependencies": [],
+                "package": {
+                    "description": "The Cross Platform Game Engine",
+                    "docUrl": "https://doc.starling-framework.org",
+                    "identifier": "starling",
+                    "license": {
+                        "public": true,
+                        "type": "Simplified BSD",
+                        "url": "https://github.com/Gamua/Starling-Framework/blob/master/LICENSE.md"
+                    },
+                    "name": "starling",
+                    "publishedAt": "2021-07-27T13:22:30.211Z",
+                    "purchaseUrl": "",
+                    "tags": [
+                        "framework",
+                        "gpu",
+                        "game engine",
+                        "game development",
+                        "gamedev",
+                        "games"
+                    ],
+                    "type": "swc",
+                    "url": "https://gamua.com/starling"
+                },
+                "parameters": [],
+                "platforms": [],
+                "publishedAt": "2021-09-08T10:52:06.732Z",
+                "sourceUrl": "https://github.com/Gamua/Starling-Framework/releases/download/v2.7/starling_2.7.0.airpackage",
+                "status": "",
+                "version": "2.7.0"
+            },
+            "request": {
+                "packageIdentifier": "starling",
+                "source": null,
+                "version": "2.7.0"
+            }
+        }
+    ],
+    "uninstalledPackageIdentifiers": []
+}

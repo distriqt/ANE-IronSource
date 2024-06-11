@@ -13,9 +13,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NSString *FBAdExperienceType NS_STRING_ENUM;
-extern FBAdExperienceType const FBAdExperienceTypeRewarded;
-extern FBAdExperienceType const FBAdExperienceTypeInterstitial;
-extern FBAdExperienceType const FBAdExperienceTypeRewardedInterstitial;
+FB_EXPORT FBAdExperienceType const FBAdExperienceTypeRewarded;
+FB_EXPORT FBAdExperienceType const FBAdExperienceTypeInterstitial;
+FB_EXPORT FBAdExperienceType const FBAdExperienceTypeRewardedInterstitial;
 
 FB_CLASS_EXPORT
 /**

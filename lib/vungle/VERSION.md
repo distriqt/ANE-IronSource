@@ -2,4 +2,4 @@
 
 | Extension | Version | Android Lib | iOS Lib |
 | --- | --- | --- | --- |
-| com.distriqt.ironsource.Vungle | 7.3.0 | 4.3.23 | 4.3.33 |
+| com.distriqt.ironsource.Vungle | 7.3.200 | 4.3.24 | 4.3.35 |

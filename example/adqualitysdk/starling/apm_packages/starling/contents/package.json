@@ -1,0 +1,29 @@
+{
+  "id": "starling",
+  "name": "starling",
+  "url": "https://gamua.com/starling",
+  "docUrl": "https://doc.starling-framework.org",
+  "description": "The Cross Platform Game Engine",
+  "type": "swc",
+  "version": "2.7.0",
+  "sourceUrl": "https://github.com/Gamua/Starling-Framework/releases/download/v2.7/starling_2.7.0.airpackage",
+  "dependencies": [
+
+  ],
+  "parameters": [
+
+  ],
+  "tags": [
+    "framework",
+    "gpu",
+    "game engine",
+    "game development",
+    "gamedev",
+    "games"
+  ],
+  "license": {
+    "type": "Simplified BSD",
+    "url": "https://github.com/Gamua/Starling-Framework/blob/master/LICENSE.md",
+    "public": true
+  }
+}

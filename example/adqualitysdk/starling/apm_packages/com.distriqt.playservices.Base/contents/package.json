@@ -1,0 +1,24 @@
+{
+  "id": "com.distriqt.playservices.Base",
+  "name": "Google Play Services Base  ",
+  "url": "https://github.com/distriqt/ANE-GooglePlayServices",
+  "docUrl": "https://github.com/distriqt/ANE-GooglePlayServices/wiki",
+  "description": "Google Play Services Base dependencies",
+  "type": "ane",
+  "version": "18.2.4",
+  "sourceUrl": "https://github.com/distriqt/ANE-GooglePlayServices/releases/download/v28.3.2/com.distriqt.playservices.Base_18.2.4.airpackage",
+  "publishedAt": "2024-04-17T12:16:37.000Z",
+  "dependencies": [],
+  "parameters": [],
+  "tags": [],
+  "license": {
+    "type": "airnativeextensions - public",
+    "url": "https://airnativeextensions.com/license",
+    "public": true
+  },
+  "status": "release",
+  "purchaseUrl": "",
+  "platforms": [
+    "android"
+  ]
+}

@@ -1,3 +1,21 @@
+###### 2024.06.11 [v3.1.0]
+
+```
+**Note** AppLovin iOS update introduces dynamic frameworks
+
+
+feat(ios,android): update ironsource sdk v8.1.0 (remove ad quality sdk) (resolves https://github.com/distriqt/ANE-NativeWebView/issues/336)
+
+feat(adqualitysdk): add new extension for the ad quality sdk v7.20.0
+feat(admob): update admob sdk: ios v4.3.54
+feat(applovin): update applovin sdk: android v4.3.44 (v12.5.0) ios v4.3.46 (v12.5.0)
+feat(chartboost): update chartboost sdk: android v4.3.16 (v9.7.0) ios v4.3.18 (v9.7.0)
+feat(digitalturbine): update digitalturbine sdk: android v4.3.31 (v8.2.7) ios v4.3.34 (v8.2.8)
+feat(facebook): update facebook audience sdk: android v4.3.46 (v6.17.0) ios v4.3.45 (v6.15.1)
+feat(unityads): update unity ads sdk: android v4.3.40 (v4.12.0) ios v4.3.40 (v4.12.0)
+feat(vungle): update vungle sdk: android v4.3.24 (v7.3.2) ios v4.3.35 (v7.3.2)
+```
+
 ###### 2024.04.23 [v3.0.1]
 
 ```

@@ -234,7 +234,7 @@ FB_CLASS_EXPORT FB_SUBCLASSING_RESTRICTED @interface FBRewardedVideoAd : NSObjec
  Experimental Feature, DO NOT USE IN PRODUCTION!
 
 
- @param FBAdCompanionView should return a Companion View for the Interstitial Ad.
+ @param completion a block that returns a companion View for the Interstitial Ad.
  */
 - (void)rewardedVideoAdCompanionViewProvider:(void (^)(FBAdCompanionView *_Nullable))completion;
 

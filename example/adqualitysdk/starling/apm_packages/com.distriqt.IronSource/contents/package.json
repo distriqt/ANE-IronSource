@@ -1,0 +1,32 @@
+{
+  "id": "com.distriqt.IronSource",
+  "name": "IronSource",
+  "url": "https://github.com/@GITHUB_REPO@",
+  "docUrl": "https://docs.airnativeextensions.com/docs/ironsource",
+  "description": "Monetise your application through advertising with ironSource",
+  "type": "ane",
+  "version": "4.0.1",
+  "sourceUrl": "https://github.com/distriqt/ANE-IronSource/releases/download/v3.0.1/com.distriqt.IronSource_4.0.1.airpackage",
+  "publishedAt": "2024-04-23T12:00:11.000Z",
+  "dependencies": [
+    "com.distriqt.Core:7.x.x",
+    "androidx.core:1.10.x",
+    "com.jetbrains.kotlin:1.8.x",
+    "com.distriqt.playservices.Base:18.2.x"
+  ],
+  "parameters": [],
+  "tags": [
+    "adverts",
+    "ads",
+    "android",
+    "ios",
+    "monetisation",
+    "mediation"
+  ],
+  "license": {
+    "type": "airnativeextensions - public",
+    "url": "https://airnativeextensions.com/license",
+    "public": true
+  },
+  "purchaseUrl": "https://github.com/sponsors/marchbold"
+}

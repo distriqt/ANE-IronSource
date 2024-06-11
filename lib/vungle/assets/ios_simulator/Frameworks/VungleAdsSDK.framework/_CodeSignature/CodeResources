@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/VungleAdsSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		qLE/ZK41vZf6AgJGRqzCypUYmSA=
+		2h5NQonQYNJgoMt4pbvuOO2y3rY=
 		</data>
 		<key>Modules/VungleAdsSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/VungleAdsSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		TmYE4+efz4RH+6XAutgm6BYgQGA=
+		2plv297ILUhAtW36P2fnCGwOmU4=
 		</data>
 		<key>Modules/VungleAdsSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		qLE/ZK41vZf6AgJGRqzCypUYmSA=
+		2h5NQonQYNJgoMt4pbvuOO2y3rY=
 		</data>
 		<key>Modules/VungleAdsSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/VungleAdsSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Z0sH25PrUdyRnxEXbjHBUyOkk0k=
+		45dNef8laCDqtPnJ4twylkl4Hc4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -66,7 +66,7 @@
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
-		BLNjR6VVI/K82v3iQCE5o0YXgGI=
+		99lHiKAMEwibufp7vGK7r8V203g=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -96,7 +96,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1CBXddw0S3sCG30BpEazvUyvql3fExCLGAF04lJfGYg=
+			1jwkWzzqTSwxufYM+ygWfq34i9TL9/4Phk01C+CrDr4=
 			</data>
 		</dict>
 		<key>Modules/VungleAdsSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -124,14 +124,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XdZxl3V2gF4tFqdnGFeB0iyMDPK+x/2kXsceDCHSR8I=
+			1Ez6KJ8ZjDnUu7yHIEcSwYToEln9zuOoUXU4DC/qhpQ=
 			</data>
 		</dict>
 		<key>Modules/VungleAdsSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1CBXddw0S3sCG30BpEazvUyvql3fExCLGAF04lJfGYg=
+			1jwkWzzqTSwxufYM+ygWfq34i9TL9/4Phk01C+CrDr4=
 			</data>
 		</dict>
 		<key>Modules/VungleAdsSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -159,7 +159,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			w3m8xrCK73s+QNTP68hVPZTAW9fk1DE+z5wt2/eC0I8=
+			nhycJC1dXVG9TGdvYLZGjW86sJ07TtmRtHRflqMGZh8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -173,7 +173,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ES/wHPURrhqoWqlouH6JyVI5Y7FKY1pgaWMpkbPGo0E=
+			RX/aXFa+FOCjdkY1ix5eE2OBHeionXWqGUSFGTmdVUQ=
 			</data>
 		</dict>
 	</dict>
