@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<application xmlns="http://ns.adobe.com/air/application/50.2" >
+<application xmlns="http://ns.adobe.com/air/application/51.0" >
   <id>com.distriqt.test</id>
   <filename>TestChartboost</filename>
   <name>TestChartboost</name>
@@ -103,12 +103,6 @@
     <activity android:name="com.ironsource.sdk.controller.OpenUrlActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent"/>
     <activity android:name="com.ironsource.mediationsdk.testSuite.TestSuiteActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar"/>
     <provider android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider" android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider"/>
-    <activity android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:excludeFromRecents="true" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-    <!--
-            Service handling Google Sign-In user revocation. For apps that do not integrate with
-            Google Sign-In, this service will never be started.
-        -->
-    <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:exported="true" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
     <activity
           android:name="com.chartboost.sdk.view.CBImpressionActivity"
           android:configChanges="keyboardHidden|orientation|screenSize"
@@ -146,7 +140,6 @@
     <extensionID>com.distriqt.ironsource.Chartboost</extensionID>
     <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
     <extensionID>com.distriqt.playservices.AppSet</extensionID>
-    <extensionID>com.distriqt.playservices.Auth</extensionID>
     <extensionID>com.distriqt.playservices.Base</extensionID>
     <extensionID>com.jetbrains.kotlin</extensionID>
   </extensions>

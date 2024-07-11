@@ -1,3 +1,9 @@
+###### 2024.07.11 [v3.1.1]
+
+```
+fix(chartboost): remove unnecessary playservices auth dependency
+```
+
 ###### 2024.06.11 [v3.1.0]
 
 ```
