@@ -1,3 +1,18 @@
+###### 2024.09.03 [v3.2.0]
+
+```
+feat(ios,android): update ironsource sdk: android v8.3.0, iOS v8.3.0
+
+feat(adqualitysdk): update ad quality sdk: android v7.20.5, iOS v7.20.6
+feat(admob): update admob sdk: android v4.3.44 (v23.3.0), ios v4.3.56 (v11.7.0)
+feat(applovin): update applovin sdk: android v4.3.45 (v12.6.0), ios v4.3.47 (v12.6.0)
+feat(chartboost): update chartboost sdk: android v4.3.16 (v9.7.0) ios v4.3.19 (v9.7.0)
+feat(digitalturbine): update digitalturbine sdk: android v4.3.32 (v8.2.7) ios v4.3.36 (v8.3.1)
+feat(facebookaudience): update facebookaudience sdk: android v4.3.47 (v6.17.0) ios v4.3.46 (v6.15.2)
+feat(unityads): update unityads sdk: android v4.3.42 (v4.12.2) ios v4.3.42 (v4.12.2) (resolves https://github.com/distriqt/ANE-IronSource/issues/68)
+feat(vungle): update vungle sdk: android v4.3.25 (v7.4.0) ios v4.3.36 (v7.4.0)
+```
+
 ###### 2024.07.11 [v3.1.1]
 
 ```

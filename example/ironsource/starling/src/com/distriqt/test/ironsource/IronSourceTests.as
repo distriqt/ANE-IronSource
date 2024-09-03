@@ -135,7 +135,7 @@ package com.distriqt.test.ironsource
 		{
 			log( "loadBanner()" );
 			IronSource.instance.loadBanner(
-					IronSourceBannerSize.LARGE,
+					IronSourceBannerSize.BANNER,
 					IronSource.POSITION_BOTTOM
 			);
 		}

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<application xmlns="http://ns.adobe.com/air/application/50.2" >
+<application xmlns="http://ns.adobe.com/air/application/51.1" >
   <id>com.distriqt.test</id>
   <filename>TestVungle</filename>
   <name>TestVungle</name>
@@ -468,15 +468,10 @@
     <provider android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider" android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider"/>
 
     <activity
-      android:name="com.vungle.ads.internal.ui.VungleActivity"
-      android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
-      android:hardwareAccelerated="true"
-      android:launchMode="singleTop" />
-
-    <provider
-      android:name="com.vungle.ads.internal.util.VungleProvider"
-      android:authorities="air.com.distriqt.test.vungle-provider"
-      android:exported="false" />
+        android:name="com.vungle.ads.internal.ui.VungleActivity"
+        android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+        android:hardwareAccelerated="true"
+        android:launchMode="singleTop" />
 
   </application>
 </manifest>

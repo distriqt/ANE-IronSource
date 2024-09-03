@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<application xmlns="http://ns.adobe.com/air/application/50.2" >
+<application xmlns="http://ns.adobe.com/air/application/51.1" >
   <id>com.distriqt.test</id>
   <filename>TestUnityAds</filename>
   <name>TestUnityAds</name>
@@ -43,7 +43,7 @@
   </iPhone>
   <android>
     <manifestAdditions><![CDATA[<manifest android:installLocation="auto" >
-  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>
   <permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
   <uses-permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
   <!-- Required permission for App measurement to run. -->

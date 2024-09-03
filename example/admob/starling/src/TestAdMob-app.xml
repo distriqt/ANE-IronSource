@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<application xmlns="http://ns.adobe.com/air/application/50.2" >
+<application xmlns="http://ns.adobe.com/air/application/51.1" >
   <id>com.distriqt.test</id>
   <filename>TestAdMob</filename>
   <name>TestAdMob</name>
@@ -61,9 +61,9 @@
   </iPhone>
   <android>
     <manifestAdditions><![CDATA[<manifest android:installLocation="auto" >
-  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>
-  <permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
-  <uses-permission android:name="air.com.distriqt.test.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34"/>
+  <permission android:name="air.com.distriqt.test.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature"/>
+  <uses-permission android:name="air.com.distriqt.test.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
   <!-- Include required permissions for Google Mobile Ads to run -->
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -95,17 +95,16 @@
     <meta-data android:name="android.max_aspect" android:value="2.5"/>
     <meta-data android:name="android.notch_support" android:value="true"/>
     <service android:name="androidx.room.MultiInstanceInvalidationService" android:directBootAware="true" android:exported="false"/>
-    <provider android:name="androidx.startup.InitializationProvider" android:authorities="air.com.distriqt.test.androidx-startup" android:exported="false">
+    <provider android:name="androidx.startup.InitializationProvider" android:authorities="air.com.distriqt.test.debug.androidx-startup" android:exported="false">
       <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
       <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
     </provider>
     <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
     <activity android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:exported="false" android:theme="@android:style/Theme.Translucent"/>
-    <provider android:name="com.google.android.gms.ads.MobileAdsInitProvider" android:authorities="air.com.distriqt.test.mobileadsinitprovider" android:exported="false" android:initOrder="100"/>
+    <provider android:name="com.google.android.gms.ads.MobileAdsInitProvider" android:authorities="air.com.distriqt.test.debug.mobileadsinitprovider" android:exported="false" android:initOrder="100"/>
     <service android:name="com.google.android.gms.ads.AdService" android:enabled="true" android:exported="false"/>
     <activity android:name="com.google.android.gms.ads.OutOfContextTestingActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:exported="false"/>
     <activity android:name="com.google.android.gms.ads.NotificationHandlerActivity" android:excludeFromRecents="true" android:exported="false" android:launchMode="singleTask" android:taskAffinity="" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-    <property android:name="android.adservices.AD_SERVICES_CONFIG" android:resource="@xml/gma_ad_services_config"/>
     <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
     <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
     <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:enabled="true" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"/>
@@ -160,11 +159,37 @@
       </intent-filter>
     </receiver>
     <activity android:name="com.distriqt.core.auth.AuthorisationActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-    <activity android:name="com.ironsource.sdk.controller.ControllerActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true"/>
-    <activity android:name="com.ironsource.sdk.controller.InterstitialActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent"/>
-    <activity android:name="com.ironsource.sdk.controller.OpenUrlActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent"/>
-    <activity android:name="com.ironsource.mediationsdk.testSuite.TestSuiteActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar"/>
-    <provider android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider" android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider"/>
+
+    <activity
+        android:name="com.ironsource.sdk.controller.ControllerActivity"
+        android:configChanges="orientation|screenSize"
+        android:hardwareAccelerated="true" />
+    <activity
+        android:name="com.ironsource.sdk.controller.InterstitialActivity"
+        android:configChanges="orientation|screenSize"
+        android:hardwareAccelerated="true"
+        android:theme="@android:style/Theme.Translucent" />
+    <activity
+        android:name="com.ironsource.sdk.controller.OpenUrlActivity"
+        android:configChanges="orientation|screenSize"
+        android:hardwareAccelerated="true"
+        android:theme="@android:style/Theme.Translucent" />
+    <activity
+        android:name="com.ironsource.mediationsdk.testSuite.TestSuiteActivity"
+        android:configChanges="orientation|screenSize"
+        android:exported="false"
+        android:hardwareAccelerated="true"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <meta-data
+            android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="true" />
+    </activity>
+
+    <provider
+        android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
+        android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider"
+        android:exported="false" />
+
   </application>
 </manifest>
 ]]></manifestAdditions>

@@ -6,6 +6,7 @@ import AVFAudio
 import AVFoundation
 import AdSupport
 import AppTrackingTransparency
+import AudioToolbox
 import CoreTelephony
 import Dispatch
 import Foundation
@@ -21,6 +22,7 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 import os
 import zlib
+@available(*, deprecated, message: "VungleBannerDelegate will be depricated and Replaced by VungleBannerViewDelegate class.")
 @objc public protocol VungleBannerDelegate : ObjectiveC.NSObjectProtocol {
   @objc optional func bannerAdDidLoad(_ banner: VungleAdsSDK.VungleBanner)
   @objc optional func bannerAdDidFailToLoad(_ banner: VungleAdsSDK.VungleBanner, withError: Foundation.NSError)
@@ -33,6 +35,7 @@ import zlib
   @objc optional func bannerAdDidClick(_ banner: VungleAdsSDK.VungleBanner)
   @objc optional func bannerAdWillLeaveApplication(_ banner: VungleAdsSDK.VungleBanner)
 }
+@available(*, deprecated, message: "BannerSize will be depricated and will be replaced by VungleAdSize")
 @objc public enum BannerSize : Swift.Int {
   case regular = 0
   case short = 1
@@ -44,9 +47,12 @@ import zlib
     get
   }
 }
-@_hasMissingDesignatedInitializers @objc public class VungleBanner : VungleAdsSDK.BasePublicAd {
+@_hasMissingDesignatedInitializers @available(*, deprecated, message: "VungleBanner class will be depricated and Replaced by VungleBannerView class.")
+@objc public class VungleBanner : VungleAdsSDK.BasePublicAd {
   @objc weak public var delegate: (any VungleAdsSDK.VungleBannerDelegate)?
   @objc public init(placementId: Swift.String, size: VungleAdsSDK.BannerSize)
+  @objc public init(placementId: Swift.String, vungleAdSize: VungleAdsSDK.VungleAdSize)
+  @objc public func getBannerSize() -> CoreFoundation.CGSize
   @objc public func present(on publisherView: UIKit.UIView)
   @objc deinit
 }
@@ -99,6 +105,7 @@ import zlib
   @objc public func registerViewForInteraction(view: UIKit.UIView, mediaView: VungleAdsSDK.MediaView, iconImageView: UIKit.UIImageView?, viewController: UIKit.UIViewController?, clickableViews: [UIKit.UIView]?)
   @objc public func unregisterView()
   @objc public func performCTA()
+  @objc public func getMediaAspectRatio() -> CoreFoundation.CGFloat
   @objc deinit
 }
 @objc public protocol VungleInterstitialDelegate : ObjectiveC.NSObjectProtocol {
@@ -174,19 +181,110 @@ import zlib
   @objc public static var sdkVersion: Swift.String {
     @objc get
   }
+  @objc public static let firstPartyData: VungleAdsSDK.FirstPartyData
   @objc final public class func initWithAppId(_ appId: Swift.String, completion: @escaping (Foundation.NSError?) -> Swift.Void)
   @objc final public class func isInitialized() -> Swift.Bool
+  @objc final public class func isInLine(_ placementId: Swift.String) -> Swift.Bool
   @objc public static func getBiddingToken() -> Swift.String
   @objc final public class func setIntegrationName(_ integrationName: Swift.String, version: Swift.String)
   @objc final public class func setDebugLoggingEnabled(_ isDebugLoggingEnabled: Swift.Bool)
   @objc deinit
 }
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers final public class FirstPartyData : ObjectiveC.NSObject, Swift.Codable {
+  @objc final public func setAge(_ age: Swift.Int)
+  @objc final public func setEducationLevel(_ educationLevel: VungleAdsSDK.EducationLevel)
+  @objc final public func setEmail(_ email: Swift.String)
+  @objc final public func setEmploymentStatus(_ employmentStatus: VungleAdsSDK.EmploymentStatus)
+  @objc final public func setGender(_ gender: VungleAdsSDK.Gender)
+  @objc final public func setIncomeUsd(_ incomeUsd: Swift.Int)
+  @objc final public func setLengthOfResidenceYears(_ lengthOfResidenceYears: Foundation.Decimal)
+  @objc final public func setLocaleClassification(_ localeClassification: VungleAdsSDK.LocaleClassification)
+  @objc final public func setMaritalStatus(_ maritalStatus: VungleAdsSDK.MaritalStatus)
+  @objc final public func setMedianHomeValueUsd(_ medianHomeValueUsd: Swift.Int)
+  @objc final public func setMonthlyHousingPaymentUsd(_ monthlyHousingPaymentUsd: Swift.Int)
+  @objc final public func setOwnership(_ ownership: VungleAdsSDK.Ownership)
+  @objc final public func setPhoneNumber(_ phoneNumber: Swift.String)
+  @objc final public func setPropertyType(_ propertyType: VungleAdsSDK.PropertyType)
+  @objc final public func setYob(_ yob: Swift.Int)
+  @objc final public func setCountry(_ country: Swift.String?)
+  @objc final public func setDma(_ dma: Swift.Int)
+  @objc final public func setIsTraveling(_ isTraveling: Swift.Bool)
+  @objc final public func setLocationSource(_ locationSource: VungleAdsSDK.LocationSource)
+  @objc final public func setLatitude(_ latitude: Swift.Double)
+  @objc final public func setLongitude(_ longitude: Swift.Double)
+  @objc final public func setPostalCode(_ postalCode: Swift.String?)
+  @objc final public func setRegionState(_ regionState: Swift.String?)
+  @objc final public func setEarningsByPlacement(_ earningsByPlacement: Foundation.Decimal)
+  @objc final public func setIsUserAPurchaser(_ isUserAPurchaser: Swift.Bool)
+  @objc final public func setIsUserASubscriber(_ isUserASubscriber: Swift.Bool)
+  @objc final public func setLast30DaysMeanSpendUsd(_ last30DaysMeanSpendUsd: Foundation.Decimal)
+  @objc final public func setLast30DaysMedianSpendUsd(_ last30DaysMedianSpendUsd: Foundation.Decimal)
+  @objc final public func setLast30DaysPlacementFillRate(_ last30DaysPlacementFillRate: Foundation.Decimal)
+  @objc final public func setLast30DaysTotalSpendUsd(_ last30DaysTotalSpendUsd: Foundation.Decimal)
+  @objc final public func setLast30DaysUserLtvUsd(_ last30DaysUserLtvUsd: Foundation.Decimal)
+  @objc final public func setLast30DaysUserPltvUsd(_ last30DaysUserPltvUsd: Foundation.Decimal)
+  @objc final public func setLast7DaysMeanSpendUsd(_ last7DaysMeanSpendUsd: Foundation.Decimal)
+  @objc final public func setLast7DaysMedianSpendUsd(_ last7DaysMedianSpendUsd: Foundation.Decimal)
+  @objc final public func setLast7DaysPlacementFillRate(_ last7DaysPlacementFillRate: Foundation.Decimal)
+  @objc final public func setLast7DaysTotalSpendUsd(_ last7DaysTotalSpendUsd: Foundation.Decimal)
+  @objc final public func setLast7DaysUserLtvUsd(_ last7DaysUserLtvUsd: Foundation.Decimal)
+  @objc final public func setLast7DaysUserPltvUsd(_ last7DaysUserPltvUsd: Foundation.Decimal)
+  @objc final public func setTopNAdomain(_ topNAdomain: [Swift.String])
+  @objc final public func setTotalEarningsUsd(_ totalEarningsUsd: Foundation.Decimal)
+  @objc final public func setFriends(_ friends: [Swift.String]?)
+  @objc final public func setHealthPercentile(_ healthPercentile: Swift.Int)
+  @objc final public func setInGamePurchases(_ inGamePurchases: Foundation.Decimal)
+  @objc final public func setLevelPercentile(_ levelPercentile: Foundation.Decimal)
+  @objc final public func setPage(_ page: Swift.String?)
+  @objc final public func setSessionStartTime(_ sessionStartTime: Foundation.Date?)
+  @objc final public func setSessionDuration(_ sessionDuration: Swift.Int)
+  @objc final public func setSignupDate(_ signupDate: Foundation.Date?)
+  @objc final public func setTimeSpent(_ timeSpent: Swift.Int)
+  @objc final public func setUserId(_ userId: Swift.String?)
+  @objc final public func setUserLevelPercentile(_ userLevelPercentile: Swift.Int)
+  @objc final public func setUserScorePercentile(_ userScorePercentile: Foundation.Decimal)
+  @objc final public func addCustomData(_ key: Swift.String, value: Swift.String)
+  @objc final public func setCustomData(_ data: [Swift.String : Swift.String])
+  public init(from decoder: any Swift.Decoder) throws
+  @objc final public func clearAll()
+  final public func encode(to encoder: any Swift.Encoder) throws
+  @objc deinit
+}
 @_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class MediaView : UIKit.UIView {
-  @objc @_Concurrency.MainActor(unsafe) public var aspectRatio: CoreFoundation.CGFloat {
-    @objc get
-  }
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc public protocol VungleBannerViewDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func bannerAdDidLoad(_ bannerView: VungleAdsSDK.VungleBannerView)
+  @objc optional func bannerAdWillPresent(_ bannerView: VungleAdsSDK.VungleBannerView)
+  @objc optional func bannerAdDidPresent(_ bannerView: VungleAdsSDK.VungleBannerView)
+  @objc optional func bannerAdDidFail(_ bannerView: VungleAdsSDK.VungleBannerView, withError: Foundation.NSError)
+  @objc optional func bannerAdWillClose(_ bannerView: VungleAdsSDK.VungleBannerView)
+  @objc optional func bannerAdDidClose(_ bannerView: VungleAdsSDK.VungleBannerView)
+  @objc optional func bannerAdDidTrackImpression(_ bannerView: VungleAdsSDK.VungleBannerView)
+  @objc optional func bannerAdDidClick(_ bannerView: VungleAdsSDK.VungleBannerView)
+  @objc optional func bannerAdWillLeaveApplication(_ bannerView: VungleAdsSDK.VungleBannerView)
+}
+@_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class VungleBannerView : UIKit.UIView {
+  @objc @_Concurrency.MainActor(unsafe) weak public var delegate: (any VungleAdsSDK.VungleBannerViewDelegate)?
+  @objc @_Concurrency.MainActor(unsafe) public init(placementId: Swift.String, vungleAdSize: VungleAdsSDK.VungleAdSize)
+  @objc @_Concurrency.MainActor(unsafe) public func load(_ bidPayload: Swift.String? = nil)
+  @objc @_Concurrency.MainActor(unsafe) public func set(extras: VungleAdsSDK.VungleAdsExtras)
+  @objc @_Concurrency.MainActor(unsafe) public var appId: Swift.String {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var placementId: Swift.String {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var eventId: Swift.String {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var creativeId: Swift.String {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) public func getBannerSize() -> CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didMoveToSuperview()
   @objc deinit
 }
 @objc public enum VungleError : Swift.Int {
@@ -275,6 +373,7 @@ import zlib
   case generateJsonDataError
   case adClosedTemplateError
   case adClosedMissingHeartbeat
+  case silentModeMonitorError
   case concurrentPlaybackUnsupported
   case bannerViewInvalidSize
   case nativeAssetError
@@ -287,6 +386,7 @@ import zlib
   case unknownRadioAccessTechnology
   case storeKitPresentationError
   case storeOverlayPresentationError
+  case invalidPlayParameter
   case outOfMemory
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
@@ -335,8 +435,106 @@ extension Foundation.Data {
   public func gzipped(level: VungleAdsSDK.CompressionLevel = .defaultCompression) throws -> Foundation.Data
   public func gunzipped() throws -> Foundation.Data
 }
+@objc public enum VungleAdSizeType : Swift.Int {
+  case regularBannerSizeType = 1, shortBannerSizeType, leaderboardSizeType, mrecSizeType, flexibleHeightSizeType, maxHeightSizeType, fixedSizeType
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc public class VungleAdSize : ObjectiveC.NSObject {
+  @objc final public let size: CoreFoundation.CGSize
+  @objc final public let type: VungleAdsSDK.VungleAdSizeType
+  @objc public static let VungleAdSizeBannerRegular: VungleAdsSDK.VungleAdSize
+  @objc public static let VungleAdSizeBannerShort: VungleAdsSDK.VungleAdSize
+  @objc public static let VungleAdSizeLeaderboard: VungleAdsSDK.VungleAdSize
+  @objc public static let VungleAdSizeMREC: VungleAdsSDK.VungleAdSize
+  @objc deinit
+}
+extension VungleAdsSDK.VungleAdSize {
+  @objc dynamic public class func VungleAdSizeWithWidth(_ width: CoreFoundation.CGFloat) -> VungleAdsSDK.VungleAdSize
+  @objc dynamic public class func VungleAdSizeWithWidthAndMAXHeight(width: CoreFoundation.CGFloat, maxHeight: CoreFoundation.CGFloat) -> VungleAdsSDK.VungleAdSize
+  @objc dynamic public class func VungleAdSizeFromCGSize(_ size: CoreFoundation.CGSize) -> VungleAdsSDK.VungleAdSize
+  @objc dynamic public class func VungleValidAdSizeFromCGSize(size: CoreFoundation.CGSize, placementId: Swift.String) -> VungleAdsSDK.VungleAdSize
+}
+@objc public enum Gender : Swift.Int, Swift.Decodable {
+  case other = 0, male, female
+  public init(from decoder: any Swift.Decoder) throws
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum EducationLevel : Swift.Int, Swift.Decodable {
+  case other = 0, noSchooling, someHighSchool, highSchoolGraduate, someCollege, bachelors, masters, professional, doctorate
+  public init(from decoder: any Swift.Decoder) throws
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum EmploymentStatus : Swift.Int, Swift.Decodable {
+  case other = 0, employed, unemployed, selfEmployed, retired, student, intern, temporary, freelancer, casual
+  public init(from decoder: any Swift.Decoder) throws
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum LocaleClassification : Swift.Int, Swift.Decodable {
+  case other = 0, urban, suburban, rural, town, cityCenter, residentialArea, outskirts, industrialArea, village
+  public init(from decoder: any Swift.Decoder) throws
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum MaritalStatus : Swift.Int, Swift.Decodable {
+  case single = 0, married, divorced, widowed, separated, partnered, engaged, cohabiting, annulled, commonLaw
+  public init(from decoder: any Swift.Decoder) throws
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum Ownership : Swift.Int, Swift.Decodable {
+  case other = 0, ownerOccupied, renterOccupied, leased, shared, freehold, coop, stateOwned, managed, vacationHome
+  public init(from decoder: any Swift.Decoder) throws
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum PropertyType : Swift.Int, Swift.Decodable {
+  case other = 0, singleFamilyHome, multiFamilyUnit, condo, townhouse, mobileHome, apartment, studio, farmhouse, ranch
+  public init(from decoder: any Swift.Decoder) throws
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum LocationSource : Swift.Int, Swift.Decodable {
+  case other = 0, gps, ipAddress, userInput, mobileNetwork, wifi, beacon, rfid, geofencing, sensor
+  public init(from decoder: any Swift.Decoder) throws
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@available(*, deprecated, message: "BannerSize will be depricated and will be replaced by VungleAdSize")
 extension VungleAdsSDK.BannerSize : Swift.Equatable {}
+@available(*, deprecated, message: "BannerSize will be depricated and will be replaced by VungleAdSize")
 extension VungleAdsSDK.BannerSize : Swift.Hashable {}
+@available(*, deprecated, message: "BannerSize will be depricated and will be replaced by VungleAdSize")
 extension VungleAdsSDK.BannerSize : Swift.RawRepresentable {}
 extension VungleAdsSDK.NativeAdOptionsPosition : Swift.Equatable {}
 extension VungleAdsSDK.NativeAdOptionsPosition : Swift.Hashable {}
@@ -347,3 +545,30 @@ extension VungleAdsSDK.ConsentStatus : Swift.RawRepresentable {}
 extension VungleAdsSDK.VungleError : Swift.Equatable {}
 extension VungleAdsSDK.VungleError : Swift.Hashable {}
 extension VungleAdsSDK.VungleError : Swift.RawRepresentable {}
+extension VungleAdsSDK.VungleAdSizeType : Swift.Equatable {}
+extension VungleAdsSDK.VungleAdSizeType : Swift.Hashable {}
+extension VungleAdsSDK.VungleAdSizeType : Swift.RawRepresentable {}
+extension VungleAdsSDK.Gender : Swift.Equatable {}
+extension VungleAdsSDK.Gender : Swift.Hashable {}
+extension VungleAdsSDK.Gender : Swift.RawRepresentable {}
+extension VungleAdsSDK.EducationLevel : Swift.Equatable {}
+extension VungleAdsSDK.EducationLevel : Swift.Hashable {}
+extension VungleAdsSDK.EducationLevel : Swift.RawRepresentable {}
+extension VungleAdsSDK.EmploymentStatus : Swift.Equatable {}
+extension VungleAdsSDK.EmploymentStatus : Swift.Hashable {}
+extension VungleAdsSDK.EmploymentStatus : Swift.RawRepresentable {}
+extension VungleAdsSDK.LocaleClassification : Swift.Equatable {}
+extension VungleAdsSDK.LocaleClassification : Swift.Hashable {}
+extension VungleAdsSDK.LocaleClassification : Swift.RawRepresentable {}
+extension VungleAdsSDK.MaritalStatus : Swift.Equatable {}
+extension VungleAdsSDK.MaritalStatus : Swift.Hashable {}
+extension VungleAdsSDK.MaritalStatus : Swift.RawRepresentable {}
+extension VungleAdsSDK.Ownership : Swift.Equatable {}
+extension VungleAdsSDK.Ownership : Swift.Hashable {}
+extension VungleAdsSDK.Ownership : Swift.RawRepresentable {}
+extension VungleAdsSDK.PropertyType : Swift.Equatable {}
+extension VungleAdsSDK.PropertyType : Swift.Hashable {}
+extension VungleAdsSDK.PropertyType : Swift.RawRepresentable {}
+extension VungleAdsSDK.LocationSource : Swift.Equatable {}
+extension VungleAdsSDK.LocationSource : Swift.Hashable {}
+extension VungleAdsSDK.LocationSource : Swift.RawRepresentable {}

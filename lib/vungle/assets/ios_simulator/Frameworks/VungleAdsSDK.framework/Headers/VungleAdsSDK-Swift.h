@@ -342,13 +342,230 @@ typedef SWIFT_ENUM(NSInteger, ConsentStatus, open) {
   ConsentStatusDenied = 1,
 };
 
+typedef SWIFT_ENUM(NSInteger, EducationLevel, open) {
+  EducationLevelOther = 0,
+  EducationLevelNoSchooling = 1,
+  EducationLevelSomeHighSchool = 2,
+  EducationLevelHighSchoolGraduate = 3,
+  EducationLevelSomeCollege = 4,
+  EducationLevelBachelors = 5,
+  EducationLevelMasters = 6,
+  EducationLevelProfessional = 7,
+  EducationLevelDoctorate = 8,
+};
+
+typedef SWIFT_ENUM(NSInteger, EmploymentStatus, open) {
+  EmploymentStatusOther = 0,
+  EmploymentStatusEmployed = 1,
+  EmploymentStatusUnemployed = 2,
+  EmploymentStatusSelfEmployed = 3,
+  EmploymentStatusRetired = 4,
+  EmploymentStatusStudent = 5,
+  EmploymentStatusIntern = 6,
+  EmploymentStatusTemporary = 7,
+  EmploymentStatusFreelancer = 8,
+  EmploymentStatusCasual = 9,
+};
+
+enum Gender : NSInteger;
+enum LocaleClassification : NSInteger;
+enum MaritalStatus : NSInteger;
+enum Ownership : NSInteger;
+enum PropertyType : NSInteger;
+enum LocationSource : NSInteger;
+@class NSDate;
+
+SWIFT_CLASS("_TtC12VungleAdsSDK14FirstPartyData")
+@interface FirstPartyData : NSObject
+/// Age categories for demographic splits.  0=Others, 1=18-20, 2=21-30, 3=31-40, 4=41-50,
+/// 5=51-60, 6=61-70, 7=71-75
+- (void)setAge:(NSInteger)age;
+/// Education stages or highest level achieved.  0=Other, 1=No Schooling, 2=Some High School,
+/// 3=High School Graduate, 4=Some College, 5=Bachelor’s Degree, 6=Master’s Degree,
+/// 7=Professional Degree, 8=Doctorate
+- (void)setEducationLevel:(enum EducationLevel)educationLevel;
+/// User’s valid email address.  jane@gmail.com
+- (void)setEmail:(NSString * _Nonnull)email;
+/// Current employment status indicating economic activity.  0=Other, 1=Employed,
+/// 2=Unemployed, 3=Self-Employed, 4=Retired, 5=Student, 6=Intern, 7=Temporary, 8=Freelancer,
+/// 9=Casual
+- (void)setEmploymentStatus:(enum EmploymentStatus)employmentStatus;
+/// Gender identification of audience.  0=Other, 1=Male, 2=Female
+- (void)setGender:(enum Gender)gender;
+/// Income brackets indicating economic capacity.  0=<$10k, 1=$10k-$30k, 2=$30k-$50k,
+/// 3=$50k-$70k, 4=$70k-$100k, 5=$100k-$200k, 6=$200k-$300k, 7=$300k-$500k, 8=$500k-$700k,
+/// 9=>$700k
+- (void)setIncomeUsd:(NSInteger)incomeUsd;
+/// Duration of residence at the current location.  0=<1 year, 1=1-5 years, 2=6-10 years,
+/// 3=11-20 years, 4=21-30 years, 5=31-40 years, 6=41-50 years, 7=51-60 years, 8=61-70 years,
+/// 9=71-75+ years
+- (void)setLengthOfResidenceYears:(NSDecimal)lengthOfResidenceYears;
+/// General geographic area of residence.  0=Other, 1=Urban, 2=Suburban, 3=Rural, 4=Town,
+/// 5=City Center, 6=Residential Area, 7=Outskirts, 8=Industrial Area, 9=Village
+- (void)setLocaleClassification:(enum LocaleClassification)localeClassification;
+/// Marital or relationship status.  0=Single, 1=Married, 2=Divorced, 3=Widowed, 4=Separated,
+/// 5=Partnered, 6=Engaged, 7=Co-habiting, 8=Annulled, 9=Common Law
+- (void)setMaritalStatus:(enum MaritalStatus)maritalStatus;
+/// Home values reflecting economic status and housing market.  0=<$100k, 1=$100k-$300k,
+/// 2=$300k-$500k, 3=$500k-$700k, 4=$700k-$900k, 5=$900k-$1.1M, 6=$1.1M-$1.3M, 7=$1.3M-$1.5M,
+/// 8=$1.5M-$1.7M, 9=>$1.7M
+- (void)setMedianHomeValueUsd:(NSInteger)medianHomeValueUsd;
+/// Monthly housing costs, indicative of financial commitments.  0=<$500, 1=$500-$1000,
+/// 2=$1000-$1500, 3=$1500-$2000, 4=$2000-$2500, 5=$2500-$3000, 6=$3000-$3500, 7=$3500-$4000,
+/// 8=$4000-$4500, 9=>$4500
+- (void)setMonthlyHousingPaymentUsd:(NSInteger)monthlyHousingPaymentUsd;
+/// Ownership status of the residence.  0=Other, 1=Owner Occupied, 2=Renter Occupied,
+/// 3=Leased, 4=Shared, 5=Freehold, 6=Co-op, 7=State Owned, 8=Managed, 9=Vacation Home
+- (void)setOwnership:(enum Ownership)ownership;
+/// User’s valid phone number in international format e.g. US+15108888888, UK +442079460958, China +861088880000, Singpore +6561234567
+- (void)setPhoneNumber:(NSString * _Nonnull)phoneNumber;
+/// Type of dwelling unit or property.  0=Other, 1=Single Family Home, 2=Multi-Family Unit,
+/// 3=Condo, 4=Townhouse, 5=Mobile Home, 6=Apartment, 7=Studio, 8=Farmhouse, 9=Ranch
+- (void)setPropertyType:(enum PropertyType)propertyType;
+/// The year the individual was born
+- (void)setYob:(NSInteger)yob;
+/// Country of the individual’s location or nationality
+- (void)setCountry:(NSString * _Nullable)country;
+/// Designated Market Areas in the United States for media planning.  e.g. 803 (Los Angeles),
+/// 501 (New York), 602 (Chicago), 504 (Philadelphia), 807 (San Francisco), 511 (Boston), 623
+/// (Washington, DC), 618 (Atlanta), 670 (Houston), 506 (Miami)
+- (void)setDma:(NSInteger)dma;
+/// Indicates whether the individual is currently traveling
+- (void)setIsTraveling:(BOOL)isTraveling;
+/// The method through which the location data was acquired.  0=Other, 1=GPS, 2=IP address,
+/// 3=User input, 4=Mobile network, 5=Wi-Fi, 6=Beacon, 7=RFID, 8=Geofencing, 9=Sensor
+- (void)setLocationSource:(enum LocationSource)locationSource;
+/// Precise geographic latitude for major global cities. e.g. 340.522
+- (void)setLatitude:(double)latitude;
+/// Precise geographic longitude for major global cities. e.g. -118.2437
+- (void)setLongitude:(double)longitude;
+/// Specific postal codes from various global locations.  e.g. 90210, 10001, SW1A 1AA, 2000,
+/// 1010, 1000, 400001, 75000, 999077, 71000
+- (void)setPostalCode:(NSString * _Nullable)postalCode;
+/// State or regional area of the individual.  e.g. California, New York, Texas, Bavaria,
+/// Ontario, Queensland, São Paulo, Tokyo Prefecture, Moscow, Gauteng
+- (void)setRegionState:(NSString * _Nullable)regionState;
+/// Revenue broken down by specific ad placement locations in USD.
+- (void)setEarningsByPlacement:(NSDecimal)earningsByPlacement;
+/// Indicates whether the user has made a purchase.
+- (void)setIsUserAPurchaser:(BOOL)isUserAPurchaser;
+/// Indicates whether the user subscribe to the App
+- (void)setIsUserASubscriber:(BOOL)isUserASubscriber;
+/// Mean spend value of the user over the last 30 days in USD.
+- (void)setLast30DaysMeanSpendUsd:(NSDecimal)last30DaysMeanSpendUsd;
+/// Median amount spent by the user in the last 30 days in USD.
+- (void)setLast30DaysMedianSpendUsd:(NSDecimal)last30DaysMedianSpendUsd;
+/// Percentage of filled ad placements out of total requests in the last 30 days.
+- (void)setLast30DaysPlacementFillRate:(NSDecimal)last30DaysPlacementFillRate;
+/// Total spent by the user in the last 30 days in USD.
+- (void)setLast30DaysTotalSpendUsd:(NSDecimal)last30DaysTotalSpendUsd;
+/// Calculated based on historical Lifetime Value of the user based on the last 30 days in USD.
+- (void)setLast30DaysUserLtvUsd:(NSDecimal)last30DaysUserLtvUsd;
+/// Predicted Lifetime Value of the user based on the last 30 days in USD. (model prediction)
+- (void)setLast30DaysUserPltvUsd:(NSDecimal)last30DaysUserPltvUsd;
+/// Mean spend value of the user over the last 7 days in USD.
+- (void)setLast7DaysMeanSpendUsd:(NSDecimal)last7DaysMeanSpendUsd;
+/// Median amount spent by the user in the last 7 days in USD.
+- (void)setLast7DaysMedianSpendUsd:(NSDecimal)last7DaysMedianSpendUsd;
+/// Percentage of filled ad placements out of total requests in the last 7 days.
+- (void)setLast7DaysPlacementFillRate:(NSDecimal)last7DaysPlacementFillRate;
+/// Total spent by the user in the last 7 days in USD.
+- (void)setLast7DaysTotalSpendUsd:(NSDecimal)last7DaysTotalSpendUsd;
+/// Calculated based on historical Lifetime Value of the user based on the last 7 days in USD.
+- (void)setLast7DaysUserLtvUsd:(NSDecimal)last7DaysUserLtvUsd;
+/// Predicted Lifetime Value of the user based on the last 7 days in USD. (model prediction).
+- (void)setLast7DaysUserPltvUsd:(NSDecimal)last7DaysUserPltvUsd;
+/// Top performing ad domains in terms of revenue generation.
+- (void)setTopNAdomain:(NSArray<NSString *> * _Nonnull)topNAdomain;
+/// Total revenue generated from the user in USD.
+- (void)setTotalEarningsUsd:(NSDecimal)totalEarningsUsd;
+/// Who are your friends in the game
+- (void)setFriends:(NSArray<NSString *> * _Nullable)friends;
+/// Current health percentage indicator
+- (void)setHealthPercentile:(NSInteger)healthPercentile;
+/// sum of purchased in-game.
+- (void)setInGamePurchases:(NSDecimal)inGamePurchases;
+/// Percentile level the player is on.  e.g. if the game has 10 levels and player is at level
+/// 3, that means value is 30.0
+- (void)setLevelPercentile:(NSDecimal)levelPercentile;
+/// The specific page the player is on
+- (void)setPage:(NSString * _Nullable)page;
+/// Seconds spent in the game since session start
+- (void)setSessionStartTime:(NSDate * _Nullable)sessionStartTime;
+/// When player sessions begin
+- (void)setSessionDuration:(NSInteger)sessionDuration;
+/// When player signed up and started playing this game
+- (void)setSignupDate:(NSDate * _Nullable)signupDate;
+/// Minutes spent in the game since player signed up
+- (void)setTimeSpent:(NSInteger)timeSpent;
+/// The account id for the user/player. Player can have multiple accounts on the same device,
+/// and each account are not of equal value.
+- (void)setUserId:(NSString * _Nullable)userId;
+/// Percentile experience level of the player in the game.  e.g. if the user max level is 10,
+/// and currently at 3, user_level_percentile=30
+- (void)setUserLevelPercentile:(NSInteger)userLevelPercentile;
+/// Percentile scores achieved in levels or sessions. e.g. if max score is 1000 and player
+/// has 123, that means value is 12.3
+- (void)setUserScorePercentile:(NSDecimal)userScorePercentile;
+/// Custom data that the publisher can pair with keys, such as player_value: high, to
+/// indicate publisher specific data
+- (void)addCustomData:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
+- (void)setCustomData:(NSDictionary<NSString *, NSString *> * _Nonnull)data;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (void)clearAll;
+@end
+
+typedef SWIFT_ENUM(NSInteger, Gender, open) {
+  GenderOther = 0,
+  GenderMale = 1,
+  GenderFemale = 2,
+};
+
+typedef SWIFT_ENUM(NSInteger, LocaleClassification, open) {
+  LocaleClassificationOther = 0,
+  LocaleClassificationUrban = 1,
+  LocaleClassificationSuburban = 2,
+  LocaleClassificationRural = 3,
+  LocaleClassificationTown = 4,
+  LocaleClassificationCityCenter = 5,
+  LocaleClassificationResidentialArea = 6,
+  LocaleClassificationOutskirts = 7,
+  LocaleClassificationIndustrialArea = 8,
+  LocaleClassificationVillage = 9,
+};
+
+typedef SWIFT_ENUM(NSInteger, LocationSource, open) {
+  LocationSourceOther = 0,
+  LocationSourceGps = 1,
+  LocationSourceIpAddress = 2,
+  LocationSourceUserInput = 3,
+  LocationSourceMobileNetwork = 4,
+  LocationSourceWifi = 5,
+  LocationSourceBeacon = 6,
+  LocationSourceRfid = 7,
+  LocationSourceGeofencing = 8,
+  LocationSourceSensor = 9,
+};
+
+typedef SWIFT_ENUM(NSInteger, MaritalStatus, open) {
+  MaritalStatusSingle = 0,
+  MaritalStatusMarried = 1,
+  MaritalStatusDivorced = 2,
+  MaritalStatusWidowed = 3,
+  MaritalStatusSeparated = 4,
+  MaritalStatusPartnered = 5,
+  MaritalStatusEngaged = 6,
+  MaritalStatusCohabiting = 7,
+  MaritalStatusAnnulled = 8,
+  MaritalStatusCommonLaw = 9,
+};
+
 @class NSCoder;
 
 /// A MediaView to display the ad’s image or video
 SWIFT_CLASS("_TtC12VungleAdsSDK9MediaView")
 @interface MediaView : UIView
-/// The aspect ratio of the content. Returns 0.0 if no ad is currently loaded.
-@property (nonatomic, readonly) CGFloat aspectRatio;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -360,8 +577,88 @@ typedef SWIFT_ENUM(NSInteger, NativeAdOptionsPosition, open) {
   NativeAdOptionsPositionBottomRight = 4,
 };
 
+typedef SWIFT_ENUM(NSInteger, Ownership, open) {
+  OwnershipOther = 0,
+  OwnershipOwnerOccupied = 1,
+  OwnershipRenterOccupied = 2,
+  OwnershipLeased = 3,
+  OwnershipShared = 4,
+  OwnershipFreehold = 5,
+  OwnershipCoop = 6,
+  OwnershipStateOwned = 7,
+  OwnershipManaged = 8,
+  OwnershipVacationHome = 9,
+};
+
+typedef SWIFT_ENUM(NSInteger, PropertyType, open) {
+  PropertyTypeOther = 0,
+  PropertyTypeSingleFamilyHome = 1,
+  PropertyTypeMultiFamilyUnit = 2,
+  PropertyTypeCondo = 3,
+  PropertyTypeTownhouse = 4,
+  PropertyTypeMobileHome = 5,
+  PropertyTypeApartment = 6,
+  PropertyTypeStudio = 7,
+  PropertyTypeFarmhouse = 8,
+  PropertyTypeRanch = 9,
+};
 
 
+
+
+enum VungleAdSizeType : NSInteger;
+
+SWIFT_CLASS("_TtC12VungleAdsSDK12VungleAdSize")
+@interface VungleAdSize : NSObject
+/// The ad size.
+@property (nonatomic, readonly) CGSize size;
+/// Reserved.
+@property (nonatomic, readonly) enum VungleAdSizeType type;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) VungleAdSize * _Nonnull VungleAdSizeBannerRegular;)
++ (VungleAdSize * _Nonnull)VungleAdSizeBannerRegular SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) VungleAdSize * _Nonnull VungleAdSizeBannerShort;)
++ (VungleAdSize * _Nonnull)VungleAdSizeBannerShort SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) VungleAdSize * _Nonnull VungleAdSizeLeaderboard;)
++ (VungleAdSize * _Nonnull)VungleAdSizeLeaderboard SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) VungleAdSize * _Nonnull VungleAdSizeMREC;)
++ (VungleAdSize * _Nonnull)VungleAdSizeMREC SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+@interface VungleAdSize (SWIFT_EXTENSION(VungleAdsSDK))
+/// This method creates and returns the VungleAdSize based on the width provided.
+/// \param width The width of the view in which the banner ad should be displayed.
+///
++ (VungleAdSize * _Nonnull)VungleAdSizeWithWidth:(CGFloat)width SWIFT_WARN_UNUSED_RESULT;
+/// This method creates and returns the VungleAdSize based on the width provided with a Max height.
+/// \param width The width of the view in which the inLine ad should be displayed.
+///
+/// \param maxHeight The Maximum height of the inLine Ad that should be displayed.
+///
++ (VungleAdSize * _Nonnull)VungleAdSizeWithWidthAndMAXHeightWithWidth:(CGFloat)width maxHeight:(CGFloat)maxHeight SWIFT_WARN_UNUSED_RESULT;
+/// This method creates and returns the VungleAdSize based on the CGSize provided.
+/// \param size The CGSize of the view in which the inLine ad should be displayed.
+///
++ (VungleAdSize * _Nonnull)VungleAdSizeFromCGSize:(CGSize)size SWIFT_WARN_UNUSED_RESULT;
+/// This method creates and returns the VungleAdSize based on the CGSize provided.
+/// \param size The CGSize of the view in which the inLine ad should be displayed.
+///
+/// \param placementId placement id of the ad.
+///
++ (VungleAdSize * _Nonnull)VungleValidAdSizeFromCGSizeWithSize:(CGSize)size placementId:(NSString * _Nonnull)placementId SWIFT_WARN_UNUSED_RESULT;
+@end
+
+typedef SWIFT_ENUM(NSInteger, VungleAdSizeType, open) {
+  VungleAdSizeTypeRegularBannerSizeType = 1,
+  VungleAdSizeTypeShortBannerSizeType = 2,
+  VungleAdSizeTypeLeaderboardSizeType = 3,
+  VungleAdSizeTypeMrecSizeType = 4,
+  VungleAdSizeTypeFlexibleHeightSizeType = 5,
+  VungleAdSizeTypeMaxHeightSizeType = 6,
+  VungleAdSizeTypeFixedSizeType = 7,
+};
 
 @class NSError;
 
@@ -369,6 +666,8 @@ SWIFT_CLASS("_TtC12VungleAdsSDK9VungleAds")
 @interface VungleAds : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull sdkVersion;)
 + (NSString * _Nonnull)sdkVersion SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) FirstPartyData * _Nonnull firstPartyData;)
++ (FirstPartyData * _Nonnull)firstPartyData SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 /// This method initializes the Vungle SDK with the provided app id and calls the completion block
@@ -384,6 +683,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 /// returns:
 /// Bool to check if the SDK has already been initialized successfully or not.
 + (BOOL)isInitialized SWIFT_WARN_UNUSED_RESULT;
+/// This method returns the bool to check if the placement is inLine type or not
+///
+/// returns:
+/// Bool to check if the placement is inLine ad or not
++ (BOOL)isInLine:(NSString * _Nonnull)placementId SWIFT_WARN_UNUSED_RESULT;
 /// This method returns the encoded token to be used for the bidding feature.
 ///
 /// returns:
@@ -413,7 +717,7 @@ SWIFT_CLASS("_TtC12VungleAdsSDK15VungleAdsExtras")
 
 @protocol VungleBannerDelegate;
 
-SWIFT_CLASS("_TtC12VungleAdsSDK12VungleBanner")
+SWIFT_CLASS("_TtC12VungleAdsSDK12VungleBanner") SWIFT_DEPRECATED_MSG("VungleBanner class will be depricated and Replaced by VungleBannerView class.")
 @interface VungleBanner : BasePublicAd
 /// The delegate to receive banner ad lifecycle callbacks
 @property (nonatomic, weak) id <VungleBannerDelegate> _Nullable delegate;
@@ -423,6 +727,17 @@ SWIFT_CLASS("_TtC12VungleAdsSDK12VungleBanner")
 /// \param size The desired banner size for the banner ad.
 ///
 - (nonnull instancetype)initWithPlacementId:(NSString * _Nonnull)placementId size:(enum BannerSize)size OBJC_DESIGNATED_INITIALIZER;
+/// This method initializes the Vungle banner ad object.
+/// \param placementId The placement id of the banner ad.
+///
+/// \param vungleAdSize The desired VungleAdSize for the inLine ad.
+///
+- (nonnull instancetype)initWithPlacementId:(NSString * _Nonnull)placementId vungleAdSize:(VungleAdSize * _Nonnull)vungleAdSize OBJC_DESIGNATED_INITIALIZER;
+/// This method gets the Vungle banner ad object size.
+///
+/// returns:
+/// CGSize of the VungleBanner ad object
+- (CGSize)getBannerSize SWIFT_WARN_UNUSED_RESULT;
 /// This method will present the banner ad in the provided UIView.
 /// This view container may be placed in random positions.
 /// If presentation fails, the <code>DidFailToPresent</code> callback will be invoked.
@@ -434,7 +749,7 @@ SWIFT_CLASS("_TtC12VungleAdsSDK12VungleBanner")
 
 
 
-SWIFT_PROTOCOL("_TtP12VungleAdsSDK20VungleBannerDelegate_")
+SWIFT_PROTOCOL("_TtP12VungleAdsSDK20VungleBannerDelegate_") SWIFT_DEPRECATED_MSG("VungleBannerDelegate will be depricated and Replaced by VungleBannerViewDelegate class.")
 @protocol VungleBannerDelegate <NSObject>
 @optional
 - (void)bannerAdDidLoad:(VungleBanner * _Nonnull)banner;
@@ -447,6 +762,60 @@ SWIFT_PROTOCOL("_TtP12VungleAdsSDK20VungleBannerDelegate_")
 - (void)bannerAdDidTrackImpression:(VungleBanner * _Nonnull)banner;
 - (void)bannerAdDidClick:(VungleBanner * _Nonnull)banner;
 - (void)bannerAdWillLeaveApplication:(VungleBanner * _Nonnull)banner;
+@end
+
+@protocol VungleBannerViewDelegate;
+
+SWIFT_CLASS("_TtC12VungleAdsSDK16VungleBannerView")
+@interface VungleBannerView : UIView
+/// The delegate to receive VungleBannerView ad lifecycle callbacks
+@property (nonatomic, weak) id <VungleBannerViewDelegate> _Nullable delegate;
+/// This method initializes the VungleBannerView ad object.
+/// \param placementId The placement id of the ad.
+///
+/// \param vungleAdSize The desired vungleAdSize for the ad.
+///
+- (nonnull instancetype)initWithPlacementId:(NSString * _Nonnull)placementId vungleAdSize:(VungleAdSize * _Nonnull)vungleAdSize OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+/// This method prepares an ad with the provided bid payload, if provided.
+/// If the bid payload is nil, the waterfall flow will be executed.
+/// This method will always invoke a <code>DidLoad</code> or a <code>DidFail</code> callback
+/// \param bidPayload The bid payload for bidding feature.
+///
+- (void)load:(NSString * _Nullable)bidPayload;
+- (void)setWithExtras:(VungleAdsExtras * _Nonnull)extras;
+@property (nonatomic, readonly, copy) NSString * _Nonnull appId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull placementId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull eventId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull creativeId;
+/// This method gets the Vungle banner view ad object size.
+///
+/// returns:
+/// CGSize of the VungleBannerView ad object
+- (CGSize)getBannerSize SWIFT_WARN_UNUSED_RESULT;
+- (void)didMoveToSuperview;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+
+
+
+
+
+
+SWIFT_PROTOCOL("_TtP12VungleAdsSDK24VungleBannerViewDelegate_")
+@protocol VungleBannerViewDelegate <NSObject>
+@optional
+- (void)bannerAdDidLoad:(VungleBannerView * _Nonnull)bannerView;
+- (void)bannerAdWillPresent:(VungleBannerView * _Nonnull)bannerView;
+- (void)bannerAdDidPresent:(VungleBannerView * _Nonnull)bannerView;
+- (void)bannerAdDidFail:(VungleBannerView * _Nonnull)bannerView withError:(NSError * _Nonnull)withError;
+- (void)bannerAdWillClose:(VungleBannerView * _Nonnull)bannerView;
+- (void)bannerAdDidClose:(VungleBannerView * _Nonnull)bannerView;
+- (void)bannerAdDidTrackImpression:(VungleBannerView * _Nonnull)bannerView;
+- (void)bannerAdDidClick:(VungleBannerView * _Nonnull)bannerView;
+- (void)bannerAdWillLeaveApplication:(VungleBannerView * _Nonnull)bannerView;
 @end
 
 typedef SWIFT_ENUM(NSInteger, VungleError, open) {
@@ -615,23 +984,26 @@ typedef SWIFT_ENUM(NSInteger, VungleError, open) {
   VungleErrorAdClosedTemplateError = 83,
 /// Missing HeartBeat error
   VungleErrorAdClosedMissingHeartbeat = 84,
+/// The errors when observing the silent/ring mode change
+  VungleErrorSilentModeMonitorError = 85,
 /// Pub attempted to call play on a fullscreen ad object with another already playing
-  VungleErrorConcurrentPlaybackUnsupported = 85,
+  VungleErrorConcurrentPlaybackUnsupported = 86,
 /// Pub provided a different size mount for the banner
-  VungleErrorBannerViewInvalidSize = 86,
+  VungleErrorBannerViewInvalidSize = 87,
 /// missing critical native ad assets
-  VungleErrorNativeAssetError = 87,
-  VungleErrorWebViewWebContentProcessDidTerminate = 88,
-  VungleErrorWebViewFailedNavigation = 89,
-  VungleErrorStoreKitLoadError = 90,
-  VungleErrorOmsdkCopyError = 91,
-  VungleErrorStoreOverlayLoadError = 92,
-  VungleErrorReachabilityInitializationFailed = 93,
-  VungleErrorUnknownRadioAccessTechnology = 94,
-  VungleErrorStoreKitPresentationError = 95,
-  VungleErrorStoreOverlayPresentationError = 96,
+  VungleErrorNativeAssetError = 88,
+  VungleErrorWebViewWebContentProcessDidTerminate = 89,
+  VungleErrorWebViewFailedNavigation = 90,
+  VungleErrorStoreKitLoadError = 91,
+  VungleErrorOmsdkCopyError = 92,
+  VungleErrorStoreOverlayLoadError = 93,
+  VungleErrorReachabilityInitializationFailed = 94,
+  VungleErrorUnknownRadioAccessTechnology = 95,
+  VungleErrorStoreKitPresentationError = 96,
+  VungleErrorStoreOverlayPresentationError = 97,
+  VungleErrorInvalidPlayParameter = 98,
 /// Memory Checks
-  VungleErrorOutOfMemory = 97,
+  VungleErrorOutOfMemory = 99,
 };
 
 @protocol VungleInterstitialDelegate;
@@ -717,6 +1089,8 @@ SWIFT_CLASS("_TtC12VungleAdsSDK12VungleNative")
 - (void)unregisterView;
 /// Performs ClickEvent on the currently displaying Native ad.
 - (void)performCTA;
+/// Returns aspect ratio of media to be shown in Native ad
+- (CGFloat)getMediaAspectRatio SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -1133,13 +1507,230 @@ typedef SWIFT_ENUM(NSInteger, ConsentStatus, open) {
   ConsentStatusDenied = 1,
 };
 
+typedef SWIFT_ENUM(NSInteger, EducationLevel, open) {
+  EducationLevelOther = 0,
+  EducationLevelNoSchooling = 1,
+  EducationLevelSomeHighSchool = 2,
+  EducationLevelHighSchoolGraduate = 3,
+  EducationLevelSomeCollege = 4,
+  EducationLevelBachelors = 5,
+  EducationLevelMasters = 6,
+  EducationLevelProfessional = 7,
+  EducationLevelDoctorate = 8,
+};
+
+typedef SWIFT_ENUM(NSInteger, EmploymentStatus, open) {
+  EmploymentStatusOther = 0,
+  EmploymentStatusEmployed = 1,
+  EmploymentStatusUnemployed = 2,
+  EmploymentStatusSelfEmployed = 3,
+  EmploymentStatusRetired = 4,
+  EmploymentStatusStudent = 5,
+  EmploymentStatusIntern = 6,
+  EmploymentStatusTemporary = 7,
+  EmploymentStatusFreelancer = 8,
+  EmploymentStatusCasual = 9,
+};
+
+enum Gender : NSInteger;
+enum LocaleClassification : NSInteger;
+enum MaritalStatus : NSInteger;
+enum Ownership : NSInteger;
+enum PropertyType : NSInteger;
+enum LocationSource : NSInteger;
+@class NSDate;
+
+SWIFT_CLASS("_TtC12VungleAdsSDK14FirstPartyData")
+@interface FirstPartyData : NSObject
+/// Age categories for demographic splits.  0=Others, 1=18-20, 2=21-30, 3=31-40, 4=41-50,
+/// 5=51-60, 6=61-70, 7=71-75
+- (void)setAge:(NSInteger)age;
+/// Education stages or highest level achieved.  0=Other, 1=No Schooling, 2=Some High School,
+/// 3=High School Graduate, 4=Some College, 5=Bachelor’s Degree, 6=Master’s Degree,
+/// 7=Professional Degree, 8=Doctorate
+- (void)setEducationLevel:(enum EducationLevel)educationLevel;
+/// User’s valid email address.  jane@gmail.com
+- (void)setEmail:(NSString * _Nonnull)email;
+/// Current employment status indicating economic activity.  0=Other, 1=Employed,
+/// 2=Unemployed, 3=Self-Employed, 4=Retired, 5=Student, 6=Intern, 7=Temporary, 8=Freelancer,
+/// 9=Casual
+- (void)setEmploymentStatus:(enum EmploymentStatus)employmentStatus;
+/// Gender identification of audience.  0=Other, 1=Male, 2=Female
+- (void)setGender:(enum Gender)gender;
+/// Income brackets indicating economic capacity.  0=<$10k, 1=$10k-$30k, 2=$30k-$50k,
+/// 3=$50k-$70k, 4=$70k-$100k, 5=$100k-$200k, 6=$200k-$300k, 7=$300k-$500k, 8=$500k-$700k,
+/// 9=>$700k
+- (void)setIncomeUsd:(NSInteger)incomeUsd;
+/// Duration of residence at the current location.  0=<1 year, 1=1-5 years, 2=6-10 years,
+/// 3=11-20 years, 4=21-30 years, 5=31-40 years, 6=41-50 years, 7=51-60 years, 8=61-70 years,
+/// 9=71-75+ years
+- (void)setLengthOfResidenceYears:(NSDecimal)lengthOfResidenceYears;
+/// General geographic area of residence.  0=Other, 1=Urban, 2=Suburban, 3=Rural, 4=Town,
+/// 5=City Center, 6=Residential Area, 7=Outskirts, 8=Industrial Area, 9=Village
+- (void)setLocaleClassification:(enum LocaleClassification)localeClassification;
+/// Marital or relationship status.  0=Single, 1=Married, 2=Divorced, 3=Widowed, 4=Separated,
+/// 5=Partnered, 6=Engaged, 7=Co-habiting, 8=Annulled, 9=Common Law
+- (void)setMaritalStatus:(enum MaritalStatus)maritalStatus;
+/// Home values reflecting economic status and housing market.  0=<$100k, 1=$100k-$300k,
+/// 2=$300k-$500k, 3=$500k-$700k, 4=$700k-$900k, 5=$900k-$1.1M, 6=$1.1M-$1.3M, 7=$1.3M-$1.5M,
+/// 8=$1.5M-$1.7M, 9=>$1.7M
+- (void)setMedianHomeValueUsd:(NSInteger)medianHomeValueUsd;
+/// Monthly housing costs, indicative of financial commitments.  0=<$500, 1=$500-$1000,
+/// 2=$1000-$1500, 3=$1500-$2000, 4=$2000-$2500, 5=$2500-$3000, 6=$3000-$3500, 7=$3500-$4000,
+/// 8=$4000-$4500, 9=>$4500
+- (void)setMonthlyHousingPaymentUsd:(NSInteger)monthlyHousingPaymentUsd;
+/// Ownership status of the residence.  0=Other, 1=Owner Occupied, 2=Renter Occupied,
+/// 3=Leased, 4=Shared, 5=Freehold, 6=Co-op, 7=State Owned, 8=Managed, 9=Vacation Home
+- (void)setOwnership:(enum Ownership)ownership;
+/// User’s valid phone number in international format e.g. US+15108888888, UK +442079460958, China +861088880000, Singpore +6561234567
+- (void)setPhoneNumber:(NSString * _Nonnull)phoneNumber;
+/// Type of dwelling unit or property.  0=Other, 1=Single Family Home, 2=Multi-Family Unit,
+/// 3=Condo, 4=Townhouse, 5=Mobile Home, 6=Apartment, 7=Studio, 8=Farmhouse, 9=Ranch
+- (void)setPropertyType:(enum PropertyType)propertyType;
+/// The year the individual was born
+- (void)setYob:(NSInteger)yob;
+/// Country of the individual’s location or nationality
+- (void)setCountry:(NSString * _Nullable)country;
+/// Designated Market Areas in the United States for media planning.  e.g. 803 (Los Angeles),
+/// 501 (New York), 602 (Chicago), 504 (Philadelphia), 807 (San Francisco), 511 (Boston), 623
+/// (Washington, DC), 618 (Atlanta), 670 (Houston), 506 (Miami)
+- (void)setDma:(NSInteger)dma;
+/// Indicates whether the individual is currently traveling
+- (void)setIsTraveling:(BOOL)isTraveling;
+/// The method through which the location data was acquired.  0=Other, 1=GPS, 2=IP address,
+/// 3=User input, 4=Mobile network, 5=Wi-Fi, 6=Beacon, 7=RFID, 8=Geofencing, 9=Sensor
+- (void)setLocationSource:(enum LocationSource)locationSource;
+/// Precise geographic latitude for major global cities. e.g. 340.522
+- (void)setLatitude:(double)latitude;
+/// Precise geographic longitude for major global cities. e.g. -118.2437
+- (void)setLongitude:(double)longitude;
+/// Specific postal codes from various global locations.  e.g. 90210, 10001, SW1A 1AA, 2000,
+/// 1010, 1000, 400001, 75000, 999077, 71000
+- (void)setPostalCode:(NSString * _Nullable)postalCode;
+/// State or regional area of the individual.  e.g. California, New York, Texas, Bavaria,
+/// Ontario, Queensland, São Paulo, Tokyo Prefecture, Moscow, Gauteng
+- (void)setRegionState:(NSString * _Nullable)regionState;
+/// Revenue broken down by specific ad placement locations in USD.
+- (void)setEarningsByPlacement:(NSDecimal)earningsByPlacement;
+/// Indicates whether the user has made a purchase.
+- (void)setIsUserAPurchaser:(BOOL)isUserAPurchaser;
+/// Indicates whether the user subscribe to the App
+- (void)setIsUserASubscriber:(BOOL)isUserASubscriber;
+/// Mean spend value of the user over the last 30 days in USD.
+- (void)setLast30DaysMeanSpendUsd:(NSDecimal)last30DaysMeanSpendUsd;
+/// Median amount spent by the user in the last 30 days in USD.
+- (void)setLast30DaysMedianSpendUsd:(NSDecimal)last30DaysMedianSpendUsd;
+/// Percentage of filled ad placements out of total requests in the last 30 days.
+- (void)setLast30DaysPlacementFillRate:(NSDecimal)last30DaysPlacementFillRate;
+/// Total spent by the user in the last 30 days in USD.
+- (void)setLast30DaysTotalSpendUsd:(NSDecimal)last30DaysTotalSpendUsd;
+/// Calculated based on historical Lifetime Value of the user based on the last 30 days in USD.
+- (void)setLast30DaysUserLtvUsd:(NSDecimal)last30DaysUserLtvUsd;
+/// Predicted Lifetime Value of the user based on the last 30 days in USD. (model prediction)
+- (void)setLast30DaysUserPltvUsd:(NSDecimal)last30DaysUserPltvUsd;
+/// Mean spend value of the user over the last 7 days in USD.
+- (void)setLast7DaysMeanSpendUsd:(NSDecimal)last7DaysMeanSpendUsd;
+/// Median amount spent by the user in the last 7 days in USD.
+- (void)setLast7DaysMedianSpendUsd:(NSDecimal)last7DaysMedianSpendUsd;
+/// Percentage of filled ad placements out of total requests in the last 7 days.
+- (void)setLast7DaysPlacementFillRate:(NSDecimal)last7DaysPlacementFillRate;
+/// Total spent by the user in the last 7 days in USD.
+- (void)setLast7DaysTotalSpendUsd:(NSDecimal)last7DaysTotalSpendUsd;
+/// Calculated based on historical Lifetime Value of the user based on the last 7 days in USD.
+- (void)setLast7DaysUserLtvUsd:(NSDecimal)last7DaysUserLtvUsd;
+/// Predicted Lifetime Value of the user based on the last 7 days in USD. (model prediction).
+- (void)setLast7DaysUserPltvUsd:(NSDecimal)last7DaysUserPltvUsd;
+/// Top performing ad domains in terms of revenue generation.
+- (void)setTopNAdomain:(NSArray<NSString *> * _Nonnull)topNAdomain;
+/// Total revenue generated from the user in USD.
+- (void)setTotalEarningsUsd:(NSDecimal)totalEarningsUsd;
+/// Who are your friends in the game
+- (void)setFriends:(NSArray<NSString *> * _Nullable)friends;
+/// Current health percentage indicator
+- (void)setHealthPercentile:(NSInteger)healthPercentile;
+/// sum of purchased in-game.
+- (void)setInGamePurchases:(NSDecimal)inGamePurchases;
+/// Percentile level the player is on.  e.g. if the game has 10 levels and player is at level
+/// 3, that means value is 30.0
+- (void)setLevelPercentile:(NSDecimal)levelPercentile;
+/// The specific page the player is on
+- (void)setPage:(NSString * _Nullable)page;
+/// Seconds spent in the game since session start
+- (void)setSessionStartTime:(NSDate * _Nullable)sessionStartTime;
+/// When player sessions begin
+- (void)setSessionDuration:(NSInteger)sessionDuration;
+/// When player signed up and started playing this game
+- (void)setSignupDate:(NSDate * _Nullable)signupDate;
+/// Minutes spent in the game since player signed up
+- (void)setTimeSpent:(NSInteger)timeSpent;
+/// The account id for the user/player. Player can have multiple accounts on the same device,
+/// and each account are not of equal value.
+- (void)setUserId:(NSString * _Nullable)userId;
+/// Percentile experience level of the player in the game.  e.g. if the user max level is 10,
+/// and currently at 3, user_level_percentile=30
+- (void)setUserLevelPercentile:(NSInteger)userLevelPercentile;
+/// Percentile scores achieved in levels or sessions. e.g. if max score is 1000 and player
+/// has 123, that means value is 12.3
+- (void)setUserScorePercentile:(NSDecimal)userScorePercentile;
+/// Custom data that the publisher can pair with keys, such as player_value: high, to
+/// indicate publisher specific data
+- (void)addCustomData:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
+- (void)setCustomData:(NSDictionary<NSString *, NSString *> * _Nonnull)data;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (void)clearAll;
+@end
+
+typedef SWIFT_ENUM(NSInteger, Gender, open) {
+  GenderOther = 0,
+  GenderMale = 1,
+  GenderFemale = 2,
+};
+
+typedef SWIFT_ENUM(NSInteger, LocaleClassification, open) {
+  LocaleClassificationOther = 0,
+  LocaleClassificationUrban = 1,
+  LocaleClassificationSuburban = 2,
+  LocaleClassificationRural = 3,
+  LocaleClassificationTown = 4,
+  LocaleClassificationCityCenter = 5,
+  LocaleClassificationResidentialArea = 6,
+  LocaleClassificationOutskirts = 7,
+  LocaleClassificationIndustrialArea = 8,
+  LocaleClassificationVillage = 9,
+};
+
+typedef SWIFT_ENUM(NSInteger, LocationSource, open) {
+  LocationSourceOther = 0,
+  LocationSourceGps = 1,
+  LocationSourceIpAddress = 2,
+  LocationSourceUserInput = 3,
+  LocationSourceMobileNetwork = 4,
+  LocationSourceWifi = 5,
+  LocationSourceBeacon = 6,
+  LocationSourceRfid = 7,
+  LocationSourceGeofencing = 8,
+  LocationSourceSensor = 9,
+};
+
+typedef SWIFT_ENUM(NSInteger, MaritalStatus, open) {
+  MaritalStatusSingle = 0,
+  MaritalStatusMarried = 1,
+  MaritalStatusDivorced = 2,
+  MaritalStatusWidowed = 3,
+  MaritalStatusSeparated = 4,
+  MaritalStatusPartnered = 5,
+  MaritalStatusEngaged = 6,
+  MaritalStatusCohabiting = 7,
+  MaritalStatusAnnulled = 8,
+  MaritalStatusCommonLaw = 9,
+};
+
 @class NSCoder;
 
 /// A MediaView to display the ad’s image or video
 SWIFT_CLASS("_TtC12VungleAdsSDK9MediaView")
 @interface MediaView : UIView
-/// The aspect ratio of the content. Returns 0.0 if no ad is currently loaded.
-@property (nonatomic, readonly) CGFloat aspectRatio;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -1151,8 +1742,88 @@ typedef SWIFT_ENUM(NSInteger, NativeAdOptionsPosition, open) {
   NativeAdOptionsPositionBottomRight = 4,
 };
 
+typedef SWIFT_ENUM(NSInteger, Ownership, open) {
+  OwnershipOther = 0,
+  OwnershipOwnerOccupied = 1,
+  OwnershipRenterOccupied = 2,
+  OwnershipLeased = 3,
+  OwnershipShared = 4,
+  OwnershipFreehold = 5,
+  OwnershipCoop = 6,
+  OwnershipStateOwned = 7,
+  OwnershipManaged = 8,
+  OwnershipVacationHome = 9,
+};
+
+typedef SWIFT_ENUM(NSInteger, PropertyType, open) {
+  PropertyTypeOther = 0,
+  PropertyTypeSingleFamilyHome = 1,
+  PropertyTypeMultiFamilyUnit = 2,
+  PropertyTypeCondo = 3,
+  PropertyTypeTownhouse = 4,
+  PropertyTypeMobileHome = 5,
+  PropertyTypeApartment = 6,
+  PropertyTypeStudio = 7,
+  PropertyTypeFarmhouse = 8,
+  PropertyTypeRanch = 9,
+};
 
 
+
+
+enum VungleAdSizeType : NSInteger;
+
+SWIFT_CLASS("_TtC12VungleAdsSDK12VungleAdSize")
+@interface VungleAdSize : NSObject
+/// The ad size.
+@property (nonatomic, readonly) CGSize size;
+/// Reserved.
+@property (nonatomic, readonly) enum VungleAdSizeType type;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) VungleAdSize * _Nonnull VungleAdSizeBannerRegular;)
++ (VungleAdSize * _Nonnull)VungleAdSizeBannerRegular SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) VungleAdSize * _Nonnull VungleAdSizeBannerShort;)
++ (VungleAdSize * _Nonnull)VungleAdSizeBannerShort SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) VungleAdSize * _Nonnull VungleAdSizeLeaderboard;)
++ (VungleAdSize * _Nonnull)VungleAdSizeLeaderboard SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) VungleAdSize * _Nonnull VungleAdSizeMREC;)
++ (VungleAdSize * _Nonnull)VungleAdSizeMREC SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+@interface VungleAdSize (SWIFT_EXTENSION(VungleAdsSDK))
+/// This method creates and returns the VungleAdSize based on the width provided.
+/// \param width The width of the view in which the banner ad should be displayed.
+///
++ (VungleAdSize * _Nonnull)VungleAdSizeWithWidth:(CGFloat)width SWIFT_WARN_UNUSED_RESULT;
+/// This method creates and returns the VungleAdSize based on the width provided with a Max height.
+/// \param width The width of the view in which the inLine ad should be displayed.
+///
+/// \param maxHeight The Maximum height of the inLine Ad that should be displayed.
+///
++ (VungleAdSize * _Nonnull)VungleAdSizeWithWidthAndMAXHeightWithWidth:(CGFloat)width maxHeight:(CGFloat)maxHeight SWIFT_WARN_UNUSED_RESULT;
+/// This method creates and returns the VungleAdSize based on the CGSize provided.
+/// \param size The CGSize of the view in which the inLine ad should be displayed.
+///
++ (VungleAdSize * _Nonnull)VungleAdSizeFromCGSize:(CGSize)size SWIFT_WARN_UNUSED_RESULT;
+/// This method creates and returns the VungleAdSize based on the CGSize provided.
+/// \param size The CGSize of the view in which the inLine ad should be displayed.
+///
+/// \param placementId placement id of the ad.
+///
++ (VungleAdSize * _Nonnull)VungleValidAdSizeFromCGSizeWithSize:(CGSize)size placementId:(NSString * _Nonnull)placementId SWIFT_WARN_UNUSED_RESULT;
+@end
+
+typedef SWIFT_ENUM(NSInteger, VungleAdSizeType, open) {
+  VungleAdSizeTypeRegularBannerSizeType = 1,
+  VungleAdSizeTypeShortBannerSizeType = 2,
+  VungleAdSizeTypeLeaderboardSizeType = 3,
+  VungleAdSizeTypeMrecSizeType = 4,
+  VungleAdSizeTypeFlexibleHeightSizeType = 5,
+  VungleAdSizeTypeMaxHeightSizeType = 6,
+  VungleAdSizeTypeFixedSizeType = 7,
+};
 
 @class NSError;
 
@@ -1160,6 +1831,8 @@ SWIFT_CLASS("_TtC12VungleAdsSDK9VungleAds")
 @interface VungleAds : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull sdkVersion;)
 + (NSString * _Nonnull)sdkVersion SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) FirstPartyData * _Nonnull firstPartyData;)
++ (FirstPartyData * _Nonnull)firstPartyData SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 /// This method initializes the Vungle SDK with the provided app id and calls the completion block
@@ -1175,6 +1848,11 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _No
 /// returns:
 /// Bool to check if the SDK has already been initialized successfully or not.
 + (BOOL)isInitialized SWIFT_WARN_UNUSED_RESULT;
+/// This method returns the bool to check if the placement is inLine type or not
+///
+/// returns:
+/// Bool to check if the placement is inLine ad or not
++ (BOOL)isInLine:(NSString * _Nonnull)placementId SWIFT_WARN_UNUSED_RESULT;
 /// This method returns the encoded token to be used for the bidding feature.
 ///
 /// returns:
@@ -1204,7 +1882,7 @@ SWIFT_CLASS("_TtC12VungleAdsSDK15VungleAdsExtras")
 
 @protocol VungleBannerDelegate;
 
-SWIFT_CLASS("_TtC12VungleAdsSDK12VungleBanner")
+SWIFT_CLASS("_TtC12VungleAdsSDK12VungleBanner") SWIFT_DEPRECATED_MSG("VungleBanner class will be depricated and Replaced by VungleBannerView class.")
 @interface VungleBanner : BasePublicAd
 /// The delegate to receive banner ad lifecycle callbacks
 @property (nonatomic, weak) id <VungleBannerDelegate> _Nullable delegate;
@@ -1214,6 +1892,17 @@ SWIFT_CLASS("_TtC12VungleAdsSDK12VungleBanner")
 /// \param size The desired banner size for the banner ad.
 ///
 - (nonnull instancetype)initWithPlacementId:(NSString * _Nonnull)placementId size:(enum BannerSize)size OBJC_DESIGNATED_INITIALIZER;
+/// This method initializes the Vungle banner ad object.
+/// \param placementId The placement id of the banner ad.
+///
+/// \param vungleAdSize The desired VungleAdSize for the inLine ad.
+///
+- (nonnull instancetype)initWithPlacementId:(NSString * _Nonnull)placementId vungleAdSize:(VungleAdSize * _Nonnull)vungleAdSize OBJC_DESIGNATED_INITIALIZER;
+/// This method gets the Vungle banner ad object size.
+///
+/// returns:
+/// CGSize of the VungleBanner ad object
+- (CGSize)getBannerSize SWIFT_WARN_UNUSED_RESULT;
 /// This method will present the banner ad in the provided UIView.
 /// This view container may be placed in random positions.
 /// If presentation fails, the <code>DidFailToPresent</code> callback will be invoked.
@@ -1225,7 +1914,7 @@ SWIFT_CLASS("_TtC12VungleAdsSDK12VungleBanner")
 
 
 
-SWIFT_PROTOCOL("_TtP12VungleAdsSDK20VungleBannerDelegate_")
+SWIFT_PROTOCOL("_TtP12VungleAdsSDK20VungleBannerDelegate_") SWIFT_DEPRECATED_MSG("VungleBannerDelegate will be depricated and Replaced by VungleBannerViewDelegate class.")
 @protocol VungleBannerDelegate <NSObject>
 @optional
 - (void)bannerAdDidLoad:(VungleBanner * _Nonnull)banner;
@@ -1238,6 +1927,60 @@ SWIFT_PROTOCOL("_TtP12VungleAdsSDK20VungleBannerDelegate_")
 - (void)bannerAdDidTrackImpression:(VungleBanner * _Nonnull)banner;
 - (void)bannerAdDidClick:(VungleBanner * _Nonnull)banner;
 - (void)bannerAdWillLeaveApplication:(VungleBanner * _Nonnull)banner;
+@end
+
+@protocol VungleBannerViewDelegate;
+
+SWIFT_CLASS("_TtC12VungleAdsSDK16VungleBannerView")
+@interface VungleBannerView : UIView
+/// The delegate to receive VungleBannerView ad lifecycle callbacks
+@property (nonatomic, weak) id <VungleBannerViewDelegate> _Nullable delegate;
+/// This method initializes the VungleBannerView ad object.
+/// \param placementId The placement id of the ad.
+///
+/// \param vungleAdSize The desired vungleAdSize for the ad.
+///
+- (nonnull instancetype)initWithPlacementId:(NSString * _Nonnull)placementId vungleAdSize:(VungleAdSize * _Nonnull)vungleAdSize OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+/// This method prepares an ad with the provided bid payload, if provided.
+/// If the bid payload is nil, the waterfall flow will be executed.
+/// This method will always invoke a <code>DidLoad</code> or a <code>DidFail</code> callback
+/// \param bidPayload The bid payload for bidding feature.
+///
+- (void)load:(NSString * _Nullable)bidPayload;
+- (void)setWithExtras:(VungleAdsExtras * _Nonnull)extras;
+@property (nonatomic, readonly, copy) NSString * _Nonnull appId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull placementId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull eventId;
+@property (nonatomic, readonly, copy) NSString * _Nonnull creativeId;
+/// This method gets the Vungle banner view ad object size.
+///
+/// returns:
+/// CGSize of the VungleBannerView ad object
+- (CGSize)getBannerSize SWIFT_WARN_UNUSED_RESULT;
+- (void)didMoveToSuperview;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
+@end
+
+
+
+
+
+
+
+
+SWIFT_PROTOCOL("_TtP12VungleAdsSDK24VungleBannerViewDelegate_")
+@protocol VungleBannerViewDelegate <NSObject>
+@optional
+- (void)bannerAdDidLoad:(VungleBannerView * _Nonnull)bannerView;
+- (void)bannerAdWillPresent:(VungleBannerView * _Nonnull)bannerView;
+- (void)bannerAdDidPresent:(VungleBannerView * _Nonnull)bannerView;
+- (void)bannerAdDidFail:(VungleBannerView * _Nonnull)bannerView withError:(NSError * _Nonnull)withError;
+- (void)bannerAdWillClose:(VungleBannerView * _Nonnull)bannerView;
+- (void)bannerAdDidClose:(VungleBannerView * _Nonnull)bannerView;
+- (void)bannerAdDidTrackImpression:(VungleBannerView * _Nonnull)bannerView;
+- (void)bannerAdDidClick:(VungleBannerView * _Nonnull)bannerView;
+- (void)bannerAdWillLeaveApplication:(VungleBannerView * _Nonnull)bannerView;
 @end
 
 typedef SWIFT_ENUM(NSInteger, VungleError, open) {
@@ -1406,23 +2149,26 @@ typedef SWIFT_ENUM(NSInteger, VungleError, open) {
   VungleErrorAdClosedTemplateError = 83,
 /// Missing HeartBeat error
   VungleErrorAdClosedMissingHeartbeat = 84,
+/// The errors when observing the silent/ring mode change
+  VungleErrorSilentModeMonitorError = 85,
 /// Pub attempted to call play on a fullscreen ad object with another already playing
-  VungleErrorConcurrentPlaybackUnsupported = 85,
+  VungleErrorConcurrentPlaybackUnsupported = 86,
 /// Pub provided a different size mount for the banner
-  VungleErrorBannerViewInvalidSize = 86,
+  VungleErrorBannerViewInvalidSize = 87,
 /// missing critical native ad assets
-  VungleErrorNativeAssetError = 87,
-  VungleErrorWebViewWebContentProcessDidTerminate = 88,
-  VungleErrorWebViewFailedNavigation = 89,
-  VungleErrorStoreKitLoadError = 90,
-  VungleErrorOmsdkCopyError = 91,
-  VungleErrorStoreOverlayLoadError = 92,
-  VungleErrorReachabilityInitializationFailed = 93,
-  VungleErrorUnknownRadioAccessTechnology = 94,
-  VungleErrorStoreKitPresentationError = 95,
-  VungleErrorStoreOverlayPresentationError = 96,
+  VungleErrorNativeAssetError = 88,
+  VungleErrorWebViewWebContentProcessDidTerminate = 89,
+  VungleErrorWebViewFailedNavigation = 90,
+  VungleErrorStoreKitLoadError = 91,
+  VungleErrorOmsdkCopyError = 92,
+  VungleErrorStoreOverlayLoadError = 93,
+  VungleErrorReachabilityInitializationFailed = 94,
+  VungleErrorUnknownRadioAccessTechnology = 95,
+  VungleErrorStoreKitPresentationError = 96,
+  VungleErrorStoreOverlayPresentationError = 97,
+  VungleErrorInvalidPlayParameter = 98,
 /// Memory Checks
-  VungleErrorOutOfMemory = 97,
+  VungleErrorOutOfMemory = 99,
 };
 
 @protocol VungleInterstitialDelegate;
@@ -1508,6 +2254,8 @@ SWIFT_CLASS("_TtC12VungleAdsSDK12VungleNative")
 - (void)unregisterView;
 /// Performs ClickEvent on the currently displaying Native ad.
 - (void)performCTA;
+/// Returns aspect ratio of media to be shown in Native ad
+- (CGFloat)getMediaAspectRatio SWIFT_WARN_UNUSED_RESULT;
 @end
 
 

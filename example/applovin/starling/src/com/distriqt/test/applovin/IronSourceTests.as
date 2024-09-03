@@ -70,7 +70,7 @@ package com.distriqt.test.applovin
 //					IronSource.instance.addEventListener( "onRewardedVideoAdClicked", onRewardedVideoAdClicked );
 
 					IronSource.instance.addEventListener( RewardedVideoAdEvent.OPENED, onRewardedVideoAdOpened );
-					IronSource.instance.addEventListener( RewardedVideoAdEvent.CLOSED, onRewardedVideoAdClosed );
+						IronSource.instance.addEventListener( RewardedVideoAdEvent.CLOSED, onRewardedVideoAdClosed );
 					IronSource.instance.addEventListener( RewardedVideoAdEvent.AVAILABILITY_CHANGED,
 														  onRewardedVideoAvailabilityChanged );
 					IronSource.instance.addEventListener( RewardedVideoAdEvent.STARTED, onRewardedVideoAdStarted );
